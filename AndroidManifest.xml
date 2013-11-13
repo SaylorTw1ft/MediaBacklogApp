@@ -27,10 +27,10 @@
             android:label="Search" />
         <activity
             android:name=".DiscoverActivity"
-            android:label="discover" />
+            android:label="Discover" />
         <activity
             android:name=".OrganizeActivity"
-            android:label="organize" />
+            android:label="Organize" />
     </application>
 
 </manifest>
