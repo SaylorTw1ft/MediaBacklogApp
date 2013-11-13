@@ -32,7 +32,9 @@
             android:background="@color/home_color"
             android:layout_gravity="right"
             android:layout_marginLeft="@dimen/action_bar_spacing"
-            android:layout_marginRight="@dimen/action_bar_spacing" />
+            android:layout_marginRight="@dimen/action_bar_spacing"
+            android:clickable="true"
+            android:onClick="homeButton" />
 
         <ImageButton
             android:contentDescription="@string/organize_button"
@@ -43,7 +45,9 @@
             android:background="@color/home_color"
             android:layout_gravity="right"
             android:layout_marginLeft="@dimen/action_bar_spacing"
-            android:layout_marginRight="@dimen/action_bar_spacing" />
+            android:layout_marginRight="@dimen/action_bar_spacing"
+            android:clickable="true"
+            android:onClick="organizeButton" />
 
         <ImageButton
             android:contentDescription="@string/discover_button"
@@ -54,7 +58,9 @@
             android:background="@color/home_color"
             android:layout_gravity="right"
             android:layout_marginLeft="@dimen/action_bar_spacing"
-            android:layout_marginRight="@dimen/action_bar_spacing" />
+            android:layout_marginRight="@dimen/action_bar_spacing"
+            android:clickable="true"
+            android:onClick="discoverButton" />
 
         <ImageButton
             android:contentDescription="@string/search_button"
@@ -65,7 +71,9 @@
             android:background="@color/home_color"
             android:layout_gravity="right"
             android:layout_marginLeft="@dimen/action_bar_spacing"
-            android:layout_marginRight="@dimen/action_bar_spacing" />
+            android:layout_marginRight="@dimen/action_bar_spacing"
+            android:clickable="true"
+            android:onClick="searchButton" />
     </LinearLayout>
 
 </RelativeLayout>

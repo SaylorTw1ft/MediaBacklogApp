@@ -3,7 +3,7 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">0dp</dimen>
     <dimen name="activity_vertical_margin">0dp</dimen>
-    <dimen name="action_bar_spacing">10.5dp</dimen>
+    <dimen name="action_bar_spacing">0dp</dimen>
     <color name="movie_color">#FF0000</color>
     <color name="game_color">#FFFF00</color>
     <color name="book_color">#0000FF</color>
