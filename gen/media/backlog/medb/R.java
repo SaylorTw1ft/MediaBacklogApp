@@ -35,7 +35,70 @@ public final class R {
     public static final class string {
         public static final int action_settings=0x7f050001;
         public static final int app_name=0x7f050000;
+        public static final int dis_additional_tab_1=0x7f05000b;
+        public static final int dis_additional_tab_2=0x7f05000c;
+        public static final int dis_additional_tab_3=0x7f05000d;
+        public static final int dis_books_relates_tab_1=0x7f050014;
+        public static final int dis_books_relates_tab_2=0x7f050015;
+        public static final int dis_books_relates_tab_3=0x7f050016;
+        /**  Discover View  
+         */
+        public static final int dis_friends_tab_name=0x7f050009;
+        public static final int dis_games_relates_tab_1=0x7f050011;
+        public static final int dis_games_relates_tab_2=0x7f050012;
+        public static final int dis_games_relates_tab_3=0x7f050013;
+        public static final int dis_media_relates_tab_1=0x7f05000e;
+        public static final int dis_media_relates_tab_2=0x7f05000f;
+        public static final int dis_media_relates_tab_3=0x7f050010;
+        public static final int dis_popular_tab_name=0x7f05000a;
+        public static final int friends_item_info=0x7f050008;
+        /**  Friends View 
+         */
+        public static final int friends_title=0x7f050007;
         public static final int hello_world=0x7f050002;
+        public static final int home_added=0x7f05001b;
+        public static final int home_friends_recent_act=0x7f050019;
+        public static final int home_my_recent_act=0x7f050018;
+        public static final int home_rated=0x7f05001a;
+        public static final int home_reviewed=0x7f05001c;
+        /**  Home View 
+         */
+        public static final int home_title=0x7f050017;
+        public static final int item_actor=0x7f050021;
+        /**  Item View 
+         */
+        public static final int item_add=0x7f05001d;
+        public static final int item_director=0x7f050020;
+        public static final int item_ok=0x7f050025;
+        public static final int item_rating=0x7f05001f;
+        public static final int item_reviews=0x7f050023;
+        public static final int item_share=0x7f05001e;
+        public static final int item_similar=0x7f050024;
+        public static final int item_tags=0x7f050022;
+        /**  List View 
+         */
+        public static final int list_title=0x7f050026;
+        public static final int movies_num_items=0x7f050006;
+        public static final int movies_recent_movies=0x7f050004;
+        /**  Movies View  
+         */
+        public static final int movies_title=0x7f050003;
+        public static final int movies_your_lists=0x7f050005;
+        /**  Notification View 
+         */
+        public static final int notification_title=0x7f050027;
+        public static final int organize_books=0x7f05002b;
+        public static final int organize_games=0x7f05002a;
+        public static final int organize_movies=0x7f050029;
+        public static final int organize_music=0x7f05002c;
+        public static final int organize_num_items=0x7f05002d;
+        /**  Organize View 
+         */
+        public static final int organize_title=0x7f050028;
+        public static final int search_add=0x7f05002f;
+        /**  Search View 
+         */
+        public static final int search_info=0x7f05002e;
     }
     public static final class style {
         /** 
