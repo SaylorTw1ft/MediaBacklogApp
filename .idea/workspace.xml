@@ -16,24 +16,7 @@
     <option name="TOOL_WINDOW_LOG_LEVEL" value="INFO" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="70439b11-7fc0-42ca-a166-fe8bae816001" name="Default" comment="Home bar implemented with fragments.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/menu/discover.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/menu/organize.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/menu/search.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gen/media/backlog/medb/R.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/media/backlog/medb/BuildConfig.java" afterPath="$PROJECT_DIR$/gen/media/backlog/medb/BuildConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/media/backlog/medb/DiscoverActivity.java" afterPath="$PROJECT_DIR$/src/media/backlog/medb/DiscoverActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/media/backlog/medb/HomeBar.java" afterPath="$PROJECT_DIR$/src/media/backlog/medb/HomeBar.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/media/backlog/medb/MainActivity.java" afterPath="$PROJECT_DIR$/src/media/backlog/medb/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/activity_discover.xml" afterPath="$PROJECT_DIR$/res/layout/activity_discover.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/res/layout/activity_main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/activity_organize.xml" afterPath="$PROJECT_DIR$/res/layout/activity_organize.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/activity_search.xml" afterPath="$PROJECT_DIR$/res/layout/activity_search.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/dimens.xml" afterPath="$PROJECT_DIR$/res/values/dimens.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/home_bar.xml" afterPath="$PROJECT_DIR$/res/layout/home_bar.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/menu/main.xml" afterPath="$PROJECT_DIR$/res/menu/main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/strings.xml" afterPath="$PROJECT_DIR$/res/values/strings.xml" />
+    <list default="true" id="70439b11-7fc0-42ca-a166-fe8bae816001" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="MediaBacklogApp.iws" />
@@ -113,10 +96,10 @@
                   </provider>
                 </entry>
               </file>
-              <file leaf-file-name="organize.xml" pinned="false" current="true" current-in-tab="true">
+              <file leaf-file-name="organize.xml" pinned="false" current="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/res/menu/organize.xml">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="2" column="6" selection-start="46" selection-end="46" vertical-scroll-proportion="0.08133971" vertical-offset="0" max-vertical-offset="418">
+                    <state line="2" column="6" selection-start="46" selection-end="46" vertical-scroll-proportion="0.082125604" vertical-offset="0" max-vertical-offset="414">
                       <folding />
                     </state>
                   </provider>
@@ -134,7 +117,7 @@
               <file leaf-file-name="DiscoverActivity.java" pinned="false" current="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/src/media/backlog/medb/DiscoverActivity.java">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="4" column="0" selection-start="84" selection-end="84" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
+                    <state line="4" column="0" selection-start="84" selection-end="84" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
                       <folding>
                         <element signature="imports" expanded="true" />
                       </folding>
@@ -167,7 +150,7 @@
               <file leaf-file-name="main.xml" pinned="false" current="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/res/menu/main.xml">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state line="5" column="0" selection-start="101" selection-end="101" vertical-scroll-proportion="0.5743243" vertical-offset="0" max-vertical-offset="187">
+                    <state line="5" column="0" selection-start="101" selection-end="101" vertical-scroll-proportion="0.5782313" vertical-offset="0" max-vertical-offset="187">
                       <folding />
                     </state>
                   </provider>
@@ -234,10 +217,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="activity_main.xml" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="activity_main.xml" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/res/layout/activity_main.xml">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="9" column="4" selection-start="338" selection-end="338" vertical-scroll-proportion="0.265625" vertical-offset="0" max-vertical-offset="576">
+                <state line="11" column="44" selection-start="435" selection-end="435" vertical-scroll-proportion="0.32807016" vertical-offset="0" max-vertical-offset="570">
                   <folding />
                 </state>
               </provider>
@@ -799,7 +782,11 @@
       <created>1385597198139</created>
       <updated>1385597198139</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Home bar implemented with fragments.">
+      <created>1385675525783</created>
+      <updated>1385675525783</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -811,7 +798,7 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33123028" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33440515" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33440515" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3279743" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32896176" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -826,7 +813,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1359375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3279743" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3279743" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24973711" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1223,7 +1210,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/res/menu/main.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="101" selection-end="101" vertical-scroll-proportion="0.5743243" vertical-offset="0" max-vertical-offset="187">
+        <state line="5" column="0" selection-start="101" selection-end="101" vertical-scroll-proportion="0.5782313" vertical-offset="0" max-vertical-offset="187">
           <folding />
         </state>
       </provider>
@@ -1269,16 +1256,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="4" selection-start="338" selection-end="338" vertical-scroll-proportion="0.265625" vertical-offset="0" max-vertical-offset="576">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gen/media/backlog/medb/R.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="0" selection-start="277" selection-end="277" vertical-scroll-proportion="0.26966292" vertical-offset="36" max-vertical-offset="1394">
@@ -1290,9 +1267,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/res/menu/organize.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="6" selection-start="46" selection-end="46" vertical-scroll-proportion="0.08133971" vertical-offset="0" max-vertical-offset="418">
+        <state line="2" column="6" selection-start="46" selection-end="46" vertical-scroll-proportion="0.082125604" vertical-offset="0" max-vertical-offset="414">
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="44" selection-start="435" selection-end="435" vertical-scroll-proportion="0.32807016" vertical-offset="0" max-vertical-offset="570">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
   </component>
