@@ -1,14 +1,13 @@
 <resources>
 
     <!-- Default screen margins, per the Android Design guidelines. -->
-    <dimen name="activity_horizontal_margin">0dp</dimen>
-    <dimen name="activity_vertical_margin">0dp</dimen>
-    <dimen name="action_bar_spacing">0dp</dimen>
-    <color name="movie_color">#FF0000</color>
-    <color name="game_color">#FFFF00</color>
-    <color name="book_color">#0000FF</color>
-    <color name="music_color">#00FF00</color>
+    <dimen name="home_bar_icon_dim">60dp</dimen>
     <color name="home_color">#666666</color>
-
+    <color name="movie_color">#FF0000</color>
+    <color name="music_color">#00FF00</color>
+    <color name="book_color">#0000FF</color>
+    <color name="discover_color">#00FFFF</color>
+    <color name="organize_color">#FF00FF</color>
+    <color name="game_color">#FFFF00</color>
 
 </resources>
