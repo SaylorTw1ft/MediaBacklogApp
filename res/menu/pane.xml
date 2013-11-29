@@ -2,4 +2,10 @@
 
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <item
+        android:id="@+id/pane_action_add"
+        android:showAsAction="always"
+        android:icon="@drawable/ic_action_new"
+        android:title="@string/pane_action_add" />
+
 </menu>

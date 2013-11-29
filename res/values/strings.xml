@@ -6,7 +6,7 @@
     <string name="organize_action_add">Add List</string>
     <string name="pane_action_add">Add List></string>
     <string name="list_action_add">Add Item</string>
-
+    <string name="list_action_edit">Edit Item</string>
     <!--Home Bar constants-->
 
     <string name="home_bar">Home Bar</string>

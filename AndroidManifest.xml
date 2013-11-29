@@ -24,13 +24,40 @@
         </activity>
         <activity
             android:name=".SearchActivity"
-            android:label="Search" />
+            android:label="Search">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
         <activity
             android:name=".DiscoverActivity"
-            android:label="Discover" />
+            android:label="Discover">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
         <activity
             android:name=".OrganizeActivity"
-            android:label="Organize" />
+            android:label="Organize">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".ListActivity"
+            android:label="ListActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".PaneActivity" />
+        </activity>
+        <activity
+            android:name=".PaneActivity"
+            android:label="PaneActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+
     </application>
 
 </manifest>

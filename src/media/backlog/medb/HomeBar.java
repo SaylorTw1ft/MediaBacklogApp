@@ -47,7 +47,7 @@ public class HomeBar extends Fragment implements View.OnClickListener {
 
     public void searchButton(View view) {
         Intent intent = new Intent(this.getActivity(), SearchActivity.class);
-        startActivity(intent);
+        startActivityForResult(intent, 1);
     }
 
     public void organizeButton(View view) {
