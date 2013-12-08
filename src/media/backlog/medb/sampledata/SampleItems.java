@@ -100,6 +100,18 @@ public class SampleItems {
 			"VALUES (37, 'Mockingjay', 3, 'fiction', 5, 'defaultimage')";
 	
 	//MUSIC
+	String yeezus = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
+			"VALUES (39, 'Yeezus', 4, 'rap', 5, 'defaultimage')";
+	String randomAccessMemory = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
+			"VALUES (40, 'Random Access Memories', 4, 'techno', 5, 'defaultimage')";
+	String theExperience = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
+			"VALUES (41, 'The 20/20 Experience', 4, 'pop', 5, 'defaultimage')";
+	String asap = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
+			"VALUES (42, 'Long.Live.A$AP', 4, 'rap', 5, 'defaultimage')";
+	String hungerSoundTrack = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
+			"VALUES (43, 'Catching Fire Soundtrack', 4, 'soundtrack', 5, 'defaultimage')";
+	String starsDance = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
+			"VALUES (44, 'Stars Dance', 4, 'pop', 5, 'defaultimage')";
 	
 	
 }
