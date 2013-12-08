@@ -100,31 +100,31 @@ public class SampleItems {
 			"VALUES (37, 'Mockingjay', 3, 'fiction', 5, 'books/mockingjay.png')";
 	//MUSIC
 	String yeezus = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
-			"VALUES (39, 'Yeezus', 4, 'rap', 5, 'defaultimage')";
+			"VALUES (39, 'Yeezus', 4, 'rap', 5, 'music/yeezus.png')";
 	String randomAccessMemory = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
-			"VALUES (40, 'Random Access Memories', 4, 'techno', 5, 'defaultimage')";
+			"VALUES (40, 'Random Access Memories', 4, 'techno', 5, 'music/ram.png')";
 	String theExperience = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
-			"VALUES (41, 'The 20/20 Experience', 4, 'pop', 5, 'defaultimage')";
+			"VALUES (41, 'The 20/20 Experience', 4, 'pop', 5, 'music/the20experience.png')";
 	String asap = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
-			"VALUES (42, 'Long.Live.A$AP', 4, 'rap', 5, 'defaultimage')";
+			"VALUES (42, 'Long.Live.A$AP', 4, 'rap', 5, 'music/asap.png')";
 	String hungerSoundTrack = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
-			"VALUES (43, 'Catching Fire Soundtrack', 4, 'soundtrack', 5, 'defaultimage')";
+			"VALUES (43, 'Catching Fire Soundtrack', 4, 'soundtrack', 5, 'music/hungersoundtrack.png')";
 	String starsDance = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
-			"VALUES (44, 'Stars Dance', 4, 'pop', 5, 'defaultimage')";
+			"VALUES (44, 'Stars Dance', 4, 'pop', 5, 'music/starsdance.png')";
 	String unaplogetic = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
-			"VALUES (45, 'Unaplogetic', 4, 'pop', 5, 'defaultimage')";
+			"VALUES (45, 'Unaplogetic', 4, 'pop', 5, 'music/unaplogetic.png')";
 	String twentyone = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
-			"VALUES (46, '21', 4, 'pop', 5, 'defaultimage')";
+			"VALUES (46, '21', 4, 'pop', 5, 'music/21.png')";
 	String upAllNight = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
-			"VALUES (47, 'Up All Night', 4, 'pop', 3, 'defaultimage')";
+			"VALUES (47, 'Up All Night', 4, 'pop', 3, 'music/upallnight.png')";
 	String becauseThe = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
-			"VALUES (48, 'Because The Internet', 4, 'rap', 5, 'defaultimage')";
+			"VALUES (48, 'Because The Internet', 4, 'rap', 5, 'music/becausetheinternet.png')";
 	String acidrap = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
-			"VALUES (49, 'Acid Rap', 4, 'mixtape', 5, 'defaultimage')";
+			"VALUES (49, 'Acid Rap', 4, 'mixtape', 5, 'music/acidrap.png')";
 	String theThrone = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
-			"VALUES (50, 'Watch The Throne', 4, 'rap', 5, 'defaultimage')";
+			"VALUES (50, 'Watch The Throne', 4, 'rap', 5, 'music/watchthethrone.png')";
 	String takeCare = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
-			"VALUES (51, 'Take Care', 4, 'rap', 5, 'defaultimage')";
+			"VALUES (51, 'Take Care', 4, 'rap', 5, 'music/takecare.png')";
 	
 	
 	
