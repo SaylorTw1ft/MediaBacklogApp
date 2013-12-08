@@ -1,5 +1,7 @@
 package media.backlog.medb.database;
 
+import java.util.ArrayList;
+
 import media.backlog.medb.data.MediaItem;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -75,5 +77,105 @@ public final class Items
     	item.setPicture(cursor.getString(cursor.getColumnIndex(ItemEntry.COLUMN_NAME_PICTURE)));
     	
     	return item;
+    }
+    
+    public static ArrayList<MediaItem> getSearchResults(DatabaseHelper dbHelper, String searchString)
+    {
+    	SQLiteDatabase db = dbHelper.getReadableDatabase();
+
+    	// Define a projection that specifies which columns from the database
+    	// you will actually use after this query.
+    	String[] projection = {
+    	    ItemEntry.COLUMN_NAME_ITEMID
+    	    };
+    	
+    	String[] selectionArgs = { String.valueOf(searchString) };
+
+    	// How you want the results sorted in the resulting Cursor
+    	//String sortOrder = FeedEntry.COLUMN_NAME_UPDATED + " DESC";
+
+    	Cursor cursor = db.query(
+    	    ItemEntry.TABLE_NAME,  // The table to query
+    	    projection,                               // The columns to return
+    	    ItemEntry.COLUMN_NAME_ITEMNAME + " = ?",    // The columns for the WHERE clause
+    	    selectionArgs,                            // The values for the WHERE clause
+    	    null,                                     // don't group the rows
+    	    null,                                     // don't filter by row groups
+    	    null                                 // The sort order
+    	    );
+    	
+    	ArrayList<Integer> resultIDs = new ArrayList<Integer>();
+    	ArrayList<MediaItem> searchResults = new ArrayList<MediaItem>();
+    	
+    	if(cursor.moveToFirst())
+    	{
+    		while(true)
+        	{
+    			int itemID = cursor.getInt(cursor.getColumnIndex(ItemEntry.COLUMN_NAME_ITEMID));
+    			resultIDs.add(itemID);
+        		searchResults.add(Items.getItem(dbHelper, itemID));
+        		
+        		if(cursor.moveToNext() == false)
+        		{
+        			break;
+        		}
+        	}
+    		
+    		for(MediaItem item : searchResults)
+    		{
+    			String genre = item.getGenre();
+    			
+    			String[] itemProjection = {
+					ItemEntry.COLUMN_NAME_ITEMID,
+		    	    ItemEntry.COLUMN_NAME_ITEMNAME,
+		    	    ItemEntry.COLUMN_NAME_CATEGORY,
+		    	    ItemEntry.COLUMN_NAME_GENRE,
+		    	    ItemEntry.COLUMN_NAME_RATING,
+		    	    ItemEntry.COLUMN_NAME_PICTURE
+		    	    };
+    		    	
+    		    	String[] itemSelectionArgs = { genre };
+
+    		    	// How you want the results sorted in the resulting Cursor
+    		    	//String sortOrder = FeedEntry.COLUMN_NAME_UPDATED + " DESC";
+
+    		    	Cursor itemCursor = db.query(
+    		    	    ItemEntry.TABLE_NAME,  // The table to query
+    		    	    itemProjection,                               // The columns to return
+    		    	    ItemEntry.COLUMN_NAME_GENRE + " = ?",    // The columns for the WHERE clause
+    		    	    itemSelectionArgs,                            // The values for the WHERE clause
+    		    	    null,                                     // don't group the rows
+    		    	    null,                                     // don't filter by row groups
+    		    	    null                                 // The sort order
+    		    	    );
+    		    	
+    		    	if(itemCursor.moveToFirst())
+    		    	{
+    		    		while(true)
+    		    		{
+    		    			int searchItemID = cursor.getInt(cursor.getColumnIndex(ItemEntry.COLUMN_NAME_ITEMID));
+    		    			if(resultIDs.get(searchItemID) < 0)
+    		    			{
+    		    				MediaItem searchItem = new MediaItem(searchItemID);
+    		    				searchItem.setItemName(cursor.getString(cursor.getColumnIndex(ItemEntry.COLUMN_NAME_ITEMNAME)));
+    		    				searchItem.setCategory(cursor.getInt(cursor.getColumnIndex(ItemEntry.COLUMN_NAME_CATEGORY)));
+    		    				searchItem.setGenre(cursor.getString(cursor.getColumnIndex(ItemEntry.COLUMN_NAME_GENRE)));
+    		    				searchItem.setRating(cursor.getInt(cursor.getColumnIndex(ItemEntry.COLUMN_NAME_RATING)));
+    		    				searchItem.setPicture(cursor.getString(cursor.getColumnIndex(ItemEntry.COLUMN_NAME_PICTURE)));
+    		    				
+    		    				resultIDs.add(searchItemID);
+    		    				searchResults.add(searchItem);
+    		    			}
+    		    			
+    		    			if(cursor.moveToNext() == false)
+		            		{
+		            			break;
+		            		}
+    		    		}
+    		    	}
+    		}
+    	}
+    	
+    	return searchResults;
     }
 }
