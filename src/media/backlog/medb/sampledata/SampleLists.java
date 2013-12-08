@@ -1,7 +1,7 @@
 package media.backlog.medb.sampledata;
 
 public class SampleLists {
-
+	//sample lists
 	String list1 = "INSERT INTO Lists(listID,itemName,movie,game,music,book) VALUE (1, 'Stuff to Buy',1,1,1,0)";
 	String list2 = "INSERT INTO Lists(listID,itemName,movie,game,music,book) VALUE (2, 'Movies I\'ve Seen',1,0,0,0)";
 	String list3 = "INSERT INTO Lists(listID,itemName,movie,game,music,book) VALUE (3, 'Games I\'ve Played',0,1,0,0)";
