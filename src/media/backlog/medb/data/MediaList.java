@@ -8,6 +8,7 @@ public class MediaList
 	private boolean game;
 	private boolean music;
 	private boolean book;
+	private int numItems;
 	
 	public MediaList(int listID)
 	{
@@ -67,5 +68,15 @@ public class MediaList
 	public boolean getBook()
 	{
 		return book;
+	}
+	
+	public void setNumItems(int numItems)
+	{
+		this.numItems = numItems;
+	}
+	
+	public int getNumItems()
+	{
+		return numItems;
 	}
 }
