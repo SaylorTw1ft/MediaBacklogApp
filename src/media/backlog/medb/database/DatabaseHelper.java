@@ -20,23 +20,33 @@ public class DatabaseHelper extends SQLiteOpenHelper
     }
     public void onCreate(SQLiteDatabase db)
     {
-        db.execSQL(ListEntry.SQL_CREATE_TABLE);
-        db.execSQL(ItemEntry.SQL_CREATE_TABLE);
-        db.execSQL(ListItemEntry.SQL_CREATE_TABLE);
-        db.execSQL(TrendingAmongFriendsEntry.SQL_CREATE_TABLE);
+    	createTables(db);
     }
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion)
     {
         // This database is only a cache for online data, so its upgrade policy is
         // to simply to discard the data and start over
-        db.execSQL(ListEntry.SQL_DELETE_TABLE);
-        db.execSQL(ItemEntry.SQL_DELETE_TABLE);
-        db.execSQL(ListItemEntry.SQL_DELETE_TABLE);
-        db.execSQL(TrendingAmongFriendsEntry.SQL_DELETE_TABLE);
+    	deleteTables(db);
         onCreate(db);
     }
     public void onDowngrade(SQLiteDatabase db, int oldVersion, int newVersion)
     {
         onUpgrade(db, oldVersion, newVersion);
+    }
+    
+    public void createTables(SQLiteDatabase db)
+    {
+    	db.execSQL(ListEntry.SQL_CREATE_TABLE);
+        db.execSQL(ItemEntry.SQL_CREATE_TABLE);
+        db.execSQL(ListItemEntry.SQL_CREATE_TABLE);
+        db.execSQL(TrendingAmongFriendsEntry.SQL_CREATE_TABLE);
+    }
+    
+    public void deleteTables(SQLiteDatabase db)
+    {
+    	db.execSQL(ListEntry.SQL_DELETE_TABLE);
+        db.execSQL(ItemEntry.SQL_DELETE_TABLE);
+        db.execSQL(ListItemEntry.SQL_DELETE_TABLE);
+        db.execSQL(TrendingAmongFriendsEntry.SQL_DELETE_TABLE);
     }
 }
