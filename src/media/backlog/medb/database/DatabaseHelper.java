@@ -1,8 +1,10 @@
 package media.backlog.medb.database;
 
+import media.backlog.medb.database.Friends.FriendsEntry;
 import media.backlog.medb.database.Items.ItemEntry;
 import media.backlog.medb.database.ListItems.ListItemEntry;
 import media.backlog.medb.database.Lists.ListEntry;
+import media.backlog.medb.database.PopularItems.PopularItemsEntry;
 import media.backlog.medb.database.TrendingAmongFriends.TrendingAmongFriendsEntry;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
@@ -20,6 +22,7 @@ public class DatabaseHelper extends SQLiteOpenHelper
     }
     public void onCreate(SQLiteDatabase db)
     {
+    	deleteTables(db);
     	createTables(db);
     }
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion)
@@ -40,6 +43,8 @@ public class DatabaseHelper extends SQLiteOpenHelper
         db.execSQL(ItemEntry.SQL_CREATE_TABLE);
         db.execSQL(ListItemEntry.SQL_CREATE_TABLE);
         db.execSQL(TrendingAmongFriendsEntry.SQL_CREATE_TABLE);
+        db.execSQL(FriendsEntry.SQL_CREATE_TABLE);
+        db.execSQL(PopularItemsEntry.SQL_CREATE_TABLE);
     }
     
     public void deleteTables(SQLiteDatabase db)
@@ -48,5 +53,12 @@ public class DatabaseHelper extends SQLiteOpenHelper
         db.execSQL(ItemEntry.SQL_DELETE_TABLE);
         db.execSQL(ListItemEntry.SQL_DELETE_TABLE);
         db.execSQL(TrendingAmongFriendsEntry.SQL_DELETE_TABLE);
+        db.execSQL(FriendsEntry.SQL_DELETE_TABLE);
+        db.execSQL(PopularItemsEntry.SQL_DELETE_TABLE);
+    }
+    
+    public void loadSampleData()
+    {
+    	
     }
 }

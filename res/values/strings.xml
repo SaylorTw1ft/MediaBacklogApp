@@ -90,4 +90,5 @@
     <!-- Search View -->
     <string name="search_info">Search results for %1$s</string>
     <string name="search_add">ADD</string>
+    <string name="login_button">Facebook Login</string>
 </resources>
