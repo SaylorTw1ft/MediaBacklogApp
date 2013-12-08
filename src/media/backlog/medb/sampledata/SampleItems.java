@@ -77,27 +77,27 @@ public class SampleItems {
 
 	//BOOKS
 	String greatGatsby = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
-			"VALUES (27, 'The Great Gatsby', 3, 'drama', 5, 'defaultimage')";
+			"VALUES (27, 'The Great Gatsby', 3, 'drama', 5, 'books/gatsbybook.png')";
 	String catch22 = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
-			"VALUES (28, 'Catch-22', 3, 'satire', 5, 'defaultimage')";
+			"VALUES (28, 'Catch-22', 3, 'satire', 5, 'books/catch22.png')";
 	String mockingbird = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
-			"VALUES (29, 'To Kill A Mockingbird', 3, 'fiction', 5, 'defaultimage')";
+			"VALUES (29, 'To Kill A Mockingbird', 3, 'fiction', 5, 'books/killmockingbird.png')";
 	String nineteen = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
-			"VALUES (30, '1984', 3, 'fiction', 5, 'defaultimage')";
+			"VALUES (30, '1984', 3, 'fiction', 5, 'books/1984.png')";
 	String ulysses = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
-			"VALUES (31, 'Ulysses', 3, 'fiction', 5, 'defaultimage')";
+			"VALUES (31, 'Ulysses', 3, 'fiction', 5, 'books/ulysses.png')";
 	String batman = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
-			"VALUES (32, 'Batman', 3, 'comic', 5, 'defaultimage')";
+			"VALUES (32, 'Batman', 3, 'comic', 5, 'books/batmancomic.png')";
 	String darkKnight = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
-			"VALUES (33, 'Legends of the Dark Knight', 3, 'comic', 5, 'defaultimage')";
+			"VALUES (33, 'Legends of the Dark Knight', 3, 'comic', 5, 'books/darkknight.png')";
 	String batmanShadow = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
-			"VALUES (34, 'Batman: Shadow of the Bat', 3, 'comic', 5, 'defaultimage')";
+			"VALUES (34, 'Batman: Shadow of the Bat', 3, 'comic', 5, 'books/shadowofbat.png')";
 	String theHungerGames = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
-			"VALUES (35, 'The Hunger Games', 3, 'fiction', 5, 'defaultimage')";
+			"VALUES (35, 'The Hunger Games', 3, 'fiction', 5, 'books/thehungergames.png')";
 	String catchingFire = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
-			"VALUES (36, 'Catching Fire', 3, 'fiction', 5, 'defaultimage')";
+			"VALUES (36, 'Catching Fire', 3, 'fiction', 5, 'books/catchingfire.png')";
 	String MockingJay = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
-			"VALUES (37, 'Mockingjay', 3, 'fiction', 5, 'defaultimage')";
+			"VALUES (37, 'Mockingjay', 3, 'fiction', 5, 'books/mockingjay.png')";
 	//MUSIC
 	String yeezus = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
 			"VALUES (39, 'Yeezus', 4, 'rap', 5, 'defaultimage')";
