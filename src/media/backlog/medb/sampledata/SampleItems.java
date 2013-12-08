@@ -74,7 +74,7 @@ public class SampleItems {
 			"VALUES (25, 'Need for Speed: Rivals', 2, 'racing', 3, 'defaultimage')";
 	String granTurismo = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
 			"VALUES (26, 'Gran Turismo 6', 2, 'racing', 5, 'defaultimage')";
-	//matrix batman
+
 	//BOOKS
 	String greatGatsby = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
 			"VALUES (27, 'The Great Gatsby', 3, 'drama', 5, 'defaultimage')";
