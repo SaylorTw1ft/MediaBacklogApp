@@ -61,6 +61,7 @@
     <string name="home_rated">%1$s rated</string>
     <string name="home_added">%1$s added to %2$s</string>
     <string name="home_reviewed">%1$s reviewed %2$s</string>
+    <string name="nav_block">Navigation Block</string>
 
     <!-- Item View -->
     <string name="item_add">ADD</string>
