@@ -58,7 +58,6 @@
             android:name=".LoginScreen"
             android:label="LoginScreen">
         </activity>
-
     </application>
 
 </manifest>
