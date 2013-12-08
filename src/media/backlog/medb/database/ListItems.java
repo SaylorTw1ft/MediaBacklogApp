@@ -1,5 +1,8 @@
 package media.backlog.medb.database;
 
+import java.util.ArrayList;
+
+import media.backlog.medb.data.MediaItem;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.provider.BaseColumns;
@@ -54,5 +57,44 @@ public final class ListItems
     	    );
     	
     	return cursor.getCount();
+    }
+    
+    public static ArrayList<MediaItem> getItemsForList(DatabaseHelper dbHelper, int listID)
+    {
+    	SQLiteDatabase db = dbHelper.getReadableDatabase();
+    	
+    	String[] projection = {
+			ListItemEntry.COLUMN_NAME_ITEMID
+    	};
+    	
+    	String[] selectionArgs = { String.valueOf(listID) };
+    	
+    	Cursor cursor = db.query(
+			ListItemEntry.TABLE_NAME,
+			projection,
+			ListItemEntry.COLUMN_NAME_LISTID + " = ?",
+			selectionArgs,
+			null,
+			null,
+			null
+			);
+    	
+    	ArrayList<MediaItem> allItems = new ArrayList<MediaItem>();
+    	
+    	if(cursor.moveToFirst())
+    	{
+    		while(true)
+        	{
+        		int itemID = cursor.getInt(cursor.getColumnIndex(ListItemEntry.COLUMN_NAME_ITEMID));
+        		allItems.add(Items.getItem(dbHelper, itemID));
+        		
+        		if(cursor.moveToNext() == false)
+        		{
+        			break;
+        		}
+        	}
+    	}
+    	
+    	return allItems;
     }
 }

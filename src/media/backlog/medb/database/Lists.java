@@ -112,6 +112,7 @@ public final class Lists
     	list.setGame(1 == cursor.getInt(cursor.getColumnIndex(ListEntry.COLUMN_NAME_GAME)));
     	list.setMusic(1 == cursor.getInt(cursor.getColumnIndex(ListEntry.COLUMN_NAME_MUSIC)));
     	list.setBook(1 == cursor.getInt(cursor.getColumnIndex(ListEntry.COLUMN_NAME_BOOK)));
+    	list.setNumItems(ListItems.getItemCountForList(dbHelper, listID));
     	
     	return list;
     }
