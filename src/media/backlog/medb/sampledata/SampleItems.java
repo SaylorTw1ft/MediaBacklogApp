@@ -98,7 +98,7 @@ public class SampleItems {
 			"VALUES (36, 'Catching Fire', 3, 'fiction', 5, 'defaultimage')";
 	String MockingJay = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
 			"VALUES (37, 'Mockingjay', 3, 'fiction', 5, 'defaultimage')";
-	
+	//hello
 	//MUSIC
 	String yeezus = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
 			"VALUES (39, 'Yeezus', 4, 'rap', 5, 'defaultimage')";
