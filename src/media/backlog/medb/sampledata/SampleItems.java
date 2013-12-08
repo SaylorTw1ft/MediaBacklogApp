@@ -98,7 +98,6 @@ public class SampleItems {
 			"VALUES (36, 'Catching Fire', 3, 'fiction', 5, 'defaultimage')";
 	String MockingJay = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
 			"VALUES (37, 'Mockingjay', 3, 'fiction', 5, 'defaultimage')";
-	//hello
 	//MUSIC
 	String yeezus = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
 			"VALUES (39, 'Yeezus', 4, 'rap', 5, 'defaultimage')";
@@ -112,6 +111,21 @@ public class SampleItems {
 			"VALUES (43, 'Catching Fire Soundtrack', 4, 'soundtrack', 5, 'defaultimage')";
 	String starsDance = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
 			"VALUES (44, 'Stars Dance', 4, 'pop', 5, 'defaultimage')";
+	String unaplogetic = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
+			"VALUES (45, 'Unaplogetic', 4, 'pop', 5, 'defaultimage')";
+	String twentyone = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
+			"VALUES (46, '21', 4, 'pop', 5, 'defaultimage')";
+	String upAllNight = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
+			"VALUES (47, 'Up All Night', 4, 'pop', 3, 'defaultimage')";
+	String becauseThe = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
+			"VALUES (48, 'Because The Internet', 4, 'rap', 5, 'defaultimage')";
+	String acidrap = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
+			"VALUES (49, 'Acid Rap', 4, 'mixtape', 5, 'defaultimage')";
+	String theThrone = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
+			"VALUES (50, 'Watch The Throne', 4, 'rap', 5, 'defaultimage')";
+	String takeCare = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
+			"VALUES (51, 'Take Care', 4, 'rap', 5, 'defaultimage')";
+	
 	
 	
 }
