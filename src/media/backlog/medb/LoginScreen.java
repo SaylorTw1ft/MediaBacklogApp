@@ -4,7 +4,8 @@ import media.backlog.medb.database.DatabaseHelper;
 import android.app.Activity;
 import android.os.Bundle;
 
-public class LoginScreen extends Activity {
+public class LoginScreen extends Activity
+{
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
