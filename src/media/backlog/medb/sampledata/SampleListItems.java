@@ -3,6 +3,7 @@ package media.backlog.medb.sampledata;
 public class SampleListItems {
 	
 	// String listItem1 = "INSERT INTO ListItems (listID, itemID) VALUES (2,4)";
+	//asdf
 	
 	//Stuff to Buy
 	String listItem4 = "INSERT INTO ListItems (listID, itemID) VALUES (1,1)";
