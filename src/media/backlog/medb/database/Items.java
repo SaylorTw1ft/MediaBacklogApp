@@ -178,4 +178,10 @@ public final class Items
     	
     	return searchResults;
     }
+    
+    public static ArrayList<MediaItem> getSimilarItems(DatabaseHelper dbHelper, MediaItem item)
+    {
+    	//TODO: Implement this function
+    	return new ArrayList<MediaItem>();
+    }
 }
