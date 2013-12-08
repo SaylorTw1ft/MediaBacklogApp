@@ -14,4 +14,13 @@
         android:id="@+id/home_bar"
         android:layout_alignParentBottom="true"
         tools:layout="@layout/home_bar"></fragment>
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:ems="10" />
+
 </RelativeLayout>
