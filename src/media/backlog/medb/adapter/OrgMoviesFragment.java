@@ -1,4 +1,4 @@
-package media.backlog.medb.adpater;
+package media.backlog.medb.adapter;
 
 import media.backlog.medb.R;
 import android.os.Bundle;
