@@ -48,32 +48,32 @@ public class SampleItems {
 	
 	//GAMES
 	String gtaFive = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
-			"VALUES (14, 'Grand Theft Auto V', 2, 'action', 5, 'defaultimage')";
+			"VALUES (14, 'Grand Theft Auto V', 2, 'action', 5, 'games/gtav.png')";
 	String zelda = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
 			"VALUES (15, 'The Legend of Zelda: A Link Between Worlds', 2," +
-			" 'adventure', 5, 'defaultimage')";
+			" 'adventure', 5, 'games/zelda.png')";
 	String battlefield = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
-			"VALUES (16, 'Battlefield 4', 2, 'shooter', 5, 'defaultimage')";
+			"VALUES (16, 'Battlefield 4', 2, 'shooter', 5, 'games/battfield4.png')";
 	String ghosts = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
-			"VALUES (17, 'Call of Duty: Ghosts', 2, 'shooter', 2, 'defaultimage')";
+			"VALUES (17, 'Call of Duty: Ghosts', 2, 'shooter', 2, 'games/ghosts.png')";
 	String pokemonX = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
-			"VALUES (18, 'Pokemon X', 2, 'adventure', 5, 'defaultimage')";
+			"VALUES (18, 'Pokemon X', 2, 'adventure', 5, 'games/pokemonx.png')";
 	String pokemonY = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
-			"VALUES (19, 'Pokemon Y', 2, 'action', 5, 'defaultimage')";
+			"VALUES (19, 'Pokemon Y', 2, 'action', 5, 'games/pokemony.png')";
 	String fifa = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
-			"VALUES (20, 'FIFA 14', 2, 'sports', 4, 'defaultimage')";
+			"VALUES (20, 'FIFA 14', 2, 'sports', 4, 'games/fifa14.png')";
 	String nba2k = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
-			"VALUES (21, 'NBA 2K14', 2, 'sports', 4, 'defaultimage')";
+			"VALUES (21, 'NBA 2K14', 2, 'sports', 4, 'games/nba2k14.png')";
 	String nhl = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
-			"VALUES (22, 'NHL 14', 2, 'sports', 4, 'defaultimage')";
+			"VALUES (22, 'NHL 14', 2, 'sports', 4, 'games/nhl14.png')";
 	String assassinsCreed = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
-			"VALUES (23, 'Assassin's Creed IV: Black Flag', 2, 'action', 5, 'defaultimage')";
+			"VALUES (23, 'Assassin's Creed IV: Black Flag', 2, 'action', 5, 'games/assassinscreed.png')";
 	String forza = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
-			"VALUES (24, 'Forza Motorsport 5', 2, 'racing', 4, 'defaultimage')";
+			"VALUES (24, 'Forza Motorsport 5', 2, 'racing', 4, 'games/forza5.png')";
 	String needForSpeed = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
-			"VALUES (25, 'Need for Speed: Rivals', 2, 'racing', 3, 'defaultimage')";
+			"VALUES (25, 'Need for Speed: Rivals', 2, 'racing', 3, 'games/needforspeed.png')";
 	String granTurismo = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
-			"VALUES (26, 'Gran Turismo 6', 2, 'racing', 5, 'defaultimage')";
+			"VALUES (26, 'Gran Turismo 6', 2, 'racing', 5, 'games/granturismo.png')";
 
 	//BOOKS
 	String greatGatsby = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
