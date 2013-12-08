@@ -39,7 +39,7 @@ public class SampleListItems {
 	
 	//Batman
 	public static String listItem21 = "INSERT INTO ListItems (listID, itemID) VALUES (7,2)";
-	//String listItem22 = "INSERT INTO ListItems (listID, itemID) VALUES (7,)";
+	public static String listItem22 = "INSERT INTO ListItems (listID, itemID) VALUES (7,53)";
 	public static String listItem23 = "INSERT INTO ListItems (listID, itemID) VALUES (7,34)";
 	
 	//Games I want to Play
@@ -49,8 +49,8 @@ public class SampleListItems {
 	
 	//Science Fiction
 	public static String listItem27 = "INSERT INTO ListItems (listID, itemID) VALUES (9,4)";
-	//String listItem28 = "INSERT INTO ListItems (listID, itemID) VALUES (9,)";
-	//String listItem29 = "INSERT INTO ListItems (listID, itemID) VALUES (9,)";
+	public static String listItem28 = "INSERT INTO ListItems (listID, itemID) VALUES (9,53)";
+	public static String listItem29 = "INSERT INTO ListItems (listID, itemID) VALUES (9,32)";
 	
 	//Xbox Games
 	public static String listItem30 = "INSERT INTO ListItems (listID, itemID) VALUES (10,14)";

@@ -74,6 +74,8 @@ public class SampleItems {
 			"VALUES (25, 'Need for Speed: Rivals', 2, 'racing', 3, 'games/needforspeed.png')";
 	public static String item26 = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
 			"VALUES (26, 'Gran Turismo 6', 2, 'racing', 5, 'games/granturismo.png')";
+	public static String item53 = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
+			"VALUES (53, 'Batman Arkham Origins', 2, 'action', 4, 'games/batmanarkhamorigins.png')";
 
 	//BOOKS
 	public static String item27 = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
