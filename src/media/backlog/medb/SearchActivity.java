@@ -2,6 +2,7 @@ package media.backlog.medb;
 
 import java.util.ArrayList;
 
+import media.backlog.medb.adapter.SearchResultListAdaptor;
 import media.backlog.medb.data.MediaItem;
 import media.backlog.medb.database.DatabaseHelper;
 import media.backlog.medb.database.Items;
@@ -26,7 +27,7 @@ import android.widget.SearchView;
 
 
 public class SearchActivity extends Activity {
-	
+	SearchResultListAdaptor adptor;
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 	    super.onCreate(savedInstanceState);
@@ -35,12 +36,17 @@ public class SearchActivity extends Activity {
 	    // Get the intent, verify the action and get the query
 	    Intent intent = getIntent();
 	    ListView la;
+	   
 	    if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
 	      String query = intent.getStringExtra(SearchManager.QUERY);
+	      
+	      //db connection
 	      DatabaseHelper meDbHelper = new DatabaseHelper(getApplicationContext());
 	      ArrayList<MediaItem> searchResults = Items.getSearchResults(meDbHelper, query);
-	      la = (ListView)findViewById(R.id.activity_organize);
-	      la.setAdapter(new ArrayAdapter<String>(SearchActivity.this,R.layout.search_list_display,searchResults));
+	      
+	      adptor = new SearchResultListAdaptor(this,R.layout.search_list_display,searchResults);
+	      la = (ListView)findViewById(R.id.org_list);
+	      la.setAdapter(adptor);
 	    }
 	}
 	

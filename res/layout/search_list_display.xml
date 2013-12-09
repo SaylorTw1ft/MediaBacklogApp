@@ -1,78 +1,63 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:columnCount="3" >
+    android:layout_height="fill_parent" >
 
     <ImageView
-        android:id="@+id/imageView1"
-        android:layout_column="0"
-        android:layout_gravity="left|top"
-        android:layout_row="0"
-        android:layout_rowSpan="2"
+        android:id="@+id/mediaImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" 
         android:src="@drawable/ic_thor" />
 
+    <ImageView
+        android:id="@+id/addButton"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/mediaTitle"
+        android:src="@drawable/ic_add" />
+
+    <ImageView
+        android:id="@+id/ratingButton"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignBottom="@+id/mediaImage"
+        android:layout_alignLeft="@+id/mediaTitle"
+        android:layout_marginBottom="14dp"
+        android:src="@drawable/ic_rating" />
+
     <EditText
-        android:id="@+id/editText1"
-        android:layout_width="142dp"
-        android:layout_column="0"
-        android:layout_columnSpan="3"
-        android:layout_gravity="center_horizontal|top"
-        android:layout_row="0"
+        android:id="@+id/mediaTitle"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/addButton"
+        android:layout_toRightOf="@+id/mediaImage"
         android:ems="10"
-        android:text="Thor" >
+        android:singleLine="true"
+        android:text="Media Title" />
+
+    <ImageView
+        android:id="@+id/movieType"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignLeft="@+id/ratingButton"
+        android:layout_below="@+id/mediaTitle"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_movie" />
+
+    <EditText
+        android:id="@+id/numOfPeople"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/movieType"
+        android:layout_toRightOf="@+id/mediaTitle"
+        android:ems="5"
+        android:singleLine="false"
+        android:text="have seen this.." >
 
         <requestFocus />
     </EditText>
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="162dp"
-        android:layout_height="108dp"
-        android:layout_column="0"
-        android:layout_columnSpan="3"
-        android:layout_gravity="center_horizontal|top"
-        android:layout_row="0"
-        android:layout_rowSpan="2"
-        android:src="@drawable/ic_rating" />
-
-    <android.support.v7.widget.Space
-        android:id="@+id/space1"
-        android:layout_width="99dp"
-        android:layout_height="1dp"
-        android:layout_column="0"
-        android:layout_row="0" />
-
-    <android.support.v7.widget.Space
-        android:id="@+id/space2"
-        android:layout_width="1dp"
-        android:layout_height="67dp"
-        android:layout_column="0"
-        android:layout_row="0" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_column="1"
-        android:layout_gravity="left"
-        android:layout_row="1"
-        android:src="@drawable/ic_movie" />
-
-    <android.support.v7.widget.Space
-        android:layout_width="220dp"
-        android:layout_height="1dp"
-        android:layout_column="1"
-        android:layout_row="0" />
-
-    <android.support.v7.widget.Space
-        android:layout_width="1dp"
-        android:layout_height="66dp"
-        android:layout_column="0"
-        android:layout_row="1" />
-
-    <android.support.v7.widget.Space
-        android:layout_width="1dp"
-        android:layout_height="350dp"
-        android:layout_column="0"
-        android:layout_row="2" />
-
-</GridLayout>
+</RelativeLayout>
