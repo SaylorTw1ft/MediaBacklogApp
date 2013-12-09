@@ -56,6 +56,7 @@
         android:layout_alignRight="@+id/share_button"
         android:layout_alignParentEnd="false"
         android:layout_alignParentStart="false"
-        android:spinnerStyle="@android:style/Widget.Spinner.DropDown" />
+        android:spinnerStyle="@android:style/Widget.Spinner.DropDown"
+         />
 
 </RelativeLayout>
