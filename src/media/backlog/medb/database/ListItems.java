@@ -3,6 +3,7 @@ package media.backlog.medb.database;
 import java.util.ArrayList;
 
 import media.backlog.medb.data.MediaItem;
+import media.backlog.medb.database.Lists.ListEntry;
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -109,5 +110,13 @@ public final class ListItems
 
     	// Insert the new row, returning the primary key value of the new row
     	db.insert(ListItemEntry.TABLE_NAME, null, values);
+    }
+    
+    public static void deleteItem(DatabaseHelper dbHelper, int listID, int itemID)
+    {
+    	SQLiteDatabase db = dbHelper.getWritableDatabase();
+    	String selection = ListItemEntry.COLUMN_NAME_LISTID + " = ? AND " + ListItemEntry.COLUMN_NAME_LISTID + " = ?";
+    	String[] selectionArgs = { String.valueOf(listID), String.valueOf(itemID) };
+    	db.delete(ListItemEntry.TABLE_NAME, selection, selectionArgs);
     }
 }
