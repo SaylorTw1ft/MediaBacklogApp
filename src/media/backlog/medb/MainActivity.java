@@ -14,7 +14,7 @@ import android.widget.ImageView;
 public class MainActivity extends Activity {
 	
     public void startNewIntent(int category){
-        Intent intent = new Intent(MainActivity.this, OrganizeActivity.class);
+        Intent intent = new Intent(MainActivity.this, PaneActivity.class);
         Bundle b = new Bundle();
         b.putInt("category", category);
         intent.putExtras(b);
