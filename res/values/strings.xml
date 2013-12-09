@@ -64,9 +64,11 @@
     <string name="nav_block">Navigation Block</string>
 
     <!-- Item View -->
+    <string name="item_name">Name</string>
     <string name="item_add">ADD</string>
     <string name="item_share">SHARE</string>
     <string name="item_rating">Rating: </string>
+    <string name="item_pic">Item Thumbnail</string>
     <string name="item_director">Director: </string>
     <string name="item_actor">Actors: </string>
     <string name="item_tags">Tags: </string>
