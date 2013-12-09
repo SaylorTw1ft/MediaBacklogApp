@@ -10,7 +10,8 @@ import media.backlog.medb.sampledata.SampleFriends;
 import media.backlog.medb.sampledata.SampleItems;
 import media.backlog.medb.sampledata.SampleListItems;
 import media.backlog.medb.sampledata.SampleLists;
-import media.backlog.medb.sampledata.SampleTrending;
+import media.backlog.medb.sampledata.SamplePopularItems;
+import media.backlog.medb.sampledata.SampleTrendingAmongFriends;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -211,47 +212,54 @@ public class DatabaseHelper extends SQLiteOpenHelper
     
     public void loadSampleTrendingAmongFriends(SQLiteDatabase db)
     {
-    	db.execSQL(SampleTrending.trend1);
-    	db.execSQL(SampleTrending.trend2);
-    	db.execSQL(SampleTrending.trend3);
-    	db.execSQL(SampleTrending.trend4);
-    	db.execSQL(SampleTrending.trend5);
-    	db.execSQL(SampleTrending.trend6);
-    	db.execSQL(SampleTrending.trend7);
-    	db.execSQL(SampleTrending.trend8);
-    	db.execSQL(SampleTrending.trend9);
-    	db.execSQL(SampleTrending.trend10);
-    	db.execSQL(SampleTrending.trend11);
-    	db.execSQL(SampleTrending.trend12);
-    	db.execSQL(SampleTrending.trend13);
-    	db.execSQL(SampleTrending.trend14);
-    	db.execSQL(SampleTrending.trend15);
-    	db.execSQL(SampleTrending.trend16);
-    	db.execSQL(SampleTrending.trend17);
-    	db.execSQL(SampleTrending.trend18);
-    	db.execSQL(SampleTrending.trend19);
-    	db.execSQL(SampleTrending.trend20);
-    	db.execSQL(SampleTrending.trend21);
-    	db.execSQL(SampleTrending.trend22);
-    	db.execSQL(SampleTrending.trend23);
-    	db.execSQL(SampleTrending.trend24);
-    	db.execSQL(SampleTrending.trend25);
-    	db.execSQL(SampleTrending.trend26);
-    	db.execSQL(SampleTrending.trend27);
-    	db.execSQL(SampleTrending.trend28);
-    	db.execSQL(SampleTrending.trend29);
-    	db.execSQL(SampleTrending.trend30);
-    	db.execSQL(SampleTrending.trend31);
-    	db.execSQL(SampleTrending.trend32);
-    	db.execSQL(SampleTrending.trend33);
-    	db.execSQL(SampleTrending.trend34);
-    	db.execSQL(SampleTrending.trend35);
-    	db.execSQL(SampleTrending.trend36);
+    	db.execSQL(SampleTrendingAmongFriends.trend1);
+    	db.execSQL(SampleTrendingAmongFriends.trend2);
+    	db.execSQL(SampleTrendingAmongFriends.trend3);
+    	db.execSQL(SampleTrendingAmongFriends.trend4);
+    	db.execSQL(SampleTrendingAmongFriends.trend5);
+    	db.execSQL(SampleTrendingAmongFriends.trend6);
+    	db.execSQL(SampleTrendingAmongFriends.trend7);
+    	db.execSQL(SampleTrendingAmongFriends.trend8);
+    	db.execSQL(SampleTrendingAmongFriends.trend9);
+    	db.execSQL(SampleTrendingAmongFriends.trend10);
+    	db.execSQL(SampleTrendingAmongFriends.trend11);
+    	db.execSQL(SampleTrendingAmongFriends.trend12);
+    	db.execSQL(SampleTrendingAmongFriends.trend13);
+    	db.execSQL(SampleTrendingAmongFriends.trend14);
+    	db.execSQL(SampleTrendingAmongFriends.trend15);
+    	db.execSQL(SampleTrendingAmongFriends.trend16);
+    	db.execSQL(SampleTrendingAmongFriends.trend17);
+    	db.execSQL(SampleTrendingAmongFriends.trend18);
+    	db.execSQL(SampleTrendingAmongFriends.trend19);
+    	db.execSQL(SampleTrendingAmongFriends.trend20);
+    	db.execSQL(SampleTrendingAmongFriends.trend21);
+    	db.execSQL(SampleTrendingAmongFriends.trend22);
+    	db.execSQL(SampleTrendingAmongFriends.trend23);
+    	db.execSQL(SampleTrendingAmongFriends.trend24);
+    	db.execSQL(SampleTrendingAmongFriends.trend25);
+    	db.execSQL(SampleTrendingAmongFriends.trend26);
+    	db.execSQL(SampleTrendingAmongFriends.trend27);
+    	db.execSQL(SampleTrendingAmongFriends.trend28);
+    	db.execSQL(SampleTrendingAmongFriends.trend29);
+    	db.execSQL(SampleTrendingAmongFriends.trend30);
+    	db.execSQL(SampleTrendingAmongFriends.trend31);
+    	db.execSQL(SampleTrendingAmongFriends.trend32);
+    	db.execSQL(SampleTrendingAmongFriends.trend33);
+    	db.execSQL(SampleTrendingAmongFriends.trend34);
+    	db.execSQL(SampleTrendingAmongFriends.trend35);
+    	db.execSQL(SampleTrendingAmongFriends.trend36);
  
     }
     
     public void loadSamplePopularItems(SQLiteDatabase db)
     {
-    	
+    	db.execSQL(SamplePopularItems.pop1);
+    	db.execSQL(SamplePopularItems.pop2);
+    	db.execSQL(SamplePopularItems.pop3);
+    	db.execSQL(SamplePopularItems.pop4);
+    	db.execSQL(SamplePopularItems.pop5);
+    	db.execSQL(SamplePopularItems.pop6);
+    	db.execSQL(SamplePopularItems.pop7);
+    	db.execSQL(SamplePopularItems.pop8);
     }
 }

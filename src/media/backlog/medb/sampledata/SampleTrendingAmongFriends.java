@@ -1,6 +1,6 @@
 package media.backlog.medb.sampledata;
 
-public class SampleTrending {
+public class SampleTrendingAmongFriends {
 
 	//inception 0
 	public static String trend1 = "INSERT INTO TrendingAmongFriends (itemID, friendID) VALUES (0,1)";
