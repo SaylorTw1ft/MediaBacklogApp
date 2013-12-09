@@ -33,43 +33,42 @@
         android:contentDescription="@string/nav_block"
         android:layout_below="@+id/horizontal_scroll_bar"
         android:layout_alignParentLeft="true"
-        android:layout_marginTop="200dp"
         android:layout_above="@+id/home_bar"
         android:layout_alignParentRight="true"
-        android:src="@drawable/ic_nav_block" />
+        android:src="@drawable/ic_nav_block"
+        android:maxHeight="200dp"
+        android:maxWidth="200dp" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Movie"
-        android:id="@+id/button"
-        android:layout_above="@+id/home_bar"
-        android:layout_marginBottom="89dp"
-        android:layout_alignParentRight="true" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Button"
-        android:id="@+id/button2"
-        android:layout_alignTop="@+id/nav_block"
-        android:layout_centerHorizontal="true" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Button"
-        android:id="@+id/button3"
-        android:layout_alignTop="@+id/button"
+        android:layout_width="125dp"
+        android:layout_height="80dp"
+        android:id="@+id/movie_button"
         android:layout_alignParentLeft="true"
-        android:layout_marginLeft="45dp" />
+        android:layout_above="@+id/game_button"
+        android:visibility="invisible" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Button"
-        android:id="@+id/button4"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:id="@+id/music_button"
+        android:layout_below="@+id/horizontal_scroll_bar"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible" />
+
+    <Button
+        android:layout_width="125dp"
+        android:layout_height="80dp"
+        android:id="@+id/book_button"
+        android:layout_alignParentRight="true"
+        android:layout_above="@+id/game_button"
+        android:visibility="invisible" />
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:id="@+id/game_button"
         android:layout_above="@+id/home_bar"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible" />
 
 </RelativeLayout>

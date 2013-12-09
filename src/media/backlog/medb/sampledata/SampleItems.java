@@ -67,7 +67,7 @@ public class SampleItems {
 	public static String item22 = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
 			"VALUES (22, 'NHL 14', 2, 'sports', 4, 'games/nhl14.png')";
 	public static String item23 = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
-			"VALUES (23, 'Assassin's Creed IV: Black Flag', 2, 'action', 5, 'games/assassinscreed.png')";
+			"VALUES (23, 'Assassins Creed IV: Black Flag', 2, 'action', 5, 'games/assassinscreed.png')";
 	public static String item24 = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
 			"VALUES (24, 'Forza Motorsport 5', 2, 'racing', 4, 'games/forza5.png')";
 	public static String item25 = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +

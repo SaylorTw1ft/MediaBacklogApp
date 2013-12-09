@@ -10,6 +10,7 @@ import media.backlog.medb.database.Lists;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
@@ -39,17 +40,16 @@ public class OrganizeActivity extends Activity {
 	boolean games_checked;
 	boolean books_checked;
 	boolean music_checked;
-	
-	ArrayList<MediaList> all_lists;
+    OrgListAdapter adapter;
+    ArrayList<MediaList> all_lists;
 	ListView org_list;
-	OrgListAdapter adapter;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_organize);
-		
-		t_movies = (ToggleButton) findViewById(R.id.toggle_org_movies);
+        getActionBar().setDisplayHomeAsUpEnabled(true);
+        t_movies = (ToggleButton) findViewById(R.id.toggle_org_movies);
 		t_games = (ToggleButton) findViewById(R.id.toggle_org_games);
 		t_books = (ToggleButton) findViewById(R.id.toggle_org_books);
 		t_music = (ToggleButton) findViewById(R.id.toggle_org_music);
@@ -166,5 +166,18 @@ public class OrganizeActivity extends Activity {
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle presses on the action bar items
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                android.support.v4.app.NavUtils.navigateUpFromSameTask(this);
+                return true;
+
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
 
 }

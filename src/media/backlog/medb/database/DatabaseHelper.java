@@ -30,12 +30,6 @@ public class DatabaseHelper extends SQLiteOpenHelper
     {
     	deleteTables(db);
     	createTables(db);
-    	loadSampleLists(db);
-    	loadSampleListItems(db);
-    	loadSampleItems(db);
-    	loadSampleFriends(db);
-    	loadSampleTrendingAmongFriends(db);
-    	loadSamplePopularItems(db);
     }
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion)
     {
@@ -67,6 +61,18 @@ public class DatabaseHelper extends SQLiteOpenHelper
         db.execSQL(TrendingAmongFriendsEntry.SQL_DELETE_TABLE);
         db.execSQL(FriendsEntry.SQL_DELETE_TABLE);
         db.execSQL(PopularItemsEntry.SQL_DELETE_TABLE);
+    }
+    
+    public void loadSampleData(SQLiteDatabase db)
+    {
+    	deleteTables(db);
+    	createTables(db);
+    	loadSampleLists(db);
+    	loadSampleListItems(db);
+    	loadSampleItems(db);
+    	loadSampleFriends(db);
+    	loadSampleTrendingAmongFriends(db);
+    	loadSamplePopularItems(db);
     }
     
     public void loadSampleLists(SQLiteDatabase db)
