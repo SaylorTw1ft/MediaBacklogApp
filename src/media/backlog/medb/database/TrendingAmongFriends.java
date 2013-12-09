@@ -2,6 +2,7 @@ package media.backlog.medb.database;
 
 import java.util.ArrayList;
 
+import media.backlog.medb.data.MediaItem;
 import media.backlog.medb.data.TrendingItem;
 
 import android.database.Cursor;
@@ -32,7 +33,7 @@ public final class TrendingAmongFriends
     	    "DROP TABLE IF EXISTS " + TrendingAmongFriendsEntry.TABLE_NAME;
     }
     
-    public static ArrayList<TrendingItem> getTrendingItems(DatabaseHelper dbHelper)
+    public static ArrayList<TrendingItem> getTrendingAmongFriendsItems(DatabaseHelper dbHelper)
     {
     	SQLiteDatabase db = dbHelper.getReadableDatabase();
 
@@ -56,6 +57,63 @@ public final class TrendingAmongFriends
     	    sortOrder                                 // The sort order
     	    );
     	
-    	return new ArrayList<TrendingItem>();
+    	ArrayList<TrendingItem> trendingItems = new ArrayList<TrendingItem>();
+    	cursor.moveToFirst();
+    	
+    	while(true)
+    	{
+    		int itemID = cursor.getInt(cursor.getColumnIndex(TrendingAmongFriendsEntry.COLUMN_NAME_ITEMID));
+    		trendingItems.add(TrendingAmongFriends.getTrendingItem(dbHelper, itemID));
+    		
+    		if(cursor.moveToNext() == false)
+    		{
+    			break;
+    		}
+    	}
+    	
+    	return trendingItems;
+    }
+    
+    private static TrendingItem getTrendingItem(DatabaseHelper dbHelper, int itemID)
+    {
+    	MediaItem mediaItem = Items.getItem(dbHelper, itemID);
+    	TrendingItem item = new TrendingItem(itemID);
+    	item.copyFromMediaItem(mediaItem);
+    	
+    	SQLiteDatabase db = dbHelper.getReadableDatabase();
+
+    	// Define a projection that specifies which columns from the database
+    	// you will actually use after this query.
+    	String[] projection = {
+    		TrendingAmongFriendsEntry.COLUMN_NAME_FRIENDID
+    	    };
+    	
+    	String[] selectionArgs = { String.valueOf(itemID) };
+
+    	Cursor cursor = db.query(
+			TrendingAmongFriendsEntry.TABLE_NAME,  	  // The table to query
+    	    projection,                               // The columns to return
+    	    TrendingAmongFriendsEntry.COLUMN_NAME_ITEMID + " = ?",  // The columns for the WHERE clause
+    	    selectionArgs,                            		  // The values for the WHERE clause
+    	    null,									  // don't group the rows
+    	    null,                                     // don't filter by row groups
+    	    null                                 // The sort order
+    	    );
+    	
+    	if(cursor.moveToFirst())
+    	{
+    		while(true)
+        	{
+        		int friendID = cursor.getInt(cursor.getColumnIndex(TrendingAmongFriendsEntry.COLUMN_NAME_FRIENDID));
+        		item.addFriend(Friends.getFriend(dbHelper, friendID));
+        		
+        		if(cursor.moveToNext() == false)
+        		{
+        			break;
+        		}
+        	}
+    	}
+    	
+    	return item;
     }
 }
