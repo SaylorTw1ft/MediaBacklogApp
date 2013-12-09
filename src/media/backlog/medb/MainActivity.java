@@ -32,6 +32,7 @@ public class MainActivity extends Activity {
         		if(event.getAction() == MotionEvent.ACTION_DOWN)
         		{
         			//Left Movies Triangle
+        			
         			if(event.getX() / navBlock.getWidth() < event.getY() / navBlock.getHeight() &&
         					navBlock.getWidth() - event.getX() > navBlock.getHeight() - event.getY()){
         				startNewIntent(1);
