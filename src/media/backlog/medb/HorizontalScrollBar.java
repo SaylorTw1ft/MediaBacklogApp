@@ -1,7 +1,9 @@
 package media.backlog.medb;
 
 import android.app.Fragment;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,6 +34,8 @@ public class HorizontalScrollBar extends Fragment
             scrollingItem.addView(b);
             TextView t1 = new TextView(v.getContext());
             t1.setText("Thor");
+            t1.setTextColor(Color.WHITE);
+            t1.setGravity(Gravity.CENTER_HORIZONTAL);
             scrollingItem.addView(t1);
             
             l.addView(scrollingItem);
