@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <ImageView
+        android:id="@+id/mediaImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" 
+        android:src="@drawable/ic_thor" />
+
+    <ImageView
+        android:id="@+id/addButton"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/mediaTitle"
+        android:src="@drawable/ic_add" />
+
+    <ImageView
+        android:id="@+id/ratingButton"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignBottom="@+id/mediaImage"
+        android:layout_alignLeft="@+id/mediaTitle"
+        android:layout_marginBottom="14dp"
+        android:src="@drawable/ic_rating" />
+
+    <EditText
+        android:id="@+id/mediaTitle"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/addButton"
+        android:layout_toRightOf="@+id/mediaImage"
+        android:ems="10"
+        android:singleLine="true"
+        android:text="Media Title" />
+
+    <ImageView
+        android:id="@+id/movieType"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignLeft="@+id/ratingButton"
+        android:layout_below="@+id/mediaTitle"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_movie" />
+
+    <EditText
+        android:id="@+id/numOfPeople"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/movieType"
+        android:layout_toRightOf="@+id/mediaTitle"
+        android:ems="5"
+        android:singleLine="false"
+        android:text="have seen this.." >
+
+        <requestFocus />
+    </EditText>
+
+</RelativeLayout>
