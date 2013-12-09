@@ -18,8 +18,8 @@ public class SearchResultListAdaptor extends ArrayAdapter<MediaList> {
 	
     private Context context;
 
-    public SearchResultListAdaptor(Context context, int textViewResourceId, ArrayList<MediaList> items) {
-        super(context, textViewResourceId, items);
+    public SearchResultListAdaptor(Context context, int textViewResourceId, ArrayList<MediaItem> items) {
+        super(context, textViewResourceId);
         this.context = context;
     }
 
