@@ -1,5 +1,9 @@
 package media.backlog.medb.database;
 
+import java.util.ArrayList;
+
+import media.backlog.medb.data.TrendingItem;
+
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.provider.BaseColumns;
@@ -28,7 +32,7 @@ public final class TrendingAmongFriends
     	    "DROP TABLE IF EXISTS " + TrendingAmongFriendsEntry.TABLE_NAME;
     }
     
-    public static int getTrendingItems(DatabaseHelper dbHelper)
+    public static ArrayList<TrendingItem> getTrendingItems(DatabaseHelper dbHelper)
     {
     	SQLiteDatabase db = dbHelper.getReadableDatabase();
 
@@ -36,24 +40,22 @@ public final class TrendingAmongFriends
     	// you will actually use after this query.
     	String[] projection = {
     		TrendingAmongFriendsEntry.COLUMN_NAME_ITEMID,
-			TrendingAmongFriendsEntry.COLUMN_NAME_FRIENDID
+			"COUNT(" + TrendingAmongFriendsEntry.COLUMN_NAME_FRIENDID + ")"
     	    };
-    	
-    	//String[] selectionArgs = { String.valueOf(listID) };
 
     	// How you want the results sorted in the resulting Cursor
-    	//String sortOrder = FeedEntry.COLUMN_NAME_UPDATED + " DESC";
+    	String sortOrder = "COUNT(" + TrendingAmongFriendsEntry.COLUMN_NAME_FRIENDID + ")" + " DESC";
 
     	Cursor cursor = db.query(
-			TrendingAmongFriendsEntry.TABLE_NAME,  // The table to query
+			TrendingAmongFriendsEntry.TABLE_NAME,  	  // The table to query
     	    projection,                               // The columns to return
-    	    TrendingAmongFriendsEntry.COLUMN_NAME_FRIENDID + " = ?",    // The columns for the WHERE clause
-    	    null,                            // The values for the WHERE clause
-    	    null,                                     // don't group the rows
+    	    null,    								  // The columns for the WHERE clause
+    	    null,                            		  // The values for the WHERE clause
+    	    TrendingAmongFriendsEntry.COLUMN_NAME_ITEMID, // don't group the rows
     	    null,                                     // don't filter by row groups
-    	    null                                 // The sort order
+    	    sortOrder                                 // The sort order
     	    );
     	
-    	return cursor.getCount();
+    	return new ArrayList<TrendingItem>();
     }
 }
