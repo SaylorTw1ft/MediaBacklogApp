@@ -7,59 +7,55 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.View.OnTouchListener;
 import android.widget.Button;
+import android.widget.ImageView;
 
 public class MainActivity extends Activity {
-
+	
+    public void startNewIntent(int category){
+        Intent intent = new Intent(MainActivity.this, OrganizeActivity.class);
+        Bundle b = new Bundle();
+        b.putInt("category", category);
+        intent.putExtras(b);
+        startActivity(intent);
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        final ImageView navBlock = (ImageView) findViewById(R.id.nav_block);
         
-        Button movie = (Button) findViewById(R.id.movie_button);
-        movie.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, OrganizeActivity.class);
-                Bundle b = new Bundle();
-                b.putInt("category", 1);
-                intent.putExtras(b);
-                startActivity(intent);
-            }
+        navBlock.setOnTouchListener(new OnTouchListener()
+        {
+        	public boolean onTouch(View v, MotionEvent event){
+        		if(event.getAction() == MotionEvent.ACTION_DOWN)
+        		{
+        			//Bottom Games Triangle
+        			if(event.getX() / navBlock.getWidth() < event.getY() / navBlock.getHeight() &&
+        					navBlock.getWidth() - event.getX() < navBlock.getHeight() - event.getY()){
+        				startNewIntent(2);
+        			}
+        			//Top Music Triangle
+        			if(event.getX() / navBlock.getWidth() > event.getY() / navBlock.getHeight() &&
+        					navBlock.getWidth() - event.getX() > navBlock.getHeight() - event.getY()){
+        				startNewIntent(4);
+        			}
+        			//Left Movies Triangle
+        			if(event.getX() / navBlock.getWidth() < event.getY() / navBlock.getHeight() &&
+        					navBlock.getWidth() - event.getX() > navBlock.getHeight() - event.getY()){
+        				startNewIntent(2);
+        			}
+        			//Right Books Triangle
+        			if(event.getX() / navBlock.getWidth() > event.getY() / navBlock.getHeight() &&
+        					navBlock.getWidth() - event.getX() < navBlock.getHeight() - event.getY()){
+        				startNewIntent(2);
+        			}
+        		}
+        		return false;
+        	}
         });
-        Button game = (Button) findViewById(R.id.game_button);
-        game.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, OrganizeActivity.class);
-                Bundle b = new Bundle();
-                b.putInt("category", 2);
-                intent.putExtras(b);
-                startActivity(intent);
-            }
-        });
-        Button book = (Button) findViewById(R.id.book_button);
-        book.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, OrganizeActivity.class);
-                Bundle b = new Bundle();
-                b.putInt("category", 3);
-                intent.putExtras(b);
-                startActivity(intent);
-            }
-        });
-        Button music = (Button) findViewById(R.id.music_button);
-        music.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, OrganizeActivity.class);
-                Bundle b = new Bundle();
-                b.putInt("category", 4);
-                intent.putExtras(b);
-                startActivity(intent);
-            }
-        });
+
     }
 
     @Override
@@ -85,27 +81,4 @@ public class MainActivity extends Activity {
     public void openSettings() {
     }
 
-    /*
-    @Override
-    public boolean onTouchEvent(MotionEvent event) {
-
-    	float eventX = event.getX();
-    	float eventY = event.getY();
-
-        switch (event.getAction()) {
-        case MotionEvent.ACTION_DOWN:{
-        	
-        }
-        case MotionEvent.ACTION_POINTER_DOWN:
-        case MotionEvent.ACTION_MOVE:
-        case MotionEvent.ACTION_UP:
-        case MotionEvent.ACTION_POINTER_UP:
-        case MotionEvent.ACTION_CANCEL: {
-          break;
-        }
-        }
-
-        return true;
-    } 
-    */
 }
