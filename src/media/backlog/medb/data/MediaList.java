@@ -1,5 +1,9 @@
 package media.backlog.medb.data;
 
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.PriorityQueue;
+
 public class MediaList
 {
 	private int listID;
@@ -78,5 +82,36 @@ public class MediaList
 	public int getNumItems()
 	{
 		return numItems;
+	}
+	
+	public void sortListsByNumberOfItems(ArrayList<MediaList> list)
+	{
+		PriorityQueue<MediaList> queue = new PriorityQueue<MediaList>(100, new Comparator<MediaList>()
+		{
+			@Override
+			public int compare(MediaList a,MediaList b)
+			{
+				if(a.getNumItems() > b.getNumItems())
+				{
+					return -1;
+				}
+				else if(a.getNumItems() == b.getNumItems())
+				{
+					return a.getListName().compareTo(b.getListName());
+				}
+				else
+				{
+					return 1;
+				}
+			}
+		});
+		
+		queue.addAll(list);
+        list.clear();
+
+        while(!queue.isEmpty())
+		{
+			list.add(queue.poll());
+		}
 	}
 }
