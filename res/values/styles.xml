@@ -20,7 +20,7 @@
         <item name = "android:layout_width">@dimen/home_bar_icon_dim</item>
         <item name = "android:layout_height">@dimen/home_bar_icon_dim</item>
         <item name = "android:layout_weight">1</item>
-        <item name = "android:background">@color/home_color</item>
+        <item name = "android:background">#6699cc</item>
        	<item name = "android:textSize">12sp</item>
         <item name = "android:textColor">#FFFFFF</item>
         <item name = "android:clickable">true</item>
