@@ -1,4 +1,4 @@
-package media.backlog.medb.adpater;
+package media.backlog.medb.adapter;
 
 
 import android.support.v4.app.Fragment;

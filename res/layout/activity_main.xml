@@ -14,4 +14,62 @@
         android:id="@+id/home_bar"
         android:layout_alignParentBottom="true"
         tools:layout="@layout/home_bar"></fragment>
+
+    <fragment
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:name="media.backlog.medb.HorizontalScrollBar"
+        android:id="@+id/horizontal_scroll_bar"
+        android:layout_alignParentTop="true"
+
+        tools:layout="@layout/horizontal_scroll_bar"
+
+        ></fragment>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/nav_block"
+        android:contentDescription="@string/nav_block"
+        android:layout_below="@+id/horizontal_scroll_bar"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="200dp"
+        android:layout_above="@+id/home_bar"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_nav_block" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Movie"
+        android:id="@+id/button"
+        android:layout_above="@+id/home_bar"
+        android:layout_marginBottom="89dp"
+        android:layout_alignParentRight="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Button"
+        android:id="@+id/button2"
+        android:layout_alignTop="@+id/nav_block"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Button"
+        android:id="@+id/button3"
+        android:layout_alignTop="@+id/button"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="45dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Button"
+        android:id="@+id/button4"
+        android:layout_above="@+id/home_bar"
+        android:layout_centerHorizontal="true" />
+
 </RelativeLayout>
