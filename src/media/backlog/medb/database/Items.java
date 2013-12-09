@@ -89,7 +89,7 @@ public final class Items
     	    ItemEntry.COLUMN_NAME_ITEMID
     	    };
     	
-    	String[] selectionArgs = { String.valueOf(searchString) };
+    	String[] selectionArgs = { "%" + searchString + "%" };
 
     	// How you want the results sorted in the resulting Cursor
     	//String sortOrder = FeedEntry.COLUMN_NAME_UPDATED + " DESC";
@@ -97,7 +97,7 @@ public final class Items
     	Cursor cursor = db.query(
     	    ItemEntry.TABLE_NAME,  // The table to query
     	    projection,                               // The columns to return
-    	    ItemEntry.COLUMN_NAME_ITEMNAME + " = ?",    // The columns for the WHERE clause
+    	    ItemEntry.COLUMN_NAME_ITEMNAME + " LIKE ?",    // The columns for the WHERE clause
     	    selectionArgs,                            // The values for the WHERE clause
     	    null,                                     // don't group the rows
     	    null,                                     // don't filter by row groups
@@ -123,56 +123,16 @@ public final class Items
     		
     		for(MediaItem item : searchResults)
     		{
-    			String genre = item.getGenre();
+    			ArrayList<MediaItem> similarItems = Items.getSimilarItems(dbHelper, item);
     			
-    			String[] itemProjection = {
-					ItemEntry.COLUMN_NAME_ITEMID,
-		    	    ItemEntry.COLUMN_NAME_ITEMNAME,
-		    	    ItemEntry.COLUMN_NAME_CATEGORY,
-		    	    ItemEntry.COLUMN_NAME_GENRE,
-		    	    ItemEntry.COLUMN_NAME_RATING,
-		    	    ItemEntry.COLUMN_NAME_PICTURE
-		    	    };
-    		    	
-    		    	String[] itemSelectionArgs = { genre };
-
-    		    	// How you want the results sorted in the resulting Cursor
-    		    	//String sortOrder = FeedEntry.COLUMN_NAME_UPDATED + " DESC";
-
-    		    	Cursor itemCursor = db.query(
-    		    	    ItemEntry.TABLE_NAME,  // The table to query
-    		    	    itemProjection,                               // The columns to return
-    		    	    ItemEntry.COLUMN_NAME_GENRE + " = ?",    // The columns for the WHERE clause
-    		    	    itemSelectionArgs,                            // The values for the WHERE clause
-    		    	    null,                                     // don't group the rows
-    		    	    null,                                     // don't filter by row groups
-    		    	    null                                 // The sort order
-    		    	    );
-    		    	
-    		    	if(itemCursor.moveToFirst())
-    		    	{
-    		    		while(true)
-    		    		{
-    		    			int searchItemID = cursor.getInt(cursor.getColumnIndex(ItemEntry.COLUMN_NAME_ITEMID));
-    		    			if(resultIDs.get(searchItemID) < 0)
-    		    			{
-    		    				MediaItem searchItem = new MediaItem(searchItemID);
-    		    				searchItem.setItemName(cursor.getString(cursor.getColumnIndex(ItemEntry.COLUMN_NAME_ITEMNAME)));
-    		    				searchItem.setCategory(cursor.getInt(cursor.getColumnIndex(ItemEntry.COLUMN_NAME_CATEGORY)));
-    		    				searchItem.setGenre(cursor.getString(cursor.getColumnIndex(ItemEntry.COLUMN_NAME_GENRE)));
-    		    				searchItem.setRating(cursor.getInt(cursor.getColumnIndex(ItemEntry.COLUMN_NAME_RATING)));
-    		    				searchItem.setPicture(cursor.getString(cursor.getColumnIndex(ItemEntry.COLUMN_NAME_PICTURE)));
-    		    				
-    		    				resultIDs.add(searchItemID);
-    		    				searchResults.add(searchItem);
-    		    			}
-    		    			
-    		    			if(cursor.moveToNext() == false)
-		            		{
-		            			break;
-		            		}
-    		    		}
-    		    	}
+    			for(MediaItem sItem : similarItems)
+    			{
+    				if(resultIDs.get(sItem.getItemID()) < 0)
+        			{
+        				resultIDs.add(sItem.getItemID());
+        				searchResults.add(sItem);
+        			}
+    			}
     		}
     	}
     	
@@ -181,7 +141,57 @@ public final class Items
     
     public static ArrayList<MediaItem> getSimilarItems(DatabaseHelper dbHelper, MediaItem item)
     {
-    	//TODO: Implement this function
-    	return new ArrayList<MediaItem>();
+    	SQLiteDatabase db = dbHelper.getReadableDatabase();
+    	String genre = item.getGenre();
+		
+		String[] projection = {
+			ItemEntry.COLUMN_NAME_ITEMID,
+    	    ItemEntry.COLUMN_NAME_ITEMNAME,
+    	    ItemEntry.COLUMN_NAME_CATEGORY,
+    	    ItemEntry.COLUMN_NAME_GENRE,
+    	    ItemEntry.COLUMN_NAME_RATING,
+    	    ItemEntry.COLUMN_NAME_PICTURE
+    	    };
+	    	
+    	String[] selectionArgs = { genre };
+
+    	// How you want the results sorted in the resulting Cursor
+    	//String sortOrder = FeedEntry.COLUMN_NAME_UPDATED + " DESC";
+
+    	Cursor cursor = db.query(
+    	    ItemEntry.TABLE_NAME,  // The table to query
+    	    projection,                               // The columns to return
+    	    ItemEntry.COLUMN_NAME_GENRE + " = ?",    // The columns for the WHERE clause
+    	    selectionArgs,                            // The values for the WHERE clause
+    	    null,                                     // don't group the rows
+    	    null,                                     // don't filter by row groups
+    	    null                                 // The sort order
+    	    );
+    	
+    	cursor.moveToFirst();
+    	ArrayList<MediaItem> similarItems = new ArrayList<MediaItem>();
+    	
+		while(true)
+		{
+			int searchItemID = cursor.getInt(cursor.getColumnIndex(ItemEntry.COLUMN_NAME_ITEMID));
+			if(searchItemID != item.getItemID())
+			{
+				MediaItem searchItem = new MediaItem(searchItemID);
+				searchItem.setItemName(cursor.getString(cursor.getColumnIndex(ItemEntry.COLUMN_NAME_ITEMNAME)));
+				searchItem.setCategory(cursor.getInt(cursor.getColumnIndex(ItemEntry.COLUMN_NAME_CATEGORY)));
+				searchItem.setGenre(cursor.getString(cursor.getColumnIndex(ItemEntry.COLUMN_NAME_GENRE)));
+				searchItem.setRating(cursor.getInt(cursor.getColumnIndex(ItemEntry.COLUMN_NAME_RATING)));
+				searchItem.setPicture(cursor.getString(cursor.getColumnIndex(ItemEntry.COLUMN_NAME_PICTURE)));
+				
+				similarItems.add(searchItem);
+			}
+			
+			if(cursor.moveToNext() == false)
+    		{
+    			break;
+    		}
+    	}
+		
+		return similarItems;
     }
 }

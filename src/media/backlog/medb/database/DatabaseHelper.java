@@ -10,6 +10,7 @@ import media.backlog.medb.sampledata.SampleFriends;
 import media.backlog.medb.sampledata.SampleItems;
 import media.backlog.medb.sampledata.SampleListItems;
 import media.backlog.medb.sampledata.SampleLists;
+import media.backlog.medb.sampledata.SampleTrending;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -210,7 +211,43 @@ public class DatabaseHelper extends SQLiteOpenHelper
     
     public void loadSampleTrendingAmongFriends(SQLiteDatabase db)
     {
-    	
+    	db.execSQL(SampleTrending.trend1);
+    	db.execSQL(SampleTrending.trend2);
+    	db.execSQL(SampleTrending.trend3);
+    	db.execSQL(SampleTrending.trend4);
+    	db.execSQL(SampleTrending.trend5);
+    	db.execSQL(SampleTrending.trend6);
+    	db.execSQL(SampleTrending.trend7);
+    	db.execSQL(SampleTrending.trend8);
+    	db.execSQL(SampleTrending.trend9);
+    	db.execSQL(SampleTrending.trend10);
+    	db.execSQL(SampleTrending.trend11);
+    	db.execSQL(SampleTrending.trend12);
+    	db.execSQL(SampleTrending.trend13);
+    	db.execSQL(SampleTrending.trend14);
+    	db.execSQL(SampleTrending.trend15);
+    	db.execSQL(SampleTrending.trend16);
+    	db.execSQL(SampleTrending.trend17);
+    	db.execSQL(SampleTrending.trend18);
+    	db.execSQL(SampleTrending.trend19);
+    	db.execSQL(SampleTrending.trend20);
+    	db.execSQL(SampleTrending.trend21);
+    	db.execSQL(SampleTrending.trend22);
+    	db.execSQL(SampleTrending.trend23);
+    	db.execSQL(SampleTrending.trend24);
+    	db.execSQL(SampleTrending.trend25);
+    	db.execSQL(SampleTrending.trend26);
+    	db.execSQL(SampleTrending.trend27);
+    	db.execSQL(SampleTrending.trend28);
+    	db.execSQL(SampleTrending.trend29);
+    	db.execSQL(SampleTrending.trend30);
+    	db.execSQL(SampleTrending.trend31);
+    	db.execSQL(SampleTrending.trend32);
+    	db.execSQL(SampleTrending.trend33);
+    	db.execSQL(SampleTrending.trend34);
+    	db.execSQL(SampleTrending.trend35);
+    	db.execSQL(SampleTrending.trend36);
+ 
     }
     
     public void loadSamplePopularItems(SQLiteDatabase db)
