@@ -23,6 +23,7 @@
     <string name="item_view">Item View</string>
     <string name="pane_view">Pane View</string>
     <string name="list_view">List View</string>
+    <string name="settings_view">Settings View</string>
 
     <!-- Movies View  -->
     <string name="movies_title">Movies</string>

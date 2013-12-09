@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:contentDescription="@string/settings_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsActivity">
 
+   <fragment
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:name="media.backlog.medb.HomeBar"
+        android:id="@+id/home_bar"
+        android:layout_alignParentBottom="true"
+        tools:layout="@layout/home_bar"></fragment>
 </RelativeLayout>
