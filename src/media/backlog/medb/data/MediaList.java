@@ -84,7 +84,7 @@ public class MediaList
 		return numItems;
 	}
 	
-	public void sortListsByNumberOfItems(ArrayList<MediaList> list)
+	public static void sortListsByNumberOfItems(ArrayList<MediaList> list)
 	{
 		PriorityQueue<MediaList> queue = new PriorityQueue<MediaList>(100, new Comparator<MediaList>()
 		{
