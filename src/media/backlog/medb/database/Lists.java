@@ -3,6 +3,7 @@ package media.backlog.medb.database;
 import java.util.ArrayList;
 
 import media.backlog.medb.data.MediaList;
+import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.provider.BaseColumns;
@@ -115,5 +116,29 @@ public final class Lists
     	list.setNumItems(ListItems.getItemCountForList(dbHelper, listID));
     	
     	return list;
+    }
+    
+    public static void addList(DatabaseHelper dbHelper, MediaList list)
+    {
+    	SQLiteDatabase db = dbHelper.getWritableDatabase();
+
+    	ContentValues values = new ContentValues();
+    	values.put(ListEntry.COLUMN_NAME_LISTID, list.getListID());
+    	values.put(ListEntry.COLUMN_NAME_LISTNAME, list.getListName());
+    	values.put(ListEntry.COLUMN_NAME_MOVIE, list.getMovie() ? 1 : 0);
+    	values.put(ListEntry.COLUMN_NAME_GAME, list.getGame() ? 1 : 0);
+    	values.put(ListEntry.COLUMN_NAME_MUSIC, list.getMusic() ? 1 : 0);
+    	values.put(ListEntry.COLUMN_NAME_BOOK, list.getBook() ? 1 : 0);
+
+    	// Insert the new row, returning the primary key value of the new row
+    	db.insert(ListEntry.TABLE_NAME, null, values);
+    }
+    
+    public static void deleteList(DatabaseHelper dbHelper, int listID)
+    {
+    	SQLiteDatabase db = dbHelper.getWritableDatabase();
+    	String selection = ListEntry.COLUMN_NAME_LISTID + " = ?";
+    	String[] selectionArgs = { String.valueOf(listID) };
+    	db.delete(ListEntry.TABLE_NAME, selection, selectionArgs);
     }
 }
