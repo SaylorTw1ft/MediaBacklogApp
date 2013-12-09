@@ -43,9 +43,8 @@ public class ItemActivity extends Activity {
     }
     public void setUpButtons()
     {
-        Button add = (Button)findViewById(R.id.add_button);
-        Button share = (Button)findViewById(R.id.share_button);
-        add.setOnClickListener(new ItemClick());
+       Button share = (Button)findViewById(R.id.share_button);
+       share.setOnClickListener(new ItemClick());
     }
     private void setSimilarItems() {
         ArrayList<MediaItem> similarItems = media.backlog.medb.database.Items.getSimilarItems(helper, item);
