@@ -11,43 +11,30 @@
     style="@android:style/ButtonBar"
     android:gravity="center">
 
-    <ImageButton
+    <Button
+        style="@style/home_bar_button"
         android:contentDescription="@string/home_button"
-        android:layout_width="@dimen/home_bar_icon_dim"
-        android:layout_height="@dimen/home_bar_icon_dim"
         android:id="@+id/homeButton"
-        android:src="@drawable/ic_action_home"
-        android:layout_weight="1"
-        android:background="@color/home_color"
-        android:clickable="true" />
+        android:drawableTop="@drawable/ic_action_home"
+        android:text="HOME"/>
 
-    <ImageButton
+    <Button
+        style="@style/home_bar_button"
         android:contentDescription="@string/organize_button"
-        android:layout_width="@dimen/home_bar_icon_dim"
-        android:layout_height="@dimen/home_bar_icon_dim"
         android:id="@+id/organizeButton"
-        android:src="@drawable/ic_action_select_all"
-        android:layout_weight="1"
-        android:background="@color/home_color"
-        android:clickable="true" />
+        android:drawableTop="@drawable/ic_action_select_all"
+        android:text="ORGANIZE"/>
 
-    <ImageButton
+    <Button
+        style="@style/home_bar_button"
         android:contentDescription="@string/discover_button"
-        android:layout_width="@dimen/home_bar_icon_dim"
-        android:layout_height="@dimen/home_bar_icon_dim"
         android:id="@+id/discoverButton"
-        android:src="@drawable/ic_action_share"
-        android:layout_weight="1"
-        android:background="@color/home_color"
-        android:clickable="true" />
-
-    <ImageButton
+        android:drawableTop="@drawable/ic_action_share"
+        android:text="DISCOVER" />
+    <Button
+        style="@style/home_bar_button"
         android:contentDescription="@string/search_button"
-        android:layout_width="@dimen/home_bar_icon_dim"
-        android:layout_height="@dimen/home_bar_icon_dim"
         android:id="@+id/searchButton"
-        android:src="@drawable/ic_action_search"
-        android:layout_weight="1"
-        android:background="@color/home_color"
-        android:clickable="true" />
+        android:drawableTop="@drawable/ic_action_search"
+        android:text="SEARCH"/>
 </LinearLayout>

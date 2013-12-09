@@ -6,7 +6,8 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
+import android.widget.Button;
+
 
 
 /**
@@ -16,10 +17,10 @@ public class HomeBar extends Fragment implements View.OnClickListener {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.home_bar, container, false);
-        ImageButton homeButton = (ImageButton) v.findViewById(R.id.homeButton);
-        ImageButton discoverButton = (ImageButton) v.findViewById(R.id.discoverButton);
-        ImageButton organizeButton = (ImageButton) v.findViewById(R.id.organizeButton);
-        ImageButton searchButton = (ImageButton) v.findViewById(R.id.searchButton);
+        Button homeButton = (Button) v.findViewById(R.id.homeButton);
+        Button discoverButton = (Button) v.findViewById(R.id.discoverButton);
+        Button organizeButton = (Button) v.findViewById(R.id.organizeButton);
+        Button searchButton = (Button) v.findViewById(R.id.searchButton);
         homeButton.setOnClickListener(this);
         discoverButton.setOnClickListener(this);
         organizeButton.setOnClickListener(this);
