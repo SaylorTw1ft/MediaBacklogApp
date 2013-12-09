@@ -1,17 +1,18 @@
 package media.backlog.medb;
 
 import android.app.Activity;
-import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-
-import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 
 import media.backlog.medb.database.DatabaseHelper;
@@ -35,10 +36,17 @@ public class ItemActivity extends Activity {
         setItemName();
         setItemGenre();
         setSimilarItems();
+        setUpButtons();
         getActionBar().setDisplayHomeAsUpEnabled(true);
 
-    }
 
+    }
+    public void setUpButtons()
+    {
+        Button add = (Button)findViewById(R.id.add_button);
+        Button share = (Button)findViewById(R.id.share_button);
+        add.setOnClickListener(new ItemClick());
+    }
     private void setSimilarItems() {
         ArrayList<MediaItem> similarItems = media.backlog.medb.database.Items.getSimilarItems(helper, item);
 
@@ -51,20 +59,34 @@ public class ItemActivity extends Activity {
     }
 
     private void setItemName() {
-        TextView text = (TextView) findViewById(R.id.item_name);
-        text.setText(item.getItemName());
+        setTitle(item.getItemName());
+
     }
 
     private void setItemThumbnail() {
         ImageView imageView = (ImageView) findViewById(R.id.item_picture);
         String path = item.getPicture();
-        File drawableFile = new File(getApplicationContext().getFilesDir().getAbsolutePath() + "/res/drawable-hdpi/" + path);
-        String absPath = drawableFile.getAbsolutePath();
-        if (Drawable.createFromPath("C:\\\\Users\\\\Arin\\\\AndroidProjects\\\\MediaBacklogApp\\\\res\\\\drawable-hdpi\\\\movies\\\\thedarkknight.png") != null) {
-            imageView.setImageDrawable(Drawable.createFromPath(absPath));
-        }
-    }
+        try {
 
+            // get input stream
+
+            InputStream ims = getAssets().open(path);
+
+            // load image as Drawable
+
+            Drawable d = Drawable.createFromStream(ims, null);
+
+            // set image to ImageView
+            imageView.setImageDrawable(d);
+
+        }
+
+        catch(IOException ex) {
+
+
+        }
+
+    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -82,6 +104,29 @@ public class ItemActivity extends Activity {
 
             default:
                 return super.onOptionsItemSelected(item);
+        }
+    }
+
+    public void addButton(View v)
+    {
+
+
+    }
+    public void shareButton(View v)
+    {
+
+    }
+    public class ItemClick implements OnClickListener {
+        @Override
+        public void onClick(View v) {
+            switch (v.getId()) {
+                case R.id.homeButton:
+                    addButton(v);
+                    break;
+                case R.id.organizeButton:
+                    shareButton(v);
+                    break;
+            }
         }
     }
 }

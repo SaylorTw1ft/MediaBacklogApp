@@ -26,7 +26,7 @@ public class LoginScreen extends Activity
             public void onClick(View view) {
                 Intent intent = new Intent(LoginScreen.this, ItemActivity.class);
                 Bundle b = new Bundle();
-                b.putInt("id", 2);
+                b.putInt("id", 5);
                 intent.putExtras(b);
                 startActivity(intent);
             }
