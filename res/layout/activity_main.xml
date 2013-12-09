@@ -45,7 +45,7 @@
         android:id="@+id/movie_button"
         android:layout_alignParentLeft="true"
         android:layout_above="@+id/game_button"
-        android:visibility="invisible" />
+        android:background="@android:color/transparent" />
 
     <Button
         android:layout_width="100dp"
@@ -53,7 +53,7 @@
         android:id="@+id/music_button"
         android:layout_below="@+id/horizontal_scroll_bar"
         android:layout_centerHorizontal="true"
-        android:visibility="invisible" />
+        android:background="@android:color/transparent" />
 
     <Button
         android:layout_width="125dp"
@@ -61,7 +61,7 @@
         android:id="@+id/book_button"
         android:layout_alignParentRight="true"
         android:layout_above="@+id/game_button"
-        android:visibility="invisible" />
+        android:background="@android:color/transparent" />
 
     <Button
         android:layout_width="100dp"
@@ -69,6 +69,6 @@
         android:id="@+id/game_button"
         android:layout_above="@+id/home_bar"
         android:layout_centerHorizontal="true"
-        android:visibility="invisible" />
+        android:background="@android:color/transparent" />
 
 </RelativeLayout>
