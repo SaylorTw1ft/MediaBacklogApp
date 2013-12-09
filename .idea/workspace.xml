@@ -18,8 +18,6 @@
   <component name="ChangeListManager">
     <list default="true" id="70439b11-7fc0-42ca-a166-fe8bae816001" name="Default" comment="Framework for action bar buttons&#10;">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/media/backlog/medb/ItemActivity.java" afterPath="$PROJECT_DIR$/src/media/backlog/medb/ItemActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/media/backlog/medb/LoginScreen.java" afterPath="$PROJECT_DIR$/src/media/backlog/medb/LoginScreen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/media/backlog/medb/adapter/OrgBooksFragment.java" afterPath="$PROJECT_DIR$/src/media/backlog/medb/adapter/OrgBooksFragment.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/activity_item.xml" afterPath="$PROJECT_DIR$/res/layout/activity_item.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -88,10 +86,10 @@
     <splitter split-orientation="horizontal" split-proportion="0.57098764">
       <split-first>
         <leaf>
-          <file leaf-file-name="ItemActivity.java" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="ItemActivity.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/media/backlog/medb/ItemActivity.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="51" column="0" selection-start="1581" selection-end="1581" vertical-scroll-proportion="0.1545699" vertical-offset="752" max-vertical-offset="2329">
+                <state line="60" column="26" selection-start="1735" selection-end="1735" vertical-scroll-proportion="0.0" vertical-offset="492" max-vertical-offset="2312">
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -102,16 +100,16 @@
           <file leaf-file-name="HomeBar.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/media/backlog/medb/HomeBar.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="33" column="30" selection-start="1243" selection-end="1243" vertical-scroll-proportion="0.0" vertical-offset="232" max-vertical-offset="1139">
+                <state line="33" column="30" selection-start="1243" selection-end="1243" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1139">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="activity_item.xml" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="activity_item.xml" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/res/layout/activity_item.xml">
               <provider editor-type-id="text-editor">
-                <state line="55" column="17" selection-start="2029" selection-end="2029" vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="1037">
+                <state line="58" column="69" selection-start="2254" selection-end="2254" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="1122">
                   <folding />
                 </state>
               </provider>
@@ -139,7 +137,7 @@
           <file leaf-file-name="HomeBar.java" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/media/backlog/medb/HomeBar.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="52" column="23" selection-start="1761" selection-end="1761" vertical-scroll-proportion="0.62243503" vertical-offset="327" max-vertical-offset="1139">
+                <state line="52" column="23" selection-start="1761" selection-end="1761" vertical-scroll-proportion="0.92268044" vertical-offset="245" max-vertical-offset="1139">
                   <folding />
                 </state>
               </provider>
@@ -206,8 +204,8 @@
         <option value="$PROJECT_DIR$/res/layout/activity_login.xml" />
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/src/media/backlog/medb/LoginScreen.java" />
-        <option value="$PROJECT_DIR$/res/layout/activity_item.xml" />
         <option value="$PROJECT_DIR$/src/media/backlog/medb/ItemActivity.java" />
+        <option value="$PROJECT_DIR$/res/layout/activity_item.xml" />
       </list>
     </option>
   </component>
@@ -776,20 +774,21 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33551913" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33123028" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33440515" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33440515" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39978564" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32896176" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290461" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33333334" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17470525" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17470525" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -800,7 +799,6 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24973711" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33123028" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3279743" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1169,16 +1167,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/activity_item.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state line="55" column="17" selection-start="2029" selection-end="2029" vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="1037">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/media/backlog/medb/HomeBar.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="33" column="30" selection-start="1243" selection-end="1243" vertical-scroll-proportion="0.0" vertical-offset="232" max-vertical-offset="1139">
@@ -1188,10 +1176,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/media/backlog/medb/ItemActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="0" selection-start="1581" selection-end="1581" vertical-scroll-proportion="0.1545699" vertical-offset="752" max-vertical-offset="2329">
+        <state line="60" column="26" selection-start="1735" selection-end="1735" vertical-scroll-proportion="0.0" vertical-offset="492" max-vertical-offset="2312">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/activity_item.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state line="58" column="69" selection-start="2254" selection-end="2254" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="1122">
+          <folding />
         </state>
       </provider>
     </entry>
