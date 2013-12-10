@@ -28,6 +28,26 @@ public class SettingsActivity extends Activity {
 				startActivity(intent);				
 			}
 		});
+        
+        Button about = (Button) findViewById(R.id.about_button);
+        about.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(SettingsActivity.this, About.class);
+				startActivity(intent);
+			}
+		});
+        
+        Button help = (Button) findViewById(R.id.help_button);
+        help.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(SettingsActivity.this, HelpActivity.class);
+				startActivity(intent);	
+			}
+		});
     }
     
     @Override
