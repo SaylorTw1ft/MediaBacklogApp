@@ -56,5 +56,21 @@
 	        android:id="@+id/horizontal_scroll_bar_d2"
 	        tools:layout="@layout/horizontal_scroll_bar">
     	</fragment>
+    	
+	    <TextView
+		   		android:id="@+id/discover_title3"
+		   		android:layout_width="match_parent"
+	       		android:layout_height="wrap_content"
+	       		android:text="New Releases"
+	       		android:gravity="center">   
+	    </TextView>
+	    
+	    <fragment
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:name="media.backlog.medb.HorizontalScrollBar"
+	        android:id="@+id/horizontal_scroll_bar_d3"
+	        tools:layout="@layout/horizontal_scroll_bar">
+    	</fragment>
     </LinearLayout>
 </RelativeLayout>

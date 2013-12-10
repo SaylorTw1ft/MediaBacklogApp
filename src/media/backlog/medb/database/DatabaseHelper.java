@@ -4,12 +4,14 @@ import media.backlog.medb.database.Friends.FriendsEntry;
 import media.backlog.medb.database.Items.ItemEntry;
 import media.backlog.medb.database.ListItems.ListItemEntry;
 import media.backlog.medb.database.Lists.ListEntry;
+import media.backlog.medb.database.NewReleases.NewReleasesEntry;
 import media.backlog.medb.database.PopularItems.PopularItemsEntry;
 import media.backlog.medb.database.TrendingAmongFriends.TrendingAmongFriendsEntry;
 import media.backlog.medb.sampledata.SampleFriends;
 import media.backlog.medb.sampledata.SampleItems;
 import media.backlog.medb.sampledata.SampleListItems;
 import media.backlog.medb.sampledata.SampleLists;
+import media.backlog.medb.sampledata.SampleNewReleases;
 import media.backlog.medb.sampledata.SamplePopularItems;
 import media.backlog.medb.sampledata.SampleTrendingAmongFriends;
 import android.content.Context;
@@ -51,6 +53,7 @@ public class DatabaseHelper extends SQLiteOpenHelper
         db.execSQL(TrendingAmongFriendsEntry.SQL_CREATE_TABLE);
         db.execSQL(FriendsEntry.SQL_CREATE_TABLE);
         db.execSQL(PopularItemsEntry.SQL_CREATE_TABLE);
+        db.execSQL(NewReleasesEntry.SQL_CREATE_TABLE);
     }
     
     public void deleteTables(SQLiteDatabase db)
@@ -61,6 +64,7 @@ public class DatabaseHelper extends SQLiteOpenHelper
         db.execSQL(TrendingAmongFriendsEntry.SQL_DELETE_TABLE);
         db.execSQL(FriendsEntry.SQL_DELETE_TABLE);
         db.execSQL(PopularItemsEntry.SQL_DELETE_TABLE);
+        db.execSQL(NewReleasesEntry.SQL_DELETE_TABLE);
     }
     
     public void loadSampleData(SQLiteDatabase db)
@@ -73,6 +77,7 @@ public class DatabaseHelper extends SQLiteOpenHelper
     	loadSampleFriends(db);
     	loadSampleTrendingAmongFriends(db);
     	loadSamplePopularItems(db);
+    	loadSampleNewReleases(db);
     }
     
     public void loadSampleLists(SQLiteDatabase db)
@@ -267,5 +272,19 @@ public class DatabaseHelper extends SQLiteOpenHelper
     	db.execSQL(SamplePopularItems.pop6);
     	db.execSQL(SamplePopularItems.pop7);
     	db.execSQL(SamplePopularItems.pop8);
+    }
+    
+    public void loadSampleNewReleases(SQLiteDatabase db)
+    {
+    	db.execSQL(SampleNewReleases.nr1);
+    	db.execSQL(SampleNewReleases.nr2);
+    	db.execSQL(SampleNewReleases.nr3);
+    	db.execSQL(SampleNewReleases.nr4);
+    	db.execSQL(SampleNewReleases.nr5);
+    	db.execSQL(SampleNewReleases.nr6);
+    	db.execSQL(SampleNewReleases.nr7);
+    	db.execSQL(SampleNewReleases.nr8);
+    	db.execSQL(SampleNewReleases.nr9);
+    	db.execSQL(SampleNewReleases.nr10);
     }
 }

@@ -8,6 +8,7 @@ import media.backlog.medb.data.MediaItem;
 import media.backlog.medb.data.PopularItem;
 import media.backlog.medb.data.TrendingItem;
 import media.backlog.medb.database.DatabaseHelper;
+import media.backlog.medb.database.NewReleases;
 import media.backlog.medb.database.PopularItems;
 import media.backlog.medb.database.TrendingAmongFriends;
 import android.app.Activity;
@@ -42,6 +43,8 @@ public class DiscoverActivity extends Activity
                 getFragmentManager().findFragmentById(R.id.horizontal_scroll_bar_d1);
         HorizontalScrollBar scrollBar2 = (HorizontalScrollBar)
                 getFragmentManager().findFragmentById(R.id.horizontal_scroll_bar_d2);
+        HorizontalScrollBar scrollBar3 = (HorizontalScrollBar)
+        		getFragmentManager().findFragmentById(R.id.horizontal_scroll_bar_d3);
         
         if(scrollBar1 != null)
         {
@@ -97,6 +100,35 @@ public class DiscoverActivity extends Activity
                     TextView buffer = new TextView(view2.getContext());
                     buffer.setText("  ");
                     view2.addView(buffer);
+                }
+        	}
+        }
+        
+        if(scrollBar3 != null)
+        {
+        	HorizontalScrollView scrollView3 = (HorizontalScrollView) scrollBar3.getView();
+        	LinearLayout view3 = (LinearLayout) scrollView3.findViewById(R.id.horizontal_scroll_bar);
+        	
+        	if(view3 != null)
+        	{
+        		view3.removeAllViews();
+        		//view1.removeAllViewsInLayout();
+        		
+                TextView t = new TextView(view3.getContext());
+                t.setText("  ");
+                view3.addView(t);
+                
+                ArrayList<MediaItem> newReleases = NewReleases.getNewReleases(helper);
+
+                for (int i = 0; i < newReleases.size(); i++)
+                {
+                    MediaItem item1 = newReleases.get(i);
+                    LinearLayout scrollingItem = setUpScrollingItem(view3, item1);
+                    view3.addView(scrollingItem);
+
+                    TextView buffer = new TextView(view3.getContext());
+                    buffer.setText("  ");
+                    view3.addView(buffer);
                 }
         	}
         }
