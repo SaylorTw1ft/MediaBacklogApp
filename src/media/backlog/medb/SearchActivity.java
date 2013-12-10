@@ -121,7 +121,11 @@ public class SearchActivity extends Activity{
 
 		search_list = (ListView) findViewById(R.id.search_list);
 		adapter = new SearchResultListAdaptor(this, R.layout.search_list_display, all_Item);
+		for(int i=0;i<all_Item.size();i++)
+		     adapter.add(all_Item.get(i));
+		
 		search_list.setAdapter(adapter);
+		
 		
 	} 
 
