@@ -95,4 +95,5 @@
     <string name="search_info">Search results for %1$s</string>
     <string name="search_add">ADD</string>
     <string name="login_button">Facebook Login</string>
+    <string name="search_title">Search</string>
 </resources>
