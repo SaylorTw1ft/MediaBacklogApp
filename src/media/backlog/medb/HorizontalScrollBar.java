@@ -1,6 +1,7 @@
 package media.backlog.medb;
 
 import android.app.Fragment;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -50,7 +51,6 @@ public class HorizontalScrollBar extends Fragment
         for (int i = 0; i < 10 && i<items.size(); i++) {
             MediaItem temp = items.get(i);
             LinearLayout scrollingItem = setUpScrollingItem(v, temp);
-
             l.addView(scrollingItem);
         }
 
@@ -62,8 +62,19 @@ public class HorizontalScrollBar extends Fragment
         scrollingItem.setLayoutParams(new LinearLayout.LayoutParams(188,225));
         scrollingItem.setOrientation(LinearLayout.VERTICAL);
         ImageButton button = new ImageButton(scrollingItem.getContext());
+        final int myId = temp.getItemID();
         button.setLayoutParams(new ViewGroup.LayoutParams(150,200));
         button.setScaleType(ScaleType.FIT_START);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(),ItemActivity.class);
+                Bundle b = new Bundle();
+                b.putInt("id",myId);
+                intent.putExtras(b);
+                startActivity(intent);
+            }
+        });
         setThumbnailPic(temp, button);
         TextView t1 = new TextView(v.getContext());
         t1.setText(temp.getItemName());
