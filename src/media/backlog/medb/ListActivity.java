@@ -84,7 +84,7 @@ public class ListActivity extends Activity {
 				  
 				  Bundle b = new Bundle();
 				  b.putString("item_name", this_item.getItemName());
-				  b.putString("id", Integer.toString(this_item.getItemID()));
+				  b.putInt("id", this_item.getItemID());
 				  Intent intent = new Intent(getApplicationContext(), ItemActivity.class);
 				  intent.putExtras(b);
 				  startActivity(intent);
