@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:id = "@+id/add_activity_view">
+    <fragment
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:name="media.backlog.medb.HomeBar"
+        android:id="@+id/home_bar"
+        android:layout_alignParentBottom="true"
+        tools:layout="@layout/home_bar"></fragment>
+    <ListView
+        android:id="@+id/add_activity_lists"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/org_buttons"
+        android:layout_marginTop="10dp" >
+    </ListView>
 
 </RelativeLayout>

@@ -8,6 +8,7 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -34,9 +35,16 @@ public class HorizontalScrollBar extends Fragment
         t.setText("  ");
         l.addView(t);
         DatabaseHelper helper = new DatabaseHelper(getActivity().getApplicationContext());
-        Bundle bundle = new Bundle();
-        int id = 1;
-        MediaItem item = media.backlog.medb.database.Items.getItem(helper, id);
+        Bundle bundle = getArguments();
+        int id;
+        try{
+            id = bundle.getInt("id");
+        }
+        catch (NullPointerException e)
+        {
+            id = 1;
+        }
+            MediaItem item = media.backlog.medb.database.Items.getItem(helper, id);
         ArrayList<MediaItem> items =  media.backlog.medb.database.Items.getSimilarItems(helper, item);
 
         for (int i = 0; i < 10 && i<items.size(); i++) {
@@ -44,10 +52,6 @@ public class HorizontalScrollBar extends Fragment
             LinearLayout scrollingItem = setUpScrollingItem(v, temp);
 
             l.addView(scrollingItem);
-
-            TextView buffer = new TextView(v.getContext());
-            buffer.setText("  ");
-            l.addView(buffer);
         }
 
         return v;
@@ -55,7 +59,7 @@ public class HorizontalScrollBar extends Fragment
 
     private LinearLayout setUpScrollingItem(View v, MediaItem temp) {
         LinearLayout scrollingItem = new LinearLayout(v.getContext());
-        scrollingItem.setLayoutParams(new LinearLayout.LayoutParams(188,250));
+        scrollingItem.setLayoutParams(new LinearLayout.LayoutParams(188,225));
         scrollingItem.setOrientation(LinearLayout.VERTICAL);
         ImageButton button = new ImageButton(scrollingItem.getContext());
         button.setLayoutParams(new ViewGroup.LayoutParams(150,200));
@@ -64,7 +68,7 @@ public class HorizontalScrollBar extends Fragment
         TextView t1 = new TextView(v.getContext());
         t1.setText(temp.getItemName());
         t1.setTextColor(Color.WHITE);
-        t1.setTextSize(12);
+        t1.setTextSize(8);
         t1.setGravity(Gravity.BOTTOM);
         scrollingItem.setMinimumHeight(200);
         scrollingItem.setMinimumWidth(134);

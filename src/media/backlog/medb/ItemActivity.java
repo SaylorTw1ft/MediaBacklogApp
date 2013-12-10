@@ -1,6 +1,9 @@
 package media.backlog.medb;
 
 import android.app.Activity;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.Menu;
@@ -9,6 +12,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.io.IOException;
@@ -37,6 +41,13 @@ public class ItemActivity extends Activity {
         setItemGenre();
         setSimilarItems();
         setUpButtons();
+        FragmentManager fragmentManager = getFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        Bundle args = new Bundle();
+        args.putInt("id",id);
+        HorizontalScrollBar horizontalScrollBar = new HorizontalScrollBar();
+        horizontalScrollBar.setArguments(args);
+        fragmentTransaction.add(R.id.scroll_bar_container, horizontalScrollBar).commit();
         getActionBar().setDisplayHomeAsUpEnabled(true);
 
 
@@ -45,6 +56,8 @@ public class ItemActivity extends Activity {
     {
        Button share = (Button)findViewById(R.id.share_button);
        share.setOnClickListener(new ItemClick());
+       Button add = (Button)findViewById(R.id.add_button);
+       add.setOnClickListener(new ItemClick());
     }
     private void setSimilarItems() {
         ArrayList<MediaItem> similarItems = media.backlog.medb.database.Items.getSimilarItems(helper, item);
@@ -108,21 +121,25 @@ public class ItemActivity extends Activity {
 
     public void addButton(View v)
     {
-
-
+        Intent intent = new Intent(this, AddActivity.class);
+        Bundle b = new Bundle();
+        b.putInt("id",item.getItemID());
+        intent.putExtras(b);
+        startActivityForResult(intent, 1);
     }
     public void shareButton(View v)
     {
-
+        Intent intent = new Intent(this, ShareActivity.class);
+        startActivityForResult(intent, 1);
     }
     public class ItemClick implements OnClickListener {
         @Override
         public void onClick(View v) {
             switch (v.getId()) {
-                case R.id.homeButton:
+                case R.id.add_button:
                     addButton(v);
                     break;
-                case R.id.organizeButton:
+                case R.id.share_button:
                     shareButton(v);
                     break;
             }
