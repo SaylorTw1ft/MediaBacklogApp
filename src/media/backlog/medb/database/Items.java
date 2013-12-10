@@ -127,7 +127,7 @@ public final class Items
     			
     			for(MediaItem sItem : similarItems)
     			{
-    				if(resultIDs.get(sItem.getItemID()) < 0)
+    				if(resultIDs.indexOf(sItem.getItemID()) < 0)
         			{
         				resultIDs.add(sItem.getItemID());
         				searchResults.add(sItem);
