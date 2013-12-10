@@ -1,5 +1,7 @@
 package media.backlog.medb;
 
+import media.backlog.medb.database.DatabaseHelper;
+import media.backlog.medb.database.ListItems;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,6 +9,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 	 
 public class ListAddItemActivity extends Activity {
 	Button btnsecond_activity;
@@ -52,6 +55,18 @@ public class ListAddItemActivity extends Activity {
 		EditText mEdit   = (EditText)findViewById(R.id.add_item_name);
 		String item_name = mEdit.getText().toString();
 		
+		int item_id = ListItems.getItemId(item_name);
+		if(item_id < 0){
+    		Toast.makeText(getApplicationContext(), 
+    				"Sorry, the item " + item_name + " doesn't exist! ", 
+    				Toast.LENGTH_SHORT).show();
+		}else{
+			DatabaseHelper dbHelper = new DatabaseHelper(getApplicationContext());
+			ListItems.addItem(dbHelper, list_id, item_id);
+    		Toast.makeText(getApplicationContext(), 
+    				"The item " + item_name + " has been added to the list! ", 
+    				Toast.LENGTH_SHORT).show();
+		}
 		
 	}
 	 
