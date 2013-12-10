@@ -84,6 +84,11 @@
         <activity
             android:name=".ShareActivity"
             android:label="Share" />
+        <activity
+			android:name=".ListAddItemActivity"
+			android:label="ListAddItemActivity"
+			android:theme="@android:style/Theme.Dialog" >
+		</activity>
     </application>
 
 </manifest>

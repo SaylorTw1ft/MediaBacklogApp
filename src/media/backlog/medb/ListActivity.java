@@ -15,7 +15,10 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.ToggleButton;
 
 /**
@@ -26,7 +29,7 @@ import android.widget.ToggleButton;
 public class ListActivity extends Activity {
 	
 	String list_name;
-	String list_id;
+	int list_id;
 
 	ToggleButton t_movies;
 	ToggleButton t_games;
@@ -38,6 +41,8 @@ public class ListActivity extends Activity {
 	boolean books_checked;
 	boolean music_checked;
 	
+	TextView mTextView;  
+	Button mButton;  
 	
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,7 +52,7 @@ public class ListActivity extends Activity {
         Bundle b = i.getExtras();
 
         list_name = b.getString("list_name");
-        list_id = b.getString("list_id");
+        list_id = b.getInt("list_id");
         setTitle(list_name);
         
         t_movies = (ToggleButton) findViewById(R.id.toggle_list_movies);
@@ -66,7 +71,7 @@ public class ListActivity extends Activity {
 		t_music.setChecked(music_checked);
         
 		DatabaseHelper dbHelper = new DatabaseHelper(getApplicationContext());
-        final ArrayList<MediaItem> items = ListItems.getItemsForList(dbHelper, Integer.parseInt(list_id));
+        final ArrayList<MediaItem> items = ListItems.getItemsForList(dbHelper, list_id);
         
 		ListView items_list_view = (ListView) findViewById(R.id.list_view_list_page);
 	    final ItemsListAdapter adapter = new ItemsListAdapter(this, R.layout.items_list);
@@ -209,9 +214,25 @@ public class ListActivity extends Activity {
     }
 
     public void addItem() {
+		Toast.makeText(getApplicationContext(), 
+				" add button has been clicked", 
+				Toast.LENGTH_SHORT).show();
+		
+		Intent intent=new Intent(getApplicationContext(), ListAddItemActivity.class);
+		Bundle b = new Bundle();
+		b.putString("list_name", list_name);
+		b.putInt("list_id", list_id);
+		intent.putExtras(b);
+		startActivity(intent);
+		
     }
 
     public void editItem() {
+		Toast.makeText(getApplicationContext(), 
+				" edit button has been clicked", 
+				Toast.LENGTH_SHORT).show();
 
     }
+    
+
 }
