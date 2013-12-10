@@ -13,7 +13,9 @@ import android.app.Activity;
 import android.app.SearchManager;
 import android.content.Context;
 import android.content.Intent;
+
 import android.os.Bundle;
+import android.provider.SearchRecentSuggestions;
 import android.text.Editable;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -25,6 +27,7 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.SearchView;
+import android.widget.TextView;
 import android.widget.ToggleButton;
 
 /**
@@ -34,8 +37,8 @@ import android.widget.ToggleButton;
  */
 
 
-public class SearchActivity extends Activity {
-
+public class SearchActivity extends Activity{
+	
 	SearchResultListAdaptor adapter;
 	ArrayList<MediaItem> all_Item;
 	ListView search_list;
@@ -43,64 +46,80 @@ public class SearchActivity extends Activity {
 	Button search_BUT;
 	Button cancel_BUT;
 	DatabaseHelper dbHelper;
+	
 
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
+		
 		super.onCreate(savedInstanceState);
+		//setContentView(R.layout.searchresult);
 		setContentView(R.layout.search_box);
-		getActionBar().setDisplayHomeAsUpEnabled(true);
+		
+		Intent i = getIntent(); 
+		
+		cancel_BUT.setText(i.getAction().toString());
+		
+		
+		
+
 		search_BUT = (Button)findViewById(R.id.search_BUTTON);
 		cancel_BUT = (Button)findViewById(R.id.cancel_BUTTON);
+		
 		search_BUT.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
+				//cancel_BUT.setText(intent.getStringExtra(SearchManager.QUERY));
+				
 				handleIntent(getIntent());
-			
 			}
 
-		});	
+		});
 		
 		cancel_BUT.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				setContentView(R.layout.search_box);
+				handleCancelIntent(getIntent());
 			}
 
 		});
-
-
-
-		
+		//btnsearch.setOnClickListener(this);
 	}
-	@Override
-	protected void onNewIntent(Intent intent) {
-
-		handleIntent(intent);
-	}
+	
+	
 	public void onListItemClick(ListView l, 
 			View v, int position, long id) { 
 		// call detail activity for clicked entry 
 	}
 
 	private void handleIntent(Intent intent) {
-
+		//
 		if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
 			String query = intent.getStringExtra(SearchManager.QUERY);
+			
 			//use the query to search your data somehow
 			doSearch(query);
 		}
+
+	}
+	
+	private void handleCancelIntent(Intent intent) {
+		intent = new Intent(this, SearchActivity.class);
+        startActivity(intent);
 	}
 	private void doSearch(String queryStr) { 
 		// get a Cursor, prepare the ListAdapter
 		// and set it
+		
+		cancel_BUT.setBackgroundColor(getResources().getColor(R.color.music_color));
 		dbHelper = new DatabaseHelper(getApplicationContext());
 		all_Item=Items.getSearchResults(dbHelper, queryStr);
 		r = (RelativeLayout) findViewById(R.id.org_layout);
 
 		search_list = (ListView) findViewById(R.id.org_list);
-		adapter = new SearchResultListAdaptor(this, R.layout.list_item, all_Item);
+		adapter = new SearchResultListAdaptor(this, R.layout.search_list_display, all_Item);
 		search_list.setAdapter(adapter);
+		
 	} 
 
 
@@ -133,4 +152,19 @@ public class SearchActivity extends Activity {
 			return super.onOptionsItemSelected(item);
 		}
 	}
+	
+	
+	
+	@Override
+	public boolean onSearchRequested(){
+		
+		startSearch("onNewIntent", false, null, false);
+		return true;
+	}
+	
+	@Override
+	public void onNewIntent(Intent intent){
+		handleIntent(intent);
+	}
+	
 }
