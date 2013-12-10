@@ -98,13 +98,13 @@ public final class TrendingAmongFriends
     	    sortOrder                                 // The sort order
     	    );
     	
-    	ArrayList<MediaItem> trendingItems = new ArrayList<MediaItem>();
+    	ArrayList<MediaItem> items = new ArrayList<MediaItem>();
     	cursor.moveToFirst();
     	
     	while(true)
     	{
     		int itemID = cursor.getInt(cursor.getColumnIndex(TrendingAmongFriendsEntry.COLUMN_NAME_ITEMID));
-    		trendingItems.add(Items.getItem(dbHelper, itemID));
+    		items.add(Items.getItem(dbHelper, itemID));
     		
     		if(cursor.moveToNext() == false)
     		{
@@ -112,7 +112,7 @@ public final class TrendingAmongFriends
     		}
     	}
     	
-    	return trendingItems;
+    	return items;
     }
     
     private static TrendingItem getTrendingItem(DatabaseHelper dbHelper, int itemID)
