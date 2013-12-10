@@ -117,9 +117,9 @@ public class SearchActivity extends Activity{
 		
 		dbHelper = new DatabaseHelper(getApplicationContext());
 		all_Item=Items.getSearchResults(dbHelper, queryStr);
-		r = (RelativeLayout) findViewById(R.id.org_layout);
+		
 
-		search_list = (ListView) findViewById(R.id.org_list);
+		search_list = (ListView) findViewById(R.id.search_list);
 		adapter = new SearchResultListAdaptor(this, R.layout.search_list_display, all_Item);
 		search_list.setAdapter(adapter);
 		

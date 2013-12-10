@@ -49,14 +49,10 @@ public class SearchResultListAdaptor extends ArrayAdapter<MediaList> {
             	title_view.setText(item.getListName());
             }
             
-            TextView number_of_item_view = (TextView) view.findViewById(R.id.num_of_items);
-            if (number_of_item_view != null) {
-            	number_of_item_view.setText(String.format("%d Items", item.getNumItems()));
-            }
 
         	ImageView add_button_view = (ImageView) view.findViewById(R.id.addButton);
             if (add_button_view != null) {
-            	int image_id = context.getResources().getIdentifier("ic_drag_button", "drawable", context.getPackageName());
+            	int image_id = context.getResources().getIdentifier("ic_add_button", "drawable", context.getPackageName());
             	add_button_view.setImageResource(image_id);
             }
             
