@@ -1,5 +1,7 @@
 package media.backlog.medb;
 
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -51,6 +53,16 @@ public class MainActivity extends Activity {
         		return false;
         	}
         });
+        //Adds in Horizontal scroll bar fragment
+        FragmentManager fragmentManager = getFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        Bundle args = new Bundle();
+        args.putInt("id",1);
+        args.putInt("type",2);
+        HorizontalScrollBar horizontalScrollBar = new HorizontalScrollBar();
+        horizontalScrollBar.setArguments(args);
+        fragmentTransaction.add(R.id.main_scroll_bar_container, horizontalScrollBar).commit();
+
 
     }
 

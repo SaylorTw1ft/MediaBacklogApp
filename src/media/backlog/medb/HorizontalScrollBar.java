@@ -38,19 +38,53 @@ public class HorizontalScrollBar extends Fragment
         DatabaseHelper helper = new DatabaseHelper(getActivity().getApplicationContext());
         Bundle bundle = getArguments();
         int id;
+        ArrayList<MediaItem> items;
+        id = bundle.getInt("id");
+
+        MediaItem item = media.backlog.medb.database.Items.getItem(helper, id);
+
+        int type;
         try{
-            id = bundle.getInt("id");
+            type = bundle.getInt("type");
+            if (type == 1)
+            {
+                items = media.backlog.medb.database.RecentActivity.getRecentActivity(helper);
+            }
+            else if (type == 2)
+            {
+                items = media.backlog.medb.database.NewReleases.getNewReleases(helper);
+            }
+            else if (type == 3)
+            {
+                items =  media.backlog.medb.database.TrendingAmongFriends.getTrendingAmongFriendsMediaItems(helper);
+            }
+            else
+            {
+                items =  media.backlog.medb.database.Items.getSimilarItems(helper, item);
+            }
         }
         catch (NullPointerException e)
         {
-            id = 1;
+            items =  media.backlog.medb.database.Items.getSimilarItems(helper, item);
         }
-            MediaItem item = media.backlog.medb.database.Items.getItem(helper, id);
-        ArrayList<MediaItem> items =  media.backlog.medb.database.Items.getSimilarItems(helper, item);
-
         for (int i = 0; i < 10 && i<items.size(); i++) {
             MediaItem temp = items.get(i);
             LinearLayout scrollingItem = setUpScrollingItem(v, temp);
+            l.addView(scrollingItem);
+        }
+        if (items.size() == 0)
+        {
+            LinearLayout scrollingItem = new LinearLayout(v.getContext());
+            scrollingItem.setLayoutParams(new LinearLayout.LayoutParams(400, 225));
+            scrollingItem.setOrientation(LinearLayout.VERTICAL);
+            TextView t1 = new TextView(v.getContext());
+            t1.setText("No similar items!");
+            t1.setTextColor(Color.WHITE);
+            t1.setTextSize(18);
+            t1.setGravity(Gravity.CENTER);
+            scrollingItem.addView(t1);
+            scrollingItem.setMinimumHeight(225);
+            scrollingItem.setMinimumWidth(200);
             l.addView(scrollingItem);
         }
 
@@ -79,7 +113,7 @@ public class HorizontalScrollBar extends Fragment
         TextView t1 = new TextView(v.getContext());
         t1.setText(temp.getItemName());
         t1.setTextColor(Color.WHITE);
-        t1.setTextSize(8);
+        t1.setTextSize(10);
         t1.setGravity(Gravity.BOTTOM);
         scrollingItem.setMinimumHeight(200);
         scrollingItem.setMinimumWidth(134);

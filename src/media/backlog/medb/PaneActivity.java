@@ -192,13 +192,13 @@ public class PaneActivity extends Activity {
     
     public void addList() {
     }
-    
+
     private LinearLayout setUpScrollingItem(View v, MediaItem temp) {
         LinearLayout scrollingItem = new LinearLayout(v.getContext());
         scrollingItem.setLayoutParams(new LinearLayout.LayoutParams(188,250));
         scrollingItem.setOrientation(LinearLayout.VERTICAL);
         ImageButton button = new ImageButton(scrollingItem.getContext());
-        button.setLayoutParams(new ViewGroup.LayoutParams(150,200));
+        button.setLayoutParams(new ViewGroup.LayoutParams(150, 200));
         button.setScaleType(ScaleType.FIT_START);
         setThumbnailPic(temp, button);
         TextView t1 = new TextView(v.getContext());
