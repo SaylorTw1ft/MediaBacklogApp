@@ -74,6 +74,47 @@ public final class TrendingAmongFriends
     	return trendingItems;
     }
     
+    public static ArrayList<MediaItem> getTrendingAmongFriendsMediaItems(DatabaseHelper dbHelper)
+    {
+    	SQLiteDatabase db = dbHelper.getReadableDatabase();
+
+    	// Define a projection that specifies which columns from the database
+    	// you will actually use after this query.
+    	String[] projection = {
+    		TrendingAmongFriendsEntry.COLUMN_NAME_ITEMID,
+			"COUNT(" + TrendingAmongFriendsEntry.COLUMN_NAME_FRIENDID + ")"
+    	    };
+
+    	// How you want the results sorted in the resulting Cursor
+    	String sortOrder = "COUNT(" + TrendingAmongFriendsEntry.COLUMN_NAME_FRIENDID + ")" + " DESC";
+
+    	Cursor cursor = db.query(
+			TrendingAmongFriendsEntry.TABLE_NAME,  	  // The table to query
+    	    projection,                               // The columns to return
+    	    null,    								  // The columns for the WHERE clause
+    	    null,                            		  // The values for the WHERE clause
+    	    TrendingAmongFriendsEntry.COLUMN_NAME_ITEMID, // don't group the rows
+    	    null,                                     // don't filter by row groups
+    	    sortOrder                                 // The sort order
+    	    );
+    	
+    	ArrayList<MediaItem> trendingItems = new ArrayList<MediaItem>();
+    	cursor.moveToFirst();
+    	
+    	while(true)
+    	{
+    		int itemID = cursor.getInt(cursor.getColumnIndex(TrendingAmongFriendsEntry.COLUMN_NAME_ITEMID));
+    		trendingItems.add(Items.getItem(dbHelper, itemID));
+    		
+    		if(cursor.moveToNext() == false)
+    		{
+    			break;
+    		}
+    	}
+    	
+    	return trendingItems;
+    }
+    
     private static TrendingItem getTrendingItem(DatabaseHelper dbHelper, int itemID)
     {
     	MediaItem mediaItem = Items.getItem(dbHelper, itemID);
