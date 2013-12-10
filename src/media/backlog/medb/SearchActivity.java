@@ -24,6 +24,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.SearchView;
@@ -46,7 +47,7 @@ public class SearchActivity extends Activity{
 	Button search_BUT;
 	Button cancel_BUT;
 	DatabaseHelper dbHelper;
-	
+	EditText et;
 
 
 	@Override
@@ -58,20 +59,22 @@ public class SearchActivity extends Activity{
 		
 		Intent i = getIntent(); 
 		
-		cancel_BUT.setText(i.getAction().toString());
+		//cancel_BUT.setText(i.getAction().toString());
 		
 		
 		
 
 		search_BUT = (Button)findViewById(R.id.search_BUTTON);
 		cancel_BUT = (Button)findViewById(R.id.cancel_BUTTON);
+		et=(EditText) findViewById(R.id.searchBOX);
+		String searchString = et.getText().toString();
 		
 		search_BUT.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				//cancel_BUT.setText(intent.getStringExtra(SearchManager.QUERY));
-				
-				handleIntent(getIntent());
+				String searchString = et.getText().toString();
+				doSearch(searchString);
 			}
 
 		});
@@ -111,7 +114,7 @@ public class SearchActivity extends Activity{
 		// get a Cursor, prepare the ListAdapter
 		// and set it
 		
-		cancel_BUT.setBackgroundColor(getResources().getColor(R.color.music_color));
+		
 		dbHelper = new DatabaseHelper(getApplicationContext());
 		all_Item=Items.getSearchResults(dbHelper, queryStr);
 		r = (RelativeLayout) findViewById(R.id.org_layout);
