@@ -113,6 +113,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="media.backlog.medb.SettingsActivity" />
         </activity>
+        <activity
+            android:name="media.backlog.medb.FriendsActivity"
+            android:label="@string/title_activity_friends"
+            android:parentActivityName="media.backlog.medb.SettingsActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="media.backlog.medb.SettingsActivity" />
+        </activity>
     </application>
 
 </manifest>
