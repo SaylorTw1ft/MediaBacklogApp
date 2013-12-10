@@ -26,7 +26,7 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         final ImageView navBlock = (ImageView) findViewById(R.id.nav_block);
         /*
-         * 
+         * Allows user to select movie/game/music/book from the nav block image.
          */
         navBlock.setOnTouchListener(new OnTouchListener()
         {
