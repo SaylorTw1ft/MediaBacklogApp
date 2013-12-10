@@ -15,8 +15,8 @@
         android:id="@+id/add_activity_lists"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/org_buttons"
-        android:layout_marginTop="10dp" >
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/home_bar">
     </ListView>
 
 </RelativeLayout>

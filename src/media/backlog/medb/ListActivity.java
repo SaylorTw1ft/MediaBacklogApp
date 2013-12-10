@@ -46,6 +46,9 @@ public class ListActivity extends Activity {
         Intent i = getIntent();
         Bundle b = i.getExtras();
 
+
+        getActionBar().setDisplayHomeAsUpEnabled(true);
+
         list_name = b.getString("list_name");
         list_id = b.getString("list_id");
         setTitle(list_name);
@@ -83,8 +86,7 @@ public class ListActivity extends Activity {
 				  MediaItem this_item = (MediaItem) parent.getItemAtPosition(position);
 				  
 				  Bundle b = new Bundle();
-				  b.putString("item_name", this_item.getItemName());
-				  b.putString("id", Integer.toString(this_item.getItemID()));
+				 b.putInt("id", this_item.getItemID());
 				  Intent intent = new Intent(getApplicationContext(), ItemActivity.class);
 				  intent.putExtras(b);
 				  startActivity(intent);

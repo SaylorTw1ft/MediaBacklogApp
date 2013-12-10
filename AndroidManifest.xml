@@ -77,13 +77,27 @@
         </activity>
         <activity
             android:name=".SettingsActivity"
-            android:label="Settings" />
+            android:label="Settings" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        
         <activity
             android:name=".NotificationsActivity"
-            android:label="Notifications" />
+            android:label="Notifications" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
         <activity
             android:name=".ShareActivity"
             android:label="Share" />
+        <activity
+            android:name=".AddActivity"
+            android:label="Add to list...">
+
+            </activity>
     </application>
 
 </manifest>

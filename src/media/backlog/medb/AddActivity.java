@@ -3,6 +3,7 @@ package media.backlog.medb;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -26,6 +27,7 @@ public class AddActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add);
+        getActionBar().setDisplayHomeAsUpEnabled(true);
         Bundle b = new Bundle();
         int id = b.getInt("id");
         DatabaseHelper helper = new DatabaseHelper(getApplicationContext());
@@ -59,7 +61,12 @@ public class AddActivity extends Activity {
             }
         });
     }
-
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.add, menu);
+        return true;
+    }
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle presses on the action bar items
         switch (item.getItemId()) {
