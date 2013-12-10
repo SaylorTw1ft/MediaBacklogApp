@@ -13,7 +13,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class SearchResultListAdaptor extends ArrayAdapter<MediaList> {
+public class SearchResultListAdaptor extends ArrayAdapter<MediaItem> {
 
 	
     private Context context;
@@ -30,7 +30,7 @@ public class SearchResultListAdaptor extends ArrayAdapter<MediaList> {
             view = inflater.inflate(R.layout.search_list_display, null);
         }
 
-        MediaList item = getItem(position);
+        MediaItem item = getItem(position);
         if (item!= null) {
         	ImageView media_View = (ImageView) view.findViewById(R.id.mediaImage);
         	if(media_View!=null){
@@ -46,7 +46,7 @@ public class SearchResultListAdaptor extends ArrayAdapter<MediaList> {
         	
             TextView title_view = (TextView) view.findViewById(R.id.mediaTitle);
             if (title_view != null) {
-            	title_view.setText(item.getListName());
+            	title_view.setText(item.getItemName());
             }
             
 
@@ -62,17 +62,14 @@ public class SearchResultListAdaptor extends ArrayAdapter<MediaList> {
         return view;
     }
 
-	private String find_icon_index(MediaList item) {
-		int index = ((item.getMovie() == true) ? 1000 : 0)
-				+ ((item.getGame() == true) ? 100 : 0)
-				+ ((item.getBook() == true) ? 10 : 0)
-				+ ((item.getMusic() == true) ? 1 : 0);
+	private String find_icon_index(MediaItem item) {
+		int index = item.getCategory();
 		
 		switch (index){
-			case 1: return "icon_music";
-			case 10: return "icon_books";
-			case 100: return "icon_games";
-			case 1000: return "icon_movies";
+			case 1: return "icon_movies";
+			case 2: return "icon_games";
+			case 3: return "icon_music";
+			case 4: return "icon_books";
 			default:break;
 		}
 		return "";
