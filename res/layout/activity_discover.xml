@@ -21,6 +21,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_centerHorizontal="true" 
+        android:layout_above="@+id/home_bar"
         android:gravity="center"
         android:background="#E2DFE8">
         

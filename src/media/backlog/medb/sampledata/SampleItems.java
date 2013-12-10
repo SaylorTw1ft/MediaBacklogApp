@@ -79,52 +79,52 @@ public class SampleItems {
 
 	//BOOKS
 	public static String item27 = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
-			"VALUES (27, 'The Great Gatsby', 3, 'Drama', 5, 'books/gatsbybook.png')";
+			"VALUES (27, 'The Great Gatsby', 4, 'Drama', 5, 'books/gatsbybook.png')";
 	public static String item28 = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
-			"VALUES (28, 'Catch-22', 3, 'Satire', 5, 'books/catch22.png')";
+			"VALUES (28, 'Catch-22', 4, 'Satire', 5, 'books/catch22.png')";
 	public static String item29 = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
-			"VALUES (29, 'To Kill A Mockingbird', 3, 'Fiction', 5, 'books/killmockingbird.png')";
+			"VALUES (29, 'To Kill A Mockingbird', 4, 'Fiction', 5, 'books/killmockingbird.png')";
 	public static String item30 = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
-			"VALUES (30, '1984', 3, 'Fiction', 5, 'books/1984.png')";
+			"VALUES (30, '1984', 4, 'Fiction', 5, 'books/1984.png')";
 	public static String item31 = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
-			"VALUES (31, 'Ulysses', 3, 'Fiction', 5, 'books/ulysses.png')";
+			"VALUES (31, 'Ulysses', 4, 'Fiction', 5, 'books/ulysses.png')";
 	public static String item32 = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
-			"VALUES (32, 'Batman', 3, 'Comic', 5, 'books/batmancomic.png')";
+			"VALUES (32, 'Batman', 4, 'Comic', 5, 'books/batmancomic.png')";
 	public static String item33 = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
-			"VALUES (33, 'Legends of the Dark Knight', 3, 'Comic', 5, 'books/darkknight.png')";
+			"VALUES (33, 'Legends of the Dark Knight', 4, 'Comic', 5, 'books/darkknight.png')";
 	public static String item34 = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
-			"VALUES (34, 'Batman: Shadow of the Bat', 3, 'Comic', 5, 'books/shadowofbat.png')";
+			"VALUES (34, 'Batman: Shadow of the Bat', 4, 'Comic', 5, 'books/shadowofbat.png')";
 	public static String item35 = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
-			"VALUES (35, 'The Hunger Games', 3, 'Fiction', 5, 'books/thehungergames.png')";
+			"VALUES (35, 'The Hunger Games', 4, 'Fiction', 5, 'books/thehungergames.png')";
 	public static String item36 = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
-			"VALUES (36, 'Catching Fire', 3, 'Fiction', 5, 'books/catchingfire.png')";
+			"VALUES (36, 'Catching Fire', 4, 'Fiction', 5, 'books/catchingfire.png')";
 	public static String item37 = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
-			"VALUES (37, 'Mockingjay', 3, 'Fiction', 5, 'books/mockingjay.png')";
+			"VALUES (37, 'Mockingjay', 4, 'Fiction', 5, 'books/mockingjay.png')";
 	//MUSIC
 	public static String item40 = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
-			"VALUES (40, 'Yeezus', 4, 'Rap', 5, 'music/yeezus.png')";
+			"VALUES (40, 'Yeezus', 3, 'Rap', 5, 'music/yeezus.png')";
 	public static String item41 = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
-			"VALUES (41, 'Random Access Memories', 4, 'Techno', 5, 'music/ram.png')";
+			"VALUES (41, 'Random Access Memories', 3, 'Techno', 5, 'music/ram.png')";
 	public static String item42 = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
-			"VALUES (42, 'The 20/20 Experience', 4, 'Pop', 5, 'music/the20experience.png')";
+			"VALUES (42, 'The 20/20 Experience', 3, 'Pop', 5, 'music/the20experience.png')";
 	public static String item43 = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
-			"VALUES (43, 'Long.Live.A$AP', 4, 'Rap', 5, 'music/asap.png')";
+			"VALUES (43, 'Long.Live.A$AP', 3, 'Rap', 5, 'music/asap.png')";
 	public static String item44 = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
-			"VALUES (44, 'Catching Fire Soundtrack', 4, 'Soundtrack', 5, 'music/hungersoundtrack.png')";
+			"VALUES (44, 'Catching Fire Soundtrack', 3, 'Soundtrack', 5, 'music/hungersoundtrack.png')";
 	public static String item45 = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
-			"VALUES (45, 'Stars Dance', 4, 'Pop', 5, 'music/starsdance.png')";
+			"VALUES (45, 'Stars Dance', 3, 'Pop', 5, 'music/starsdance.png')";
 	public static String item46 = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
-			"VALUES (46, 'Unaplogetic', 4, 'Pop', 5, 'music/unaplogetic.png')";
+			"VALUES (46, 'Unaplogetic', 3, 'Pop', 5, 'music/unaplogetic.png')";
 	public static String item47 = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
-			"VALUES (47, '21', 4, 'Pop', 5, 'music/21.png')";
+			"VALUES (47, '21', 3, 'Pop', 5, 'music/21.png')";
 	public static String item48 = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
-			"VALUES (48, 'Up All Night', 4, 'Pop', 3, 'music/upallnight.png')";
+			"VALUES (48, 'Up All Night', 3, 'Pop', 3, 'music/upallnight.png')";
 	public static String item49 = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
-			"VALUES (49, 'Because The Internet', 4, 'Rap', 5, 'music/becausetheinternet.png')";
+			"VALUES (49, 'Because The Internet', 3, 'Rap', 5, 'music/becausetheinternet.png')";
 	public static String item50 = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
-			"VALUES (50, 'Acid Rap', 4, 'Mixtape', 5, 'music/acidrap.png')";
+			"VALUES (50, 'Acid Rap', 3, 'Mixtape', 5, 'music/acidrap.png')";
 	public static String item51 = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
-			"VALUES (51, 'Watch The Throne', 4, 'Rap', 5, 'music/watchthethrone.png')";
+			"VALUES (51, 'Watch The Throne', 3, 'Rap', 5, 'music/watchthethrone.png')";
 	public static String item52 = "INSERT INTO Items (itemId, itemName, category, genre, rating, picture)" +
-			"VALUES (52, 'Take Care', 4, 'Rap', 5, 'music/takecare.png')";	
+			"VALUES (52, 'Take Care', 3, 'Rap', 5, 'music/takecare.png')";	
 }
