@@ -11,6 +11,7 @@ public class TrendingItem extends MediaItem
 	{
 		super(itemID);
 		numFriends = 0;
+		friends = new ArrayList<MediaFriend>();
 	}
 	
 	public void setNumFriends(int numFriends)
