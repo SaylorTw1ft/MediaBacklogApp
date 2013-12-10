@@ -17,8 +17,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="70439b11-7fc0-42ca-a166-fe8bae816001" name="Default" comment="Framework for action bar buttons&#10;">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/media/backlog/medb/HorizontalScrollBar.java" afterPath="$PROJECT_DIR$/src/media/backlog/medb/HorizontalScrollBar.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/activity_item.xml" afterPath="$PROJECT_DIR$/res/layout/activity_item.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/menu/add.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/media/backlog/medb/AddActivity.java" afterPath="$PROJECT_DIR$/src/media/backlog/medb/AddActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/media/backlog/medb/ItemActivity.java" afterPath="$PROJECT_DIR$/src/media/backlog/medb/ItemActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/media/backlog/medb/ListActivity.java" afterPath="$PROJECT_DIR$/src/media/backlog/medb/ListActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/activity_add.xml" afterPath="$PROJECT_DIR$/res/layout/activity_add.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="MediaBacklogApp.iws" />
@@ -84,65 +88,40 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ItemActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/media/backlog/medb/ItemActivity.java">
+      <file leaf-file-name="AddActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/media/backlog/medb/AddActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="26" selection-start="1735" selection-end="1735" vertical-scroll-proportion="0.0" vertical-offset="492" max-vertical-offset="2312">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoginScreen.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/media/backlog/medb/LoginScreen.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="34" selection-start="1006" selection-end="1006" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="663">
-              <folding>
-                <element signature="e#753#1106#0" expanded="true" />
-                <element signature="e#1095#1096#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HomeBar.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/media/backlog/medb/HomeBar.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="30" selection-start="1243" selection-end="1243" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1139">
+            <state line="57" column="39" selection-start="2131" selection-end="2131" vertical-scroll-proportion="0.0" vertical-offset="361" max-vertical-offset="1105">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="activity_item.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/activity_item.xml">
-          <provider editor-type-id="text-editor">
-            <state line="59" column="8" selection-start="2263" selection-end="2263" vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="1139">
-              <folding />
-            </state>
-          </provider>
+      <file leaf-file-name="activity_add.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/activity_add.xml">
           <provider selected="true" editor-type-id="android-designer">
             <state />
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HorizontalScrollBar.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/media/backlog/medb/HorizontalScrollBar.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="10" selection-start="904" selection-end="904" vertical-scroll-proportion="0.50606394" vertical-offset="0" max-vertical-offset="907">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+          <provider editor-type-id="text-editor">
+            <state line="18" column="45" selection-start="811" selection-end="811" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="459">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/media/backlog/medb/MainActivity.java">
+      <file leaf-file-name="ItemActivity.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/media/backlog/medb/ItemActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="13" selection-start="370" selection-end="370" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="714">
+            <state line="60" column="4" selection-start="2035" selection-end="2035" vertical-scroll-proportion="0.4123484" vertical-offset="306" max-vertical-offset="2176">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="89" column="0" selection-start="3052" selection-end="3052" vertical-scroll-proportion="0.0" vertical-offset="939" max-vertical-offset="1683">
               <folding />
             </state>
           </provider>
@@ -192,7 +171,6 @@
         <option value="$PROJECT_DIR$/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/src/media/backlog/medb/DiscoverActivity.java" />
         <option value="$PROJECT_DIR$/src/media/backlog/medb/PaneActivity.java" />
-        <option value="$PROJECT_DIR$/src/media/backlog/medb/ListActivity.java" />
         <option value="$PROJECT_DIR$/res/menu/list.xml" />
         <option value="$PROJECT_DIR$/res/menu/pane.xml" />
         <option value="$PROJECT_DIR$/res/menu/discover.xml" />
@@ -205,11 +183,15 @@
         <option value="$PROJECT_DIR$/src/media/backlog/medb/OrganizeActivity.java" />
         <option value="$PROJECT_DIR$/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/res/layout/activity_login.xml" />
-        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/src/media/backlog/medb/LoginScreen.java" />
-        <option value="$PROJECT_DIR$/src/media/backlog/medb/ItemActivity.java" />
         <option value="$PROJECT_DIR$/res/layout/activity_item.xml" />
         <option value="$PROJECT_DIR$/src/media/backlog/medb/HorizontalScrollBar.java" />
+        <option value="$PROJECT_DIR$/src/media/backlog/medb/AddActivity.java" />
+        <option value="$PROJECT_DIR$/res/menu/add.xml" />
+        <option value="$PROJECT_DIR$/res/layout/activity_add.xml" />
+        <option value="$PROJECT_DIR$/src/media/backlog/medb/ListActivity.java" />
+        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/src/media/backlog/medb/ItemActivity.java" />
       </list>
     </option>
   </component>
@@ -290,8 +272,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -328,8 +308,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MediaBacklogApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MediaBacklogApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -415,19 +411,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -453,6 +436,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -626,7 +622,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3279743" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24973711" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -635,6 +631,34 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3279743" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33551913" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32896176" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290461" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3279743" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24973711" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33440515" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33123028" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3279743" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39978564" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33333334" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17470525" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USERS">
@@ -662,11 +686,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.idea/compiler.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="493" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/activity_search.xml">
       <provider editor-type-id="android-designer">
         <state />
@@ -693,16 +712,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gen/media/backlog/medb/Manifest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="3" selection-start="192" selection-end="192" vertical-scroll-proportion="0.22516556" vertical-offset="0" max-vertical-offset="453">
-          <folding />
-        </state>
+        <state line="6" column="3" selection-start="192" selection-end="192" vertical-scroll-proportion="0.22516556" vertical-offset="0" max-vertical-offset="453" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gen/media/backlog/medb/BuildConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="19" selection-start="179" selection-end="179" vertical-scroll-proportion="0.18763797" vertical-offset="0" max-vertical-offset="453">
-          <folding />
-        </state>
+        <state line="5" column="19" selection-start="179" selection-end="179" vertical-scroll-proportion="0.18763797" vertical-offset="0" max-vertical-offset="453" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
@@ -755,37 +770,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ic_launcher-web.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-18/android.jar!/android/app/Activity.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="50" column="0" selection-start="2116" selection-end="2116" vertical-scroll-proportion="0.5610561" vertical-offset="493" max-vertical-offset="7531" />
       </provider>
     </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/sdk/platforms/android-18/data/res/drawable-hdpi/ab_solid_light_holo.9.png">
-      <provider editor-type-id="images">
+      <provider selected="true" editor-type-id="ninepatcheditor">
         <state />
       </provider>
-      <provider selected="true" editor-type-id="ninepatcheditor">
+      <provider editor-type-id="images">
         <state />
       </provider>
     </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/sdk/platforms/android-18/data/res/drawable-hdpi/ab_transparent_light_holo.9.png">
-      <provider editor-type-id="images">
+      <provider selected="true" editor-type-id="ninepatcheditor">
         <state />
       </provider>
-      <provider selected="true" editor-type-id="ninepatcheditor">
+      <provider editor-type-id="images">
         <state />
       </provider>
     </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/sdk/platforms/android-18/data/res/drawable-hdpi/activity_title_bar.9.png">
-      <provider editor-type-id="images">
+      <provider selected="true" editor-type-id="ninepatcheditor">
         <state />
       </provider>
-      <provider selected="true" editor-type-id="ninepatcheditor">
+      <provider editor-type-id="images">
         <state />
       </provider>
     </entry>
@@ -799,23 +809,6 @@
     <entry file="file://$PROJECT_DIR$/.idea/libraries/android_support_v4.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="12" selection-start="227" selection-end="227" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="238" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/media/backlog/medb/ListActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="28" selection-start="986" selection-end="986" vertical-scroll-proportion="0.0" vertical-offset="561" max-vertical-offset="901">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/list_item.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="884">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/values/styles.xml">
@@ -856,16 +849,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/menu/list.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="50" selection-start="484" selection-end="484" vertical-scroll-proportion="0.24366042" vertical-offset="0" max-vertical-offset="907" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/menu/search.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="7" selection-start="114" selection-end="114" vertical-scroll-proportion="0.074972436" vertical-offset="0" max-vertical-offset="907" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/menu/pane.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="0" selection-start="295" selection-end="295" vertical-scroll-proportion="0.16868798" vertical-offset="0" max-vertical-offset="907" />
@@ -889,13 +872,6 @@
     <entry file="file://$PROJECT_DIR$/src/media/backlog/medb/adapter/OrgBooksFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="35" selection-start="35" selection-end="35" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="596">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/media/backlog/medb/DiscoverActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="4" selection-start="680" selection-end="1072" vertical-scroll-proportion="0.4843962" vertical-offset="0" max-vertical-offset="737">
           <folding />
         </state>
       </provider>
@@ -968,25 +944,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="34" selection-start="343" selection-end="343" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="1326">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/media/backlog/medb/ItemActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="26" selection-start="1735" selection-end="1735" vertical-scroll-proportion="0.0" vertical-offset="492" max-vertical-offset="2312">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/media/backlog/medb/HomeBar.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="30" selection-start="1243" selection-end="1243" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1139">
+        <state line="33" column="30" selection-start="1165" selection-end="1165" vertical-scroll-proportion="0.0" vertical-offset="561" max-vertical-offset="1258">
           <folding />
         </state>
       </provider>
@@ -994,9 +954,31 @@
     <entry file="file://$PROJECT_DIR$/src/media/backlog/medb/LoginScreen.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="28" column="34" selection-start="1006" selection-end="1006" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="663">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/media/backlog/medb/DiscoverActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="109" column="101" selection-start="4131" selection-end="4131" vertical-scroll-proportion="0.1733871" vertical-offset="1724" max-vertical-offset="3519">
           <folding>
-            <element signature="e#753#1106#0" expanded="true" />
-            <element signature="e#1095#1096#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/menu/list.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="42" selection-start="347" selection-end="347" vertical-scroll-proportion="0.22849463" vertical-offset="0" max-vertical-offset="744">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/media/backlog/medb/HorizontalScrollBar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="10" selection-start="723" selection-end="723" vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="1853">
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1006,24 +988,70 @@
         <state />
       </provider>
       <provider editor-type-id="text-editor">
-        <state line="59" column="8" selection-start="2263" selection-end="2263" vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="1139">
+        <state line="59" column="8" selection-start="2141" selection-end="2141" vertical-scroll-proportion="0.0" vertical-offset="1003" max-vertical-offset="1207">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/media/backlog/medb/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="13" selection-start="370" selection-end="370" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="714">
+        <state line="15" column="13" selection-start="396" selection-end="396" vertical-scroll-proportion="-0.20564516" vertical-offset="255" max-vertical-offset="1292">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/media/backlog/medb/HorizontalScrollBar.java">
+    <entry file="file://$PROJECT_DIR$/res/menu/add.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="10" selection-start="904" selection-end="904" vertical-scroll-proportion="0.50606394" vertical-offset="0" max-vertical-offset="907">
+        <state line="3" column="0" selection-start="106" selection-end="106" vertical-scroll-proportion="0.06854839" vertical-offset="0" max-vertical-offset="744">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/media/backlog/medb/ListActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="178" column="25" selection-start="5693" selection-end="5693" vertical-scroll-proportion="0.0" vertical-offset="2112" max-vertical-offset="3230">
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#2456#2912#0" expanded="true" />
+            <element signature="e#2907#2908#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/menu/item.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="7" selection-start="114" selection-end="114" vertical-scroll-proportion="0.09139785" vertical-offset="0" max-vertical-offset="744">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="89" column="0" selection-start="3052" selection-end="3052" vertical-scroll-proportion="0.0" vertical-offset="939" max-vertical-offset="1683">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/activity_add.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state line="18" column="45" selection-start="811" selection-end="811" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="459">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/media/backlog/medb/AddActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="39" selection-start="2131" selection-end="2131" vertical-scroll-proportion="0.0" vertical-offset="361" max-vertical-offset="1105">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/media/backlog/medb/ItemActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="4" selection-start="2035" selection-end="2035" vertical-scroll-proportion="0.4123484" vertical-offset="306" max-vertical-offset="2176">
+          <folding />
         </state>
       </provider>
     </entry>

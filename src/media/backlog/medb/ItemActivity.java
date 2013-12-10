@@ -39,7 +39,6 @@ public class ItemActivity extends Activity {
         setItemThumbnail();
         setItemName();
         setItemGenre();
-        setSimilarItems();
         setUpButtons();
         FragmentManager fragmentManager = getFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -59,11 +58,7 @@ public class ItemActivity extends Activity {
        Button add = (Button)findViewById(R.id.add_button);
        add.setOnClickListener(new ItemClick());
     }
-    private void setSimilarItems() {
-        ArrayList<MediaItem> similarItems = media.backlog.medb.database.Items.getSimilarItems(helper, item);
-
-
-    }
+    
 
     private void setItemGenre() {
         TextView text = (TextView) findViewById(R.id.item_genre);

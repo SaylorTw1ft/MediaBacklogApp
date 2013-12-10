@@ -84,6 +84,11 @@
         <activity
             android:name=".ShareActivity"
             android:label="Share" />
+        <activity
+            android:name=".AddActivity"
+            android:label="Add to list...">
+
+            </activity>
     </application>
 
 </manifest>
