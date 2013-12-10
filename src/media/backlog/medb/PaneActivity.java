@@ -1,28 +1,68 @@
 package media.backlog.medb;
 
+import java.util.ArrayList;
+
+import media.backlog.medb.adapter.OrgListAdapter;
+import media.backlog.medb.data.MediaList;
+import media.backlog.medb.database.DatabaseHelper;
+import media.backlog.medb.database.Lists;
 import android.app.Activity;
+import android.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.Button;
+import android.widget.ListView;
+import android.widget.AdapterView.OnItemClickListener;
 
 /**
  * Created by Arin on 11/28/13.
  */
 public class PaneActivity extends Activity {
 	
+	public void setHomeBarColor(int color)
+	{
+        Fragment homeFrag = getFragmentManager().findFragmentById(R.id.home_bar);
+        View mainView = homeFrag.getView();
+        View homeView = mainView.findViewById(R.id.homeButton);
+        View organizeView = mainView.findViewById(R.id.organizeButton);
+        View discoverView = mainView.findViewById(R.id.discoverButton);
+        View searchView = mainView.findViewById(R.id.searchButton);
+        
+        mainView.setBackgroundColor(color);
+        homeView.setBackgroundColor(color);
+        organizeView.setBackgroundColor(color);
+        discoverView.setBackgroundColor(color);
+        searchView.setBackgroundColor(color);
+	}
 	public void setUpPage(int category){
-        //Movies
+		//Movies
         if (category == 1)
+        {
         	setTitle("Movies");
+            setHomeBarColor(getResources().getColor(R.color.movie_color));
+        }
         //Games
         if(category == 2)
+        {
         	setTitle("Games");
-        //Books
-        if(category == 3)
-        	setTitle("Music");
+        	setHomeBarColor(getResources().getColor(R.color.game_color));
+        }
         //Music
+        if(category == 3)
+        {
+        	setTitle("Music");
+        	setHomeBarColor(getResources().getColor(R.color.music_color));
+        }
+        //Books
         if(category == 4)
+        {
         	setTitle("Books");
+        	setHomeBarColor(getResources().getColor(R.color.book_color));
+        }
 	}
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +71,33 @@ public class PaneActivity extends Activity {
         Bundle b = getIntent().getExtras();
         int category = b.getInt("category");
         setUpPage(category);
+        
+		DatabaseHelper dbHelper = new DatabaseHelper(getApplicationContext());
+		final ArrayList<MediaList> all_lists = Lists.getAllLists(dbHelper);
+		ListView media_list = (ListView) findViewById(R.id.media_list);
+	    final OrgListAdapter adapter = new OrgListAdapter(this, R.layout.lists_list);
+	    
+	    media_list.setAdapter(adapter);
+	    update_media_list(all_lists, adapter, category);
+	    
+		media_list.setOnItemClickListener(new OnItemClickListener() {
+			  @Override
+			  public void onItemClick(AdapterView<?> parent, View view, 
+					  int position, long id) {
+				  
+				  MediaList this_item = (MediaList) parent.getItemAtPosition(position);
+				  
+				  Bundle b = new Bundle();
+				  b.putString("list_name", this_item.getListName());
+				  b.putString("list_id", Integer.toString(this_item.getListID()));
+				  Intent intent = new Intent(getApplicationContext(), ListActivity.class);
+				  intent.putExtras(b);
+				  startActivity(intent);
+				  
+			  }
+		});
+        
+        
     }
 
     @Override
@@ -54,7 +121,30 @@ public class PaneActivity extends Activity {
                 return super.onOptionsItemSelected(item);
         }
     }
-
+	private void update_media_list(ArrayList<MediaList> all_lists, OrgListAdapter adapter, int category) {
+        adapter.clear();
+        for(int i=0; i<all_lists.size(); i++){
+        	if(category == 1 && all_lists.get(i).getMovie()){
+        		adapter.add(all_lists.get(i));
+        		continue;
+            		}
+        	if(category == 2 && all_lists.get(i).getGame()){
+        		adapter.add(all_lists.get(i));
+        		continue;
+            		}
+        	if(category == 3 && all_lists.get(i).getMusic()){
+        		adapter.add(all_lists.get(i));
+        		continue;
+            		}
+        	if(category == 4 && all_lists.get(i).getBook()){
+        		adapter.add(all_lists.get(i));
+        		continue;
+            		}
+        		}
+        adapter.notifyDataSetChanged();
+		
+	}
+    
     public void addList() {
     }
 }
