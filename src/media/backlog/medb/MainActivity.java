@@ -31,26 +31,19 @@ public class MainActivity extends Activity {
         	public boolean onTouch(View v, MotionEvent event){
         		if(event.getAction() == MotionEvent.ACTION_DOWN)
         		{
-        			//Left Movies Triangle
-        			
-        			if(event.getX() / navBlock.getWidth() < event.getY() / navBlock.getHeight() &&
-        					navBlock.getWidth() - event.getX() > navBlock.getHeight() - event.getY()){
-        				startNewIntent(1);
+        			double x = event.getX() - 85;
+        		    double y = event.getY();
+        			if(y > x){
+        				if(navBlock.getHeight() - y > x)
+        					startNewIntent(1);
+        				else
+        					startNewIntent(2);
         			}
-        			//Bottom Games Triangle
-        			if(event.getX() / navBlock.getWidth() < event.getY() / navBlock.getHeight() &&
-        					navBlock.getWidth() - event.getX() < navBlock.getHeight() - event.getY()){
-        				startNewIntent(2);
-        			}
-        			//Right Books Triangle
-        			if(event.getX() / navBlock.getWidth() > event.getY() / navBlock.getHeight() &&
-        					navBlock.getWidth() - event.getX() < navBlock.getHeight() - event.getY()){
-        				startNewIntent(3);
-        			}
-        			//Top Music Triangle
-        			if(event.getX() / navBlock.getWidth() > event.getY() / navBlock.getHeight() &&
-        					navBlock.getWidth() - event.getX() > navBlock.getHeight() - event.getY()){
-        				startNewIntent(4);
+        			else{
+        				if(navBlock.getHeight() - y > x)
+        					startNewIntent(3);
+        				else
+        					startNewIntent(4);
         			}
         		}
         		return false;
