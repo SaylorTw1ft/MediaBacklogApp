@@ -9,10 +9,28 @@ import android.view.MenuItem;
  * Created by Arin on 11/28/13.
  */
 public class PaneActivity extends Activity {
+	
+	public void setUpPage(int category){
+        //Movies
+        if (category == 1)
+        	setTitle("Movies");
+        //Games
+        if(category == 2)
+        	setTitle("Games");
+        //Books
+        if(category == 3)
+        	setTitle("Music");
+        //Music
+        if(category == 4)
+        	setTitle("Books");
+	}
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pane);
         getActionBar().setDisplayHomeAsUpEnabled(true);
+        Bundle b = getIntent().getExtras();
+        int category = b.getInt("category");
+        setUpPage(category);
     }
 
     @Override
