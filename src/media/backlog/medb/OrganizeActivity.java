@@ -1,13 +1,13 @@
 package media.backlog.medb;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import media.backlog.medb.adapter.OrgListAdapter;
 import media.backlog.medb.data.MediaList;
 import media.backlog.medb.database.DatabaseHelper;
 import media.backlog.medb.database.Lists;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -17,6 +17,7 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 import android.widget.ToggleButton;
 
 
@@ -40,42 +41,54 @@ public class OrganizeActivity extends Activity {
 	boolean games_checked;
 	boolean books_checked;
 	boolean music_checked;
-    OrgListAdapter adapter;
-    ArrayList<MediaList> all_lists;
-	ListView org_list;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_organize);
         getActionBar().setDisplayHomeAsUpEnabled(true);
+        
         t_movies = (ToggleButton) findViewById(R.id.toggle_org_movies);
 		t_games = (ToggleButton) findViewById(R.id.toggle_org_games);
 		t_books = (ToggleButton) findViewById(R.id.toggle_org_books);
 		t_music = (ToggleButton) findViewById(R.id.toggle_org_music);
 
-		movies_checked = false;
-		games_checked = false;
-		books_checked = false;
-		music_checked = false;
+		movies_checked = true;
+		games_checked = true;
+		books_checked = true;
+		music_checked = true;
+		
+		t_movies.setChecked(movies_checked);
+		t_games.setChecked(games_checked);
+		t_books.setChecked(books_checked);
+		t_music.setChecked(music_checked);
 		
 		// db connection
 		DatabaseHelper dbHelper = new DatabaseHelper(getApplicationContext());
-		all_lists = Lists.getAllLists(dbHelper);
+		final ArrayList<MediaList> all_lists = Lists.getAllLists(dbHelper);
+//		Collections.sort(all_lists);
 		
-		// get the layout
-		r = (RelativeLayout) findViewById(R.id.org_layout);
 
-	    org_list = (ListView) findViewById(R.id.org_list);
-	    adapter = new OrgListAdapter(this, R.layout.list_item, all_lists);
+		ListView org_list = (ListView) findViewById(R.id.org_list);
+	    final OrgListAdapter adapter = new OrgListAdapter(this, R.layout.lists_list);
+	    
 	    org_list.setAdapter(adapter);
 		
-	    update_org_list(movies_checked, games_checked, books_checked, music_checked);
+	    update_org_list(movies_checked, games_checked, books_checked, music_checked, all_lists, adapter);
 	    
 		org_list.setOnItemClickListener(new OnItemClickListener() {
 			  @Override
-			  public void onItemClick(AdapterView<?> parent, View view,
-			    int position, long id) {
+			  public void onItemClick(AdapterView<?> parent, View view, 
+					  int position, long id) {
+				  
+				  MediaList this_item = (MediaList) parent.getItemAtPosition(position);
+				  
+				  Bundle b = new Bundle();
+				  b.putString("list_name", this_item.getListName());
+				  b.putString("list_id", Integer.toString(this_item.getListID()));
+				  Intent intent = new Intent(getApplicationContext(), ListActivity.class);
+				  intent.putExtras(b);
+				  startActivity(intent);
 				  
 			  }
 		}); 
@@ -84,9 +97,12 @@ public class OrganizeActivity extends Activity {
 		t_movies.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-			
+//
+//				Toast.makeText(getApplicationContext(), 
+//						"movies clicked", 
+//						Toast.LENGTH_SHORT).show();
 				movies_checked = ((ToggleButton)v).isChecked();
-				update_org_list(movies_checked, games_checked, books_checked, music_checked);
+				update_org_list(movies_checked, games_checked, books_checked, music_checked, all_lists, adapter);
 				
 			}
 
@@ -95,9 +111,12 @@ public class OrganizeActivity extends Activity {
 		t_games.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-			
+
+//				Toast.makeText(getApplicationContext(), 
+//						"games clicked", 
+//						Toast.LENGTH_SHORT).show();
 				games_checked = ((ToggleButton)v).isChecked();
-				update_org_list(movies_checked, games_checked, books_checked, music_checked);
+				update_org_list(movies_checked, games_checked, books_checked, music_checked, all_lists, adapter);
 				
 			}
 
@@ -106,9 +125,12 @@ public class OrganizeActivity extends Activity {
 		t_books.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-			
+
+//				Toast.makeText(getApplicationContext(), 
+//						"books clicked", 
+//						Toast.LENGTH_SHORT).show();
 				books_checked = ((ToggleButton)v).isChecked();
-				update_org_list(movies_checked, games_checked, books_checked, music_checked);
+				update_org_list(movies_checked, games_checked, books_checked, music_checked, all_lists, adapter);
 				
 			}
 
@@ -117,9 +139,12 @@ public class OrganizeActivity extends Activity {
 		t_music.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-			
+
+//				Toast.makeText(getApplicationContext(), 
+//						"music clicked", 
+//						Toast.LENGTH_SHORT).show();
 				music_checked = ((ToggleButton)v).isChecked();
-				update_org_list(movies_checked, games_checked, books_checked, music_checked);
+				update_org_list(movies_checked, games_checked, books_checked, music_checked, all_lists, adapter);
 				
 			}
 
@@ -130,21 +155,30 @@ public class OrganizeActivity extends Activity {
 
 	private void update_org_list(boolean movies_checked,
 			boolean games_checked, boolean books_checked,
-			boolean music_checked) {
-		
+			boolean music_checked, 
+			ArrayList<MediaList> all_lists,
+			OrgListAdapter adapter) {
+
         adapter.clear();
+//		Toast.makeText(getApplicationContext(), 
+//				"updating org list: all_list size is " + Integer.toString(all_lists.size()), 
+//				Toast.LENGTH_SHORT).show();
         for(int i=0; i<all_lists.size(); i++){
         	if(movies_checked && all_lists.get(i).getMovie()){
         		adapter.add(all_lists.get(i));
+        		continue;
         	}else{
         		if(games_checked && all_lists.get(i).getGame()){
         			adapter.add(all_lists.get(i));
+        			continue;
         		}else{
             		if(books_checked && all_lists.get(i).getBook()){
             			adapter.add(all_lists.get(i));
+            			continue;
             		}else{
                 		if(music_checked && all_lists.get(i).getMusic()){
                 			adapter.add(all_lists.get(i));
+                			continue;
                 		}
             		}
         		}
@@ -152,12 +186,6 @@ public class OrganizeActivity extends Activity {
         }
         adapter.notifyDataSetChanged();
 		
-	}
-	
-	private List<MediaList> getItems() {
-		// TODO Auto-generated method stub
-		
-		return null;
 	}
 
 	@Override
