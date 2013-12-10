@@ -17,7 +17,7 @@
         tools:layout="@layout/home_bar"></fragment>
    
    <Button
-       android:id="@+id/button1"
+       android:id="@+id/log_out_button"
        android:layout_width="240dp"
        android:layout_height="wrap_content"
        android:layout_alignParentTop="true"
@@ -26,29 +26,29 @@
        android:text="@string/log_out_button" />
 
    <Button
-       android:id="@+id/button2"
+       android:id="@+id/friends_button"
        android:layout_width="240dp"
        android:layout_height="wrap_content"
-       android:layout_below="@+id/button1"
+       android:layout_below="@+id/log_out_button"
        android:layout_centerHorizontal="true"
        android:layout_marginTop="10dp"
        android:text="@string/friends_button" />
    
    <Button
-       android:id="@+id/button3"
+       android:id="@+id/about_button"
        android:layout_width="240dp"
        android:layout_height="wrap_content"
-       android:layout_alignLeft="@+id/button2"
-       android:layout_below="@+id/button2"
+       android:layout_alignLeft="@+id/friends_button"
+       android:layout_below="@+id/friends_button"
        android:layout_marginTop="10dp"
        android:text="@string/about_button" />
 
    <Button
-       android:id="@+id/button4"
+       android:id="@+id/help_button"
        android:layout_width="240dp"
        android:layout_height="wrap_content"
-       android:layout_alignRight="@+id/button3"
-       android:layout_below="@+id/button3"
+       android:layout_alignRight="@+id/about_button"
+       android:layout_below="@+id/about_button"
        android:layout_marginTop="10dp"
        android:text="@string/help_button" />
 
