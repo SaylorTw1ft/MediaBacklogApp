@@ -14,60 +14,61 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".MainActivity"
+            android:name="media.backlog.medb.MainActivity"
             android:label="@string/app_name" >
         </activity>
-        
-        <activity android:name=".SearchActivity" android:launchMode="singleTop">
-           
+        <activity
+            android:name="media.backlog.medb.SearchActivity"
+            android:launchMode="singleTop" >
             <intent-filter>
-                <action android:name="android.intent.action.SEARCH" ></action>     
+                <action android:name="android.intent.action.SEARCH" >
+                </action>
             </intent-filter>
 
-            <meta-data android:name="android.app.searchable"
-            android:resource="@xml/searchable" />
-            
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
         </activity>
 
         <provider
-            android:name="SearchSuggestionSampleProvider"
+            android:name="media.backlog.medb.SearchSuggestionSampleProvider"
             android:authorities="com.android.cbin.SearchSuggestionSampleProvider" >
         </provider>
 
         <activity
-            android:name=".DiscoverActivity"
+            android:name="media.backlog.medb.DiscoverActivity"
             android:label="Discover" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
         <activity
-            android:name=".OrganizeActivity"
+            android:name="media.backlog.medb.OrganizeActivity"
             android:label="Organize" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
         <activity
-            android:name=".ListActivity"
+            android:name="media.backlog.medb.ListActivity"
             android:label="ListActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".PaneActivity" />
         </activity>
         <activity
-            android:name=".PaneActivity"
+            android:name="media.backlog.medb.PaneActivity"
             android:label="PaneActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
         <activity
-            android:name=".ItemActivity"
+            android:name="media.backlog.medb.ItemActivity"
             android:label="ItemActivity" >
         </activity>
         <activity
-            android:name=".LoginScreen"
+            android:name="media.backlog.medb.LoginScreen"
             android:label="Login" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -76,28 +77,42 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SettingsActivity"
+            android:name="media.backlog.medb.SettingsActivity"
             android:label="Settings" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
-        
         <activity
-            android:name=".NotificationsActivity"
+            android:name="media.backlog.medb.NotificationsActivity"
             android:label="Notifications" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
         <activity
-            android:name=".ShareActivity"
+            android:name="media.backlog.medb.ShareActivity"
             android:label="Share" />
         <activity
-            android:name=".AddActivity"
-            android:label="Add to list...">
-
-            </activity>
+            android:name="media.backlog.medb.AddActivity"
+            android:label="Add to list..." >
+        </activity>
+        <activity
+            android:name="media.backlog.medb.About"
+            android:label="@string/title_activity_about"
+            android:parentActivityName="media.backlog.medb.SettingsActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="media.backlog.medb.SettingsActivity" />
+        </activity>
+        <activity
+            android:name="media.backlog.medb.HelpActivity"
+            android:label="@string/title_activity_help"
+            android:parentActivityName="media.backlog.medb.SettingsActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="media.backlog.medb.SettingsActivity" />
+        </activity>
     </application>
 
 </manifest>
