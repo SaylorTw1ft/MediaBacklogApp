@@ -25,7 +25,9 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         final ImageView navBlock = (ImageView) findViewById(R.id.nav_block);
-        
+        /*
+         * 
+         */
         navBlock.setOnTouchListener(new OnTouchListener()
         {
         	public boolean onTouch(View v, MotionEvent event){
