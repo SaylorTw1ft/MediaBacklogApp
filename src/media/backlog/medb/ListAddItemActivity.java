@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.EditText;
 	 
 public class ListAddItemActivity extends Activity {
 	Button btnsecond_activity;
@@ -48,6 +49,9 @@ public class ListAddItemActivity extends Activity {
 
 	private void add_new_item_to_db() {
 		// TODO Auto-generated method stub
+		EditText mEdit   = (EditText)findViewById(R.id.add_item_name);
+		String item_name = mEdit.getText().toString();
+		
 		
 	}
 	 
