@@ -29,7 +29,7 @@
 		   		android:id="@+id/discover_title1"
 		   		android:layout_width="match_parent"
 	       		android:layout_height="wrap_content"
-	       		android:text="Trending Among Friends"
+	       		android:text="@string/trending_among_friends"
 	       		android:gravity="center">   
 	    </TextView>
 	    
@@ -45,7 +45,7 @@
 		   		android:id="@+id/discover_title2"
 		   		android:layout_width="match_parent"
 	       		android:layout_height="wrap_content"
-	       		android:text="Popular"
+	       		android:text="@string/popular"
 	       		android:gravity="center">   
 	    </TextView>
 	    
@@ -61,7 +61,7 @@
 		   		android:id="@+id/discover_title3"
 		   		android:layout_width="match_parent"
 	       		android:layout_height="wrap_content"
-	       		android:text="New Releases"
+	       		android:text="@string/new_releases"
 	       		android:gravity="center">   
 	    </TextView>
 	    

@@ -194,4 +194,57 @@ public final class Items
 		
 		return similarItems;
     }
+    
+    public static ArrayList<MediaItem> getPaneItems(DatabaseHelper dbHelper, int category)
+    {
+    	SQLiteDatabase db = dbHelper.getReadableDatabase();
+		
+		String[] projection = {
+			ItemEntry.COLUMN_NAME_ITEMID,
+    	    ItemEntry.COLUMN_NAME_ITEMNAME,
+    	    ItemEntry.COLUMN_NAME_CATEGORY,
+    	    ItemEntry.COLUMN_NAME_GENRE,
+    	    ItemEntry.COLUMN_NAME_RATING,
+    	    ItemEntry.COLUMN_NAME_PICTURE
+    	    };
+	    	
+    	String[] selectionArgs = { String.valueOf(category) };
+
+    	// How you want the results sorted in the resulting Cursor
+    	//String sortOrder = FeedEntry.COLUMN_NAME_UPDATED + " DESC";
+
+    	Cursor cursor = db.query(
+    	    ItemEntry.TABLE_NAME,  // The table to query
+    	    projection,                               // The columns to return
+    	    ItemEntry.COLUMN_NAME_CATEGORY + " = ?",    // The columns for the WHERE clause
+    	    selectionArgs,                            // The values for the WHERE clause
+    	    null,                                     // don't group the rows
+    	    null,                                     // don't filter by row groups
+    	    null                                 // The sort order
+    	    );
+    	
+    	ArrayList<MediaItem> paneItems = new ArrayList<MediaItem>();
+    	
+    	if(cursor.moveToFirst())
+    	{
+    		while(paneItems.size() < 10)
+    		{
+    			MediaItem item = new MediaItem(cursor.getInt(cursor.getColumnIndex(ItemEntry.COLUMN_NAME_ITEMID)));
+				item.setItemName(cursor.getString(cursor.getColumnIndex(ItemEntry.COLUMN_NAME_ITEMNAME)));
+				item.setCategory(cursor.getInt(cursor.getColumnIndex(ItemEntry.COLUMN_NAME_CATEGORY)));
+				item.setGenre(cursor.getString(cursor.getColumnIndex(ItemEntry.COLUMN_NAME_GENRE)));
+				item.setRating(cursor.getInt(cursor.getColumnIndex(ItemEntry.COLUMN_NAME_RATING)));
+				item.setPicture(cursor.getString(cursor.getColumnIndex(ItemEntry.COLUMN_NAME_PICTURE)));
+				
+				paneItems.add(item);
+    			
+    			if(cursor.moveToNext() == false)
+        		{
+        			break;
+        		}
+        	}
+    	}
+		
+		return paneItems;
+    }
 }

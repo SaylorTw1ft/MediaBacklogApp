@@ -7,22 +7,29 @@
     android:layout_height="match_parent"
     tools:context=".PaneActivity">
     
+    <TextView
+  		android:id="@+id/category_recent_title"
+  		android:layout_width="match_parent"
+   		android:layout_height="wrap_content"
+   		android:text="@string/popular"
+   		android:layout_alignParentTop="true"
+   		android:gravity="center">   
+    </TextView>
+    
     <fragment
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:name="media.backlog.medb.HorizontalScrollBar"
-        android:id="@+id/horizontal_scroll_bar"
-        android:layout_alignParentTop="true"
-
-        tools:layout="@layout/horizontal_scroll_bar"
-
-        ></fragment>
+        android:id="@+id/horizontal_scroll_bar_pane"
+        android:layout_below="@+id/category_recent_title"
+        tools:layout="@layout/horizontal_scroll_bar">
+    </fragment>
 
     <ListView
         android:id="@+id/media_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/horizontal_scroll_bar"
+        android:layout_below="@+id/horizontal_scroll_bar_pane"
         android:layout_marginTop="10dp" >
     </ListView>
     

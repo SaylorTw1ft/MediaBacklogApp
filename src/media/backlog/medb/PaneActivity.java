@@ -1,22 +1,34 @@
 package media.backlog.medb;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 
 import media.backlog.medb.adapter.OrgListAdapter;
+import media.backlog.medb.data.MediaItem;
 import media.backlog.medb.data.MediaList;
 import media.backlog.medb.database.DatabaseHelper;
+import media.backlog.medb.database.Items;
 import media.backlog.medb.database.Lists;
 import android.app.Activity;
 import android.app.Fragment;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.Button;
+import android.widget.HorizontalScrollView;
+import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ImageView.ScaleType;
 
 /**
  * Created by Arin on 11/28/13.
@@ -72,8 +84,41 @@ public class PaneActivity extends Activity {
         int category = b.getInt("category");
         setUpPage(category);
         
-		DatabaseHelper dbHelper = new DatabaseHelper(getApplicationContext());
-		final ArrayList<MediaList> all_lists = Lists.getAllLists(dbHelper);
+		DatabaseHelper helper = new DatabaseHelper(getApplicationContext());
+		
+		HorizontalScrollBar scrollBar = (HorizontalScrollBar)
+                getFragmentManager().findFragmentById(R.id.horizontal_scroll_bar_pane);
+        
+        if(scrollBar != null)
+        {
+        	HorizontalScrollView scrollView = (HorizontalScrollView) scrollBar.getView();
+        	LinearLayout view1 = (LinearLayout) scrollView.findViewById(R.id.horizontal_scroll_bar);
+        	
+        	if(view1 != null)
+        	{
+        		view1.removeAllViews();
+        		//view1.removeAllViewsInLayout();
+        		
+                TextView t = new TextView(view1.getContext());
+                t.setText("  ");
+                view1.addView(t);
+                
+                ArrayList<MediaItem> paneItems = Items.getPaneItems(helper, category);
+
+                for (int i = 0; i < paneItems.size(); i++)
+                {
+                    MediaItem item1 = paneItems.get(i);
+                    LinearLayout scrollingItem = setUpScrollingItem(view1, item1);
+                    view1.addView(scrollingItem);
+
+                    TextView buffer = new TextView(view1.getContext());
+                    buffer.setText("  ");
+                    view1.addView(buffer);
+                }
+        	}
+        }
+		
+		final ArrayList<MediaList> all_lists = Lists.getAllLists(helper);
 		ListView media_list = (ListView) findViewById(R.id.media_list);
 	    final OrgListAdapter adapter = new OrgListAdapter(this, R.layout.lists_list);
 	    
@@ -146,5 +191,49 @@ public class PaneActivity extends Activity {
 	}
     
     public void addList() {
+    }
+    
+    private LinearLayout setUpScrollingItem(View v, MediaItem temp) {
+        LinearLayout scrollingItem = new LinearLayout(v.getContext());
+        scrollingItem.setLayoutParams(new LinearLayout.LayoutParams(188,250));
+        scrollingItem.setOrientation(LinearLayout.VERTICAL);
+        ImageButton button = new ImageButton(scrollingItem.getContext());
+        button.setLayoutParams(new ViewGroup.LayoutParams(150,200));
+        button.setScaleType(ScaleType.FIT_START);
+        setThumbnailPic(temp, button);
+        TextView t1 = new TextView(v.getContext());
+        t1.setText(temp.getItemName());
+        t1.setTextColor(Color.WHITE);
+        t1.setTextSize(12);
+        t1.setGravity(Gravity.BOTTOM);
+        scrollingItem.setMinimumHeight(200);
+        scrollingItem.setMinimumWidth(134);
+        scrollingItem.addView(button);
+        scrollingItem.addView(t1);
+        return scrollingItem;
+    }
+    
+    public void setThumbnailPic(MediaItem item, ImageButton imageButton)
+    {
+        String path = item.getPicture();
+        try {
+
+            // get input stream
+
+            InputStream ims = getAssets().open(path);
+
+            // load image as Drawable
+
+            Drawable d = Drawable.createFromStream(ims, null);
+
+            // set image to ImageView
+            imageButton.setImageDrawable(d);
+
+        }
+
+        catch(IOException ex) {
+
+
+        }
     }
 }
