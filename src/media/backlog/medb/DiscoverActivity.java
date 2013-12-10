@@ -1,5 +1,6 @@
 package media.backlog.medb;
 
+import media.backlog.medb.database.DatabaseHelper;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -8,10 +9,18 @@ import android.view.MenuItem;
 /**
  * Created by Arin on 11/13/13.
  */
-public class DiscoverActivity extends Activity {
-    public void onCreate(Bundle savedInstanceState) {
+public class DiscoverActivity extends Activity
+{
+	private DatabaseHelper helper;
+	
+    public void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_discover);
+        helper = new DatabaseHelper(getApplicationContext());
+        
+        //LinearLayout view = (LinearLayout) this.findViewById(R.id.discover_layout);
+        
         getActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
