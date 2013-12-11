@@ -8,11 +8,9 @@
     <LinearLayout
         android:id="@+id/horizontal_scroll_bar"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="fill_parent"
         android:orientation="horizontal"
         android:paddingTop="5dp"
-        android:paddingBottom="5dp"
-
         ></LinearLayout>
 
 </HorizontalScrollView>

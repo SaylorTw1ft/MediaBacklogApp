@@ -8,7 +8,7 @@
     tools:context=".ItemActivity">
     
     <TextView
-        android:id="@+id/item_name"
+        android:id="@+id/item_name_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/item_picture"
@@ -23,38 +23,21 @@
         android:layout_width="131.25dp"
         android:layout_height="130dp"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/item_name"
+        android:layout_below="@+id/item_name_text"
         android:layout_marginLeft="15dp"
         android:contentDescription="@string/item_pic"
         android:focusableInTouchMode="true" />
-   
-	<FrameLayout
-        android:layout_width="fill_parent"
-        android:layout_height="170dp"
-        android:id = "@+id/scroll_bar_container"
-        android:background="@color/white"
-        android:contentDescription="Recommendations container"
-        android:layout_above="@+id/home_bar"
-        android:layout_alignParentLeft="true"></FrameLayout>
+
+
+	    
 	<fragment
+	    android:id="@+id/item_home_bar"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:name="media.backlog.medb.HomeBar"
-        android:id="@+id/home_bar"
         android:background="@color/home_color"
         android:layout_alignParentBottom="true"
         tools:layout="@layout/home_bar"></fragment>
-
-	<Button
-	    android:id="@+id/add_button"
-	    android:textColor="@color/home_color"
-	    android:background="@layout/itempage_add_button"
-	    android:layout_width="125dp"
-	    android:layout_height="wrap_content"
-	    android:layout_alignTop="@+id/item_picture"
-	    android:layout_alignLeft="@+id/item_genre"
-	    
-	    android:text="Add" />
 
 	<Button
 	    android:id="@+id/share_button"
@@ -64,7 +47,7 @@
 	    android:textColor="@color/home_color"
 	    android:background="@layout/share_button"
 	    android:layout_marginTop="8dp"
-	    android:layout_toRightOf="@+id/recommend_text"
+	    android:layout_alignLeft="@+id/add_button"
 	    android:text="Share" />
 
 	<TextView
@@ -72,10 +55,8 @@
 	    android:layout_width="200dp"
 	    android:layout_height="wrap_content"
 	    android:layout_alignLeft="@+id/share_button"
-	    android:layout_alignParentRight="true"
 	    android:layout_below="@+id/share_button"
 	    android:layout_marginTop="8dp"
-	    android:paddingLeft="5dp"
 	    android:text="Medium Text"
 	    android:textColor="@color/white"
 	    android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -85,11 +66,29 @@
 	    android:layout_width="wrap_content"
 	    android:layout_height="wrap_content"
 	    android:layout_alignParentLeft="true"
-	    android:layout_above="@+id/scroll_bar_container"
+	    android:layout_above ="@+id/horizontal_scroll_bar_item"
 	    android:paddingLeft="5dp"
 	    android:paddingBottom="5dp"
 	    android:text="Recommendations"
-	    android:textColor="@color/white"
-	    android:textAppearance="?android:attr/textAppearanceMedium" />
+	    android:textColor="@color/white"/>
+
+	<fragment
+	    android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+	    android:id="@+id/horizontal_scroll_bar_item"
+	    android:name="media.backlog.medb.WhiteHorizontalScrollBar"
+	    android:layout_above="@+id/item_home_bar"
+	    tools:layout="@layout/horizontal_scroll_bar" />
+
+	<Button
+	    android:id="@+id/add_button"
+	    android:layout_width="125dp"
+	    android:layout_height="wrap_content"
+	    android:layout_alignTop="@+id/item_picture"
+	    android:layout_marginLeft="20dp"
+	    android:layout_toRightOf="@+id/item_picture"
+	    android:background="@layout/itempage_add_button"
+	    android:text="Add"
+	    android:textColor="@color/home_color" />
 
 </RelativeLayout>
