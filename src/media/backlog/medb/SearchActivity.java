@@ -69,7 +69,7 @@ public class SearchActivity extends Activity{
 		cancel_BUT.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				handleCancelIntent(getIntent());
+				doCancel();
 			}
 
 		});
@@ -93,10 +93,12 @@ public class SearchActivity extends Activity{
 
 	}
 	
-	private void handleCancelIntent(Intent intent) {
-		intent = new Intent(this, SearchActivity.class);
-        startActivity(intent);
+	private void doCancel()
+	{
+		et.setText("");
+		adapter.clear();
 	}
+	
 	private void doSearch(String queryStr) { 
 		// get a Cursor, prepare the ListAdapter
 		// and set it

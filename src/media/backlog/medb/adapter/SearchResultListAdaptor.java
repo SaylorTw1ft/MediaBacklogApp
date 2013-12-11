@@ -5,6 +5,7 @@ import java.io.InputStream;
 import java.util.ArrayList;
 
 import media.backlog.medb.AddActivity;
+import media.backlog.medb.ItemActivity;
 import media.backlog.medb.R;
 import media.backlog.medb.SearchActivity;
 import media.backlog.medb.data.MediaItem;
@@ -54,6 +55,16 @@ public class SearchResultListAdaptor extends ArrayAdapter<MediaItem> {
     		holder.context = convertView.getContext();
     		holder.imageViewRating = (ImageView) convertView.findViewById(R.id.rating_image);
     		holder.imageViewThumbnail = (ImageView) convertView.findViewById(R.id.thumbnail_image);
+    		holder.imageViewThumbnail.setOnClickListener(new OnClickListener() {
+    			@Override
+    			public void onClick(View v) {
+    		        Intent intent = new Intent(context, ItemActivity.class);
+    		        Bundle b = new Bundle();
+    		        b.putInt("id", mediaItem.getItemID());
+    		        intent.putExtras(b);
+    		        context.startActivity(intent);
+    			}
+    		});
     		holder.textViewPeople = (TextView) convertView.findViewById(R.id.num_people);
     		holder.textViewItemName = (TextView) convertView.findViewById(R.id.search_item_title);
     		holder.buttonAdd = (Button) convertView.findViewById(R.id.search_add_button);
