@@ -10,18 +10,25 @@
         android:layout_height="fill_parent"
 		android:paddingLeft="10dp"
         android:layout_alignParentRight="true"
+        android:gravity="left|center"/>
+    
+	<ImageView
+        android:id="@+id/category_icon"
+        android:layout_width="50dp"
+        android:layout_height="fill_parent"
+		android:paddingLeft="10dp"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true"
         android:layout_alignParentTop="true"/>
-    
+	
     <TextView
         android:id="@+id/item_title"
         android:layout_width="wrap_content"
         android:layout_height="fill_parent"
-        android:layout_alignParentLeft="true"
         android:layout_toLeftOf="@id/rating_icon"
+        android:layout_toRightOf="@id/category_icon"
         android:gravity="left|center"
         android:paddingLeft="20dp"
-        android:singleLine="true"
         android:textSize="16sp"
         android:textStyle="bold" />
 

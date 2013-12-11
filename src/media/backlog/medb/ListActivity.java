@@ -16,6 +16,7 @@ import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
+import android.widget.Toast;
 import android.widget.ToggleButton;
 
 /**
@@ -26,7 +27,7 @@ import android.widget.ToggleButton;
 public class ListActivity extends Activity {
 	
 	String list_name;
-	String list_id;
+	int list_id;
 
 	ToggleButton t_movies;
 	ToggleButton t_games;
@@ -50,7 +51,7 @@ public class ListActivity extends Activity {
         getActionBar().setDisplayHomeAsUpEnabled(true);
 
         list_name = b.getString("list_name");
-        list_id = b.getString("list_id");
+        list_id = b.getInt("list_id");
         setTitle(list_name);
         
         t_movies = (ToggleButton) findViewById(R.id.toggle_list_movies);
@@ -86,7 +87,7 @@ public class ListActivity extends Activity {
 				  MediaItem this_item = (MediaItem) parent.getItemAtPosition(position);
 				  
 				  Bundle b = new Bundle();
-				 b.putInt("id", this_item.getItemID());
+				  b.putInt("id", this_item.getItemID());
 				  Intent intent = new Intent(getApplicationContext(), ItemActivity.class);
 				  intent.putExtras(b);
 				  startActivity(intent);
@@ -211,9 +212,21 @@ public class ListActivity extends Activity {
     }
 
     public void addItem() {
+        Toast.makeText(getApplicationContext(),
+                " add button has been clicked",
+                Toast.LENGTH_SHORT).show();
+
+        Intent intent=new Intent(getApplicationContext(), ListAddItemActivity.class);
+        Bundle b = new Bundle();
+        b.putString("list_name", list_name);
+        b.putInt("list_id", list_id);
+        intent.putExtras(b);
+        startActivity(intent);
     }
 
     public void editItem() {
-
+        Toast.makeText(getApplicationContext(),
+                " edit button has been clicked",
+                Toast.LENGTH_SHORT).show();
     }
 }

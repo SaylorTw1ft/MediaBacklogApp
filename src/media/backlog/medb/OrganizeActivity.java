@@ -1,6 +1,8 @@
 package media.backlog.medb;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 import media.backlog.medb.adapter.OrgListAdapter;
 import media.backlog.medb.data.MediaList;
@@ -8,7 +10,6 @@ import media.backlog.medb.database.DatabaseHelper;
 import media.backlog.medb.database.Lists;
 import android.app.Activity;
 import android.content.Intent;
-import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -18,7 +19,6 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
-import android.widget.Toast;
 import android.widget.ToggleButton;
 
 
@@ -67,7 +67,7 @@ public class OrganizeActivity extends Activity {
 		// db connection
 		DatabaseHelper dbHelper = new DatabaseHelper(getApplicationContext());
 		final ArrayList<MediaList> all_lists = Lists.getAllLists(dbHelper);
-//		Collections.sort(all_lists);
+		Collections.sort(all_lists, new ListComparator());
 		
 
 		ListView org_list = (ListView) findViewById(R.id.org_list);
@@ -86,7 +86,7 @@ public class OrganizeActivity extends Activity {
 				  
 				  Bundle b = new Bundle();
 				  b.putString("list_name", this_item.getListName());
-				  b.putString("list_id", Integer.toString(this_item.getListID()));
+				  b.putInt("list_id", this_item.getListID());
 				  Intent intent = new Intent(getApplicationContext(), ListActivity.class);
 				  intent.putExtras(b);
 				  startActivity(intent);
@@ -209,4 +209,14 @@ public class OrganizeActivity extends Activity {
         }
     }
 
+    private class ListComparator implements Comparator<MediaList> {
+        @Override
+        public int compare(MediaList l1, MediaList l2) {
+        	if(l1.getNumItems() == l2.getNumItems()){
+        		return l1.getListName().compareTo(l2.getListName());
+        	}else{
+        		return l2.getNumItems() - l1.getNumItems();
+        	}
+        }
+    }
 }

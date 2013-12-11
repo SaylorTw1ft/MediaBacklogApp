@@ -25,32 +25,32 @@
                 </action>
             </intent-filter>
 
-            <meta-data
-                android:name="android.app.searchable"
-                android:resource="@xml/searchable" />
+            <meta-data android:name="android.app.searchable"
+            android:resource="@xml/searchable" />
+            
         </activity>
 
         <provider
-            android:name="media.backlog.medb.SearchSuggestionSampleProvider"
+            android:name="SearchSuggestionSampleProvider"
             android:authorities="com.android.cbin.SearchSuggestionSampleProvider" >
         </provider>
 
         <activity
-            android:name="media.backlog.medb.DiscoverActivity"
+            android:name=".DiscoverActivity"
             android:label="Discover" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
         <activity
-            android:name="media.backlog.medb.OrganizeActivity"
+            android:name=".OrganizeActivity"
             android:label="Organize" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
         <activity
-            android:name="media.backlog.medb.ListActivity"
+            android:name=".ListActivity"
             android:label="ListActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -93,6 +93,11 @@
         <activity
             android:name="media.backlog.medb.ShareActivity"
             android:label="Share" />
+        <activity
+			android:name=".ListAddItemActivity"
+			android:label="ListAddItemActivity"
+			android:theme="@android:style/Theme.Dialog" >
+		</activity>
         <activity
             android:name="media.backlog.medb.AddActivity"
             android:label="Add to list..." >

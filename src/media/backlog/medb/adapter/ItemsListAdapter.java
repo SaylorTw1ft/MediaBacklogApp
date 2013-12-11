@@ -37,6 +37,15 @@ public class ItemsListAdapter extends ArrayAdapter<MediaItem> {
 //    				item.getItemName() + " worked ", Toast.LENGTH_SHORT).show();
     		
             holder = new ViewHolder();
+
+        	holder.category_view = (ImageView) view.findViewById(R.id.category_icon);
+            if (holder.category_view != null) {
+            	String category_icon_path = find_category_icon_path(item);
+            	int rating_image_id = context.getResources().getIdentifier(category_icon_path, 
+            			"drawable", context.getPackageName());
+            	holder.category_view.setImageResource(rating_image_id);
+            }
+            
             
             holder.item_title_view = (TextView) view.findViewById(R.id.item_title);
             if (holder.item_title_view != null) {
@@ -45,8 +54,8 @@ public class ItemsListAdapter extends ArrayAdapter<MediaItem> {
 
         	holder.rating_view = (ImageView) view.findViewById(R.id.rating_icon);
             if (holder.rating_view != null) {
-            	String icon_path = find_rating_icon_path(item);
-            	int rating_image_id = context.getResources().getIdentifier(icon_path, 
+            	String rating_icon_path = find_rating_icon_path(item);
+            	int rating_image_id = context.getResources().getIdentifier(rating_icon_path, 
             			"drawable", context.getPackageName());
             	holder.rating_view.setImageResource(rating_image_id);
             }
@@ -56,6 +65,18 @@ public class ItemsListAdapter extends ArrayAdapter<MediaItem> {
 
         return view;
     }
+
+	private String find_category_icon_path(MediaItem item) {
+
+		switch (item.getCategory()){
+			case 1: return "ic_movies_individual";
+			case 2: return "ic_games_individual";
+			case 3: return "ic_music_individual";
+			case 4: return "ic_books_individual";
+			default:break;
+		}
+		return "";
+	}
 
 	private String find_rating_icon_path(MediaItem item) {
 		
@@ -77,5 +98,6 @@ public class ItemsListAdapter extends ArrayAdapter<MediaItem> {
 	private static class ViewHolder {
 		public TextView item_title_view;
 		public ImageView rating_view;
+		public ImageView category_view;
 	}
 }
