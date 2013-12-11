@@ -8,9 +8,13 @@
     <color name="movie_color">#C54234</color>
     <color name="music_color">#7E3D9A</color>
     <color name="book_color">#F1C40D</color>
+    <color name="game_color">#26AB5E</color>
+    <color name="fade_movie_color">#e2a099</color>
+    <color name="fade_music_color">#be9ecc</color>
+    <color name="fade_book_color">#f8e186</color>
+    <color name="fade_game_color">#92d5ae</color>
     <color name="discover_color">#00FFFF</color>
     <color name="organize_color">#FF00FF</color>
-    <color name="game_color">#26AB5E</color>
 	<color name="white">#FFFFFF</color>
 	
     <dimen name="activity_horizontal_margin">16dp</dimen>

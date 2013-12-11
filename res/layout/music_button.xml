@@ -23,12 +23,12 @@
     <item>        
         <shape>
             <gradient
-                android:endColor="#6699cc"
-                android:startColor="#6699cc"
+                android:endColor="@color/fade_music_color"
+                android:startColor="@color/fade_music_color"
                 android:angle="270" />
             <stroke
                 android:width="3dp"
-                android:color="#6699cc" />
+                android:color="@color/fade_music_color" />
             <corners
                 android:radius="3dp" />
             <padding
