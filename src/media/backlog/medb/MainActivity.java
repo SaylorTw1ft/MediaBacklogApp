@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import media.backlog.medb.data.MediaItem;
 import media.backlog.medb.database.DatabaseHelper;
 import media.backlog.medb.database.Items;
+import media.backlog.medb.database.TrendingAmongFriends;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
@@ -60,7 +61,7 @@ public class MainActivity extends Activity {
 		                t.setText("  ");
 		                view1.addView(t);
 		                
-		                ArrayList<MediaItem> paneItems = Items.getPaneItems(helper, 1);
+		                ArrayList<MediaItem> paneItems = TrendingAmongFriends.getTrendingAmongFriendsMediaItems(helper);
 
 		                for (int i = 0; i < paneItems.size(); i++)
 		                {
