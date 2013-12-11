@@ -39,8 +39,9 @@ public class HorizontalScrollBar extends Fragment
         Bundle bundle = getArguments();
         int id;
         ArrayList<MediaItem> items;
+        try{
         id = bundle.getInt("id");
-
+        }catch(NullPointerException e) { id = 1;}
         MediaItem item = media.backlog.medb.database.Items.getItem(helper, id);
 
         int type;

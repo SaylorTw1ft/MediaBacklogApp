@@ -134,7 +134,7 @@ public class PaneActivity extends Activity {
 				  
 				  Bundle b = new Bundle();
 				  b.putString("list_name", this_item.getListName());
-				  b.putString("list_id", Integer.toString(this_item.getListID()));
+				  b.putInt("list_id", this_item.getListID());
 				  Intent intent = new Intent(getApplicationContext(), ListActivity.class);
 				  intent.putExtras(b);
 				  startActivity(intent);

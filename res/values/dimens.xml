@@ -4,7 +4,7 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="home_bar_icon_dim">60dp</dimen>
 
-    <color name="home_color">#666666</color>
+    <color name="home_color">#3398DA</color>
     <color name="movie_color">#ff3232</color>
     <color name="music_color">#913291</color>
     <color name="book_color">#CDCD00</color>

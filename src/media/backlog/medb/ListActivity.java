@@ -70,7 +70,7 @@ public class ListActivity extends Activity {
 		t_music.setChecked(music_checked);
         
 		DatabaseHelper dbHelper = new DatabaseHelper(getApplicationContext());
-        final ArrayList<MediaItem> items = ListItems.getItemsForList(dbHelper, Integer.parseInt(list_id));
+        final ArrayList<MediaItem> items = ListItems.getItemsForList(dbHelper, list_id);
         
 		ListView items_list_view = (ListView) findViewById(R.id.list_view_list_page);
 	    final ItemsListAdapter adapter = new ItemsListAdapter(this, R.layout.items_list);
