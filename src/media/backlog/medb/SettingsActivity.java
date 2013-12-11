@@ -24,7 +24,7 @@ public class SettingsActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				Intent intent = new Intent(SettingsActivity.this, LoginScreen.class);
-				intent.setFlags(intent.FLAG_ACTIVITY_CLEAR_TOP);
+				intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 				startActivity(intent);				
 			}
 		});

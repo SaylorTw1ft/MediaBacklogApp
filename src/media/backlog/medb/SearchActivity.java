@@ -2,34 +2,26 @@ package media.backlog.medb;
 
 import java.util.ArrayList;
 
-import media.backlog.medb.adapter.OrgListAdapter;
 import media.backlog.medb.adapter.SearchResultListAdaptor;
 import media.backlog.medb.data.MediaItem;
-import media.backlog.medb.data.MediaList;
 import media.backlog.medb.database.DatabaseHelper;
 import media.backlog.medb.database.Items;
-import media.backlog.medb.database.Lists;
 import android.app.Activity;
 import android.app.SearchManager;
 import android.content.Context;
 import android.content.Intent;
 
 import android.os.Bundle;
-import android.provider.SearchRecentSuggestions;
-import android.text.Editable;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.SearchView;
-import android.widget.TextView;
-import android.widget.ToggleButton;
 
 /**
  * Created by Arin on 11/13/13.
@@ -57,8 +49,6 @@ public class SearchActivity extends Activity{
 		//setContentView(R.layout.searchresult);
 		setContentView(R.layout.search_box);
 		
-		Intent i = getIntent(); 
-		
 		//cancel_BUT.setText(i.getAction().toString());
 		
 		
@@ -67,7 +57,7 @@ public class SearchActivity extends Activity{
 		search_BUT = (Button)findViewById(R.id.search_BUTTON);
 		cancel_BUT = (Button)findViewById(R.id.cancel_BUTTON);
 		et=(EditText) findViewById(R.id.searchBOX);
-		String searchString = et.getText().toString();
+		//String searchString = et.getText().toString();
 		
 		search_BUT.setOnClickListener(new OnClickListener() {
 			@Override

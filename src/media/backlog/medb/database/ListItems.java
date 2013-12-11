@@ -3,7 +3,6 @@ package media.backlog.medb.database;
 import java.util.ArrayList;
 
 import media.backlog.medb.data.MediaItem;
-import media.backlog.medb.database.Lists.ListEntry;
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;

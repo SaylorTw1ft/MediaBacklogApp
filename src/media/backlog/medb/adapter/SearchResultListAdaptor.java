@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 import media.backlog.medb.R;
 import media.backlog.medb.data.MediaItem;
-import media.backlog.medb.data.MediaList;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
