@@ -3,7 +3,8 @@
 
     <string name="app_name">meDB</string>
     <string name="login_button_text">LOG IN</string>
-    
+    <string name="login_description_text">Organize \u2022 
+        Discover \u2022 Share</string>
     <!-- Action Bar constants -->
     <string name="home_action_settings">Settings</string>
     <string name="organize_action_add">Add List</string>

@@ -20,17 +20,6 @@ public class LoginScreen extends Activity
         dbHelper.loadSampleData(db);
         setContentView(R.layout.activity_login);
 
-        Button test = (Button) findViewById(R.id.test_item);
-        test.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(LoginScreen.this, ItemActivity.class);
-                Bundle b = new Bundle();
-                b.putInt("id", 5);
-                intent.putExtras(b);
-                startActivity(intent);
-            }
-        });
         Button home = (Button) findViewById(R.id.home_button);
         home.setOnClickListener(new View.OnClickListener() {
             @Override

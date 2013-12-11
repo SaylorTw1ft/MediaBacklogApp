@@ -2,31 +2,52 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
-
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="240dp"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="@string/login_button" />
+    android:orientation="vertical"
+    android:background="@color/home_color" >
 
     <Button
         android:id="@+id/home_button"
         android:layout_width="240dp"
         android:layout_height="wrap_content"
-        android:text="@string/home_button"
-        android:layout_above="@+id/button1"
-        android:layout_alignLeft="@+id/button1" />
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="160dp"
+        android:background="@layout/login_button"
+        android:text="@string/login_button_text"
+        android:textColor="@color/home_color"
+        android:textSize="36sp" />
 
-    <Button
+    <ImageView
+        android:id="@+id/login_page_image"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_alignBottom="@+id/login_page_text"
+        android:layout_toLeftOf="@+id/login_page_text"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_launcher" />
+
+    <TextView
+        android:id="@+id/login_page_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Test Item"
-        android:id="@+id/test_item"
-        android:layout_below="@+id/button1"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/home_button"
+        android:layout_marginTop="28dp"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:textSize="60sp" />
+
+    <TextView
+        android:id="@+id/TextView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="29dp" />
+        android:layout_below="@+id/login_page_image"
+        android:gravity="center_horizontal"
+        android:text="@string/login_description_text"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+"
 
 </RelativeLayout>
