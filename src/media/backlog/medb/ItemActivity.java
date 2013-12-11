@@ -38,10 +38,11 @@ public class ItemActivity extends Activity {
         setContentView(R.layout.activity_item);
         helper = new DatabaseHelper(getApplicationContext());
         item = media.backlog.medb.database.Items.getItem(helper, id);
-        setItemThumbnail();
         setItemName();
+        setTitleName();
         setItemGenre();
         setUpButtons();
+        setItemThumbnail();
         FragmentManager fragmentManager = getFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         Bundle args = new Bundle();
@@ -64,14 +65,17 @@ public class ItemActivity extends Activity {
 
     private void setItemGenre() {
         TextView text = (TextView) findViewById(R.id.item_genre);
-        text.setText(item.getGenre());
+        text.setText("Type: " + item.getGenre());
     }
 
-    private void setItemName() {
+    private void setTitleName() {
         setTitle(item.getItemName());
-
     }
 
+    private void setItemName(){
+    	TextView text = (TextView) findViewById(R.id.item_name);
+    	text.setText(item.getItemName());
+    }
     private void setItemThumbnail() {
         ImageView imageView = (ImageView) findViewById(R.id.item_picture);
         String path = item.getPicture();

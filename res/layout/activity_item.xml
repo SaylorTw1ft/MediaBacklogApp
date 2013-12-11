@@ -1,13 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:contentDescription="@string/item_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ItemActivity">
+    
+    <TextView
+        android:id="@+id/item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/item_picture"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="8dp"
+        android:text="Default"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
 
-    <fragment
+    <ImageView
+        android:id="@+id/item_picture"
+        android:layout_width="131.25dp"
+        android:layout_height="130dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/item_name"
+        android:layout_marginLeft="15dp"
+        android:contentDescription="@string/item_pic"
+        android:focusableInTouchMode="true" />
+   
+	<FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="170dp"
+        android:id = "@+id/scroll_bar_container"
+        android:background="@color/home_color"
+        android:contentDescription="Recommendations container"
+        android:layout_above="@+id/home_bar"
+        android:layout_alignParentLeft="true"></FrameLayout>
+	<fragment
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:name="media.backlog.medb.HomeBar"
@@ -16,63 +43,49 @@
         android:layout_alignParentBottom="true"
         tools:layout="@layout/home_bar"></fragment>
 
-    <ImageView
-        android:layout_width="131.25dp"
-        android:layout_height="175dp"
-        android:id="@+id/item_picture"
-        android:contentDescription="@string/item_pic"
-        android:layout_marginTop="20dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="20dp"
-        android:layout_alignParentStart="true"
-        android:focusableInTouchMode="true" />
+	<Button
+	    android:id="@+id/add_button"
+	    android:textColor="#FFFFFF"
+	    android:background="@layout/moive_button"
+	    android:layout_width="125dp"
+	    android:layout_height="wrap_content"
+	    android:layout_alignTop="@+id/item_picture"
+	    android:layout_alignLeft="@+id/item_genre"
+	    
+	    android:text="Add" />
 
-    <TextView
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Medium Text"
-        android:id="@+id/item_genre"
-        android:paddingLeft="5dp"
-        android:layout_alignBottom="@+id/item_picture"
-        android:layout_alignParentRight="true"
-        android:layout_alignLeft="@+id/share_button" />
+	<Button
+	    android:id="@+id/share_button"
+	    android:layout_width="125dp"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@+id/add_button"
+	    android:textColor="#FFFFFF"
+	    android:background="@layout/moive_button"
+	    android:layout_marginTop="8dp"
+	    android:layout_toRightOf="@+id/recommend_text"
+	    android:text="Share" />
 
-    <Button
-        android:layout_width="125dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/share_button"
-        android:layout_marginTop="21dp"
-        android:text="Share"
-        android:layout_below="@+id/add_button"
-        android:layout_toRightOf="@+id/item_picture" />
+	<TextView
+	    android:id="@+id/item_genre"
+	    android:layout_width="200dp"
+	    android:layout_height="wrap_content"
+	    android:layout_alignLeft="@+id/share_button"
+	    android:layout_alignParentRight="true"
+	    android:layout_below="@+id/share_button"
+	    android:layout_marginTop="8dp"
+	    android:paddingLeft="5dp"
+	    android:text="Medium Text"
+	    android:textAppearance="?android:attr/textAppearanceMedium" />
 
-    <Button
-        android:layout_width="125dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/add_button"
-        android:text="Add"
-        android:layout_alignTop="@+id/item_picture"
-        android:layout_toRightOf="@+id/item_picture" />
-
-    <FrameLayout
-        android:layout_width="fill_parent"
-        android:layout_height="170dp"
-        android:id = "@+id/scroll_bar_container"
-        android:background="@color/home_color"
-        android:contentDescription="Recommendations container"
-        android:layout_above="@+id/home_bar"
-        android:layout_alignParentLeft="true"></FrameLayout>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Recommendations"
-        android:id="@+id/recommend_text"
-        android:layout_below="@+id/item_picture"
-        android:layout_alignLeft="@+id/item_picture"
-        android:paddingLeft="10dp" />
+	<TextView
+	    android:id="@+id/recommend_text"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignLeft="@+id/item_picture"
+	    android:layout_above="@+id/scroll_bar_container"
+	    android:paddingLeft="5dp"
+	    android:paddingBottom="5dp"
+	    android:text="Recommendations"
+	    android:textAppearance="?android:attr/textAppearanceMedium" />
 
 </RelativeLayout>
