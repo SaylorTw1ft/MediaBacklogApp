@@ -1,7 +1,5 @@
 package media.backlog.medb;
 
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.ArrayList;
 
 import media.backlog.medb.adapter.FriendAdapter;
@@ -10,18 +8,9 @@ import media.backlog.medb.database.DatabaseHelper;
 import media.backlog.medb.database.Friends;
 import android.os.Bundle;
 import android.app.Activity;
-import android.graphics.Color;
-import android.graphics.drawable.Drawable;
-import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ImageButton;
-import android.widget.ImageView.ScaleType;
-import android.widget.LinearLayout;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.support.v4.app.NavUtils;
 
 public class FriendsActivity extends Activity
@@ -41,49 +30,8 @@ public class FriendsActivity extends Activity
 	    final FriendAdapter adapter = new FriendAdapter(this, R.layout.friends_list);
 	    friendsList.setAdapter(adapter);
 	    adapter.clear();
-//		Toast.makeText(getApplicationContext(), 
-//				"updating org list: all_list size is " + Integer.toString(all_lists.size()), 
-//				Toast.LENGTH_SHORT).show();
-	    for(int i=0; i<friends.size(); i++)
-	    {
-	    	adapter.add(friends.get(i));
-	    	System.out.println(friends.get(i).getFriendName());
-	    }
-	    
+	    adapter.addAll(friends);
         adapter.notifyDataSetChanged();
-	}
-	
-	private LinearLayout setUpFriendItem(View v, MediaFriend f) {
-		LinearLayout item = new LinearLayout(v.getContext());
-		//item.setLayoutParams(new LinearLayout.LayoutParams(width, height));
-		item.setOrientation(LinearLayout.HORIZONTAL);
-		ImageButton button = new ImageButton(item.getContext());
-		button.setLayoutParams(new ViewGroup.LayoutParams(150, 150));
-		button.setScaleType(ScaleType.FIT_START);
-		setThumbnailPic(f, button);
-		TextView t = new TextView(v.getContext());
-		t.setText(f.getFriendName());
-		t.setTextColor(Color.BLACK);
-		t.setTextSize(12);
-		t.setGravity(Gravity.RIGHT);
-		item.setMinimumHeight(170);
-		//item.setMinimumWidth(250);
-		item.addView(button);
-		item.addView(t);
-		return item;
-		
-	}
-	
-	public void setThumbnailPic(MediaFriend f, ImageButton button) {
-		String path = f.getPicture();
-		try {
-			InputStream ims = getAssets().open(path);
-			Drawable d = Drawable .createFromStream(ims,  null);
-			button.setImageDrawable(d);
-		}
-		catch(IOException e) {
-			
-		}
 	}
 
 	/**

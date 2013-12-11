@@ -7,19 +7,16 @@
         android:id="@+id/list_icon"
         android:contentDescription="@null"
         android:layout_width="50dp"
-        android:layout_height="fill_parent"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentTop="true"/>
+        android:layout_height="fill_parent"/>
 
     <TextView
         android:id="@+id/list_name"
         android:layout_height="fill_parent"
-        android:layout_width="200dp"
-        android:layout_alignParentTop="true"
+        android:layout_width="fill_parent"
         android:layout_toRightOf="@id/list_icon"
 		android:paddingLeft="10dp"
         android:singleLine="true"
         android:textStyle="bold"
         android:gravity="left|center"
-        android:textSize="16sp" />
+        android:textSize="12sp" />
 </RelativeLayout>
