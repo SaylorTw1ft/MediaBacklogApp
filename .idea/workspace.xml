@@ -17,10 +17,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="70439b11-7fc0-42ca-a166-fe8bae816001" name="Default" comment="Framework for action bar buttons&#10;">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/media/backlog/medb/HorizontalScrollBar.java" afterPath="$PROJECT_DIR$/src/media/backlog/medb/HorizontalScrollBar.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/media/backlog/medb/ListActivity.java" afterPath="$PROJECT_DIR$/src/media/backlog/medb/ListActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/media/backlog/medb/PaneActivity.java" afterPath="$PROJECT_DIR$/src/media/backlog/medb/PaneActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/dimens.xml" afterPath="$PROJECT_DIR$/res/values/dimens.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="MediaBacklogApp.iws" />
@@ -89,7 +86,7 @@
       <file leaf-file-name="HorizontalScrollBar.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/media/backlog/medb/HorizontalScrollBar.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="95" column="48" selection-start="3408" selection-end="3408" vertical-scroll-proportion="0.0" vertical-offset="1188" max-vertical-offset="2584">
+            <state line="102" column="8" selection-start="3815" selection-end="4194" vertical-scroll-proportion="0.0" vertical-offset="1324" max-vertical-offset="2584">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -115,11 +112,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Method.class" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Method.class" pinned="false" current="false" current-in-tab="false">
         <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-18/android.jar!/java/lang/reflect/Method.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="0" selection-start="2320" selection-end="2320" vertical-scroll-proportion="1.3469387" vertical-offset="109" max-vertical-offset="1003">
+            <state line="33" column="34" selection-start="1441" selection-end="1441" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1003">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PaneActivity.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/media/backlog/medb/PaneActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="207" column="40" selection-start="7322" selection-end="7322" vertical-scroll-proportion="0.86767894" vertical-offset="3017" max-vertical-offset="4216">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -648,14 +656,14 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290461" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33333334" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.47802788" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.47802788" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3279743" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3279743" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24973711" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1015,28 +1023,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/media/backlog/medb/HorizontalScrollBar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="95" column="48" selection-start="3408" selection-end="3408" vertical-scroll-proportion="0.0" vertical-offset="1188" max-vertical-offset="2584">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/media/backlog/medb/ListActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="45" column="0" selection-start="1146" selection-end="1146" vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="3366">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/media/backlog/medb/PaneActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="135" column="29" selection-start="4734" selection-end="4740" vertical-scroll-proportion="0.3325688" vertical-offset="2099" max-vertical-offset="4080">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1049,8 +1039,26 @@
     </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-18/android.jar!/java/lang/reflect/Method.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="0" selection-start="2320" selection-end="2320" vertical-scroll-proportion="1.3469387" vertical-offset="109" max-vertical-offset="1003">
+        <state line="33" column="34" selection-start="1441" selection-end="1441" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1003">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/media/backlog/medb/HorizontalScrollBar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="102" column="8" selection-start="3815" selection-end="4194" vertical-scroll-proportion="0.0" vertical-offset="1324" max-vertical-offset="2584">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/media/backlog/medb/PaneActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="207" column="40" selection-start="7322" selection-end="7322" vertical-scroll-proportion="0.86767894" vertical-offset="3017" max-vertical-offset="4216">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
