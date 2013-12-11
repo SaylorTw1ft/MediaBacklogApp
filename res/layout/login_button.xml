@@ -4,12 +4,12 @@
 	<item android:state_pressed = "true">
         <shape>
             <gradient
-                android:startColor="#00a693"
-                android:endColor="#00a693"
+                android:startColor="@color/fade_home_color"
+                android:endColor="@color/fade_home_color"
                 android:angle="270" />
             <stroke
                 android:width="3dp"
-                android:color="#00a693" />
+                android:color="@color/fade_home_color" />
             <corners
                 android:radius="3dp" />
             <padding

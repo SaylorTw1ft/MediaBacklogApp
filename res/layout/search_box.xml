@@ -9,7 +9,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/search_button_layout"
-    android:orientation="vertical"  >
+    android:orientation="vertical"
+    android:layout_above="@+id/item_home_bar_search"  >
        
     <EditText
         android:id="@+id/searchBOX"
@@ -46,6 +47,7 @@
 	    android:layout_height="wrap_content"
 	    android:layout_alignParentLeft="true"
 	    android:layout_alignParentTop="true" >
+        android
 	</ListView>
 
     </LinearLayout>

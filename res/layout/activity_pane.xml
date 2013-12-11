@@ -31,6 +31,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/horizontal_scroll_bar_pane"
+        android:layout_above="@+id/home_bar"
         android:layout_marginTop="10dp" >
     </ListView>
     

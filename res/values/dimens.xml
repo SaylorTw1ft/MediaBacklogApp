@@ -5,6 +5,7 @@
     <dimen name="home_bar_icon_dim">60dp</dimen>
 
     <color name="home_color">#3398DA</color>
+    <color name="fade_home_color">#99cbec</color>
     <color name="movie_color">#C54234</color>
     <color name="music_color">#7E3D9A</color>
     <color name="book_color">#F1C40D</color>
