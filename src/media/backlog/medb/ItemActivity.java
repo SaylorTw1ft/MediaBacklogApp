@@ -1,8 +1,10 @@
 package media.backlog.medb;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -11,8 +13,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -122,8 +126,23 @@ public class ItemActivity extends Activity {
     }
     public void shareButton(View v)
     {
-        Intent intent = new Intent(this, ShareActivity.class);
-        startActivityForResult(intent, 1);
+    	AlertDialog.Builder shareAlert = new AlertDialog.Builder(this);
+    	shareAlert.setTitle("Enter Your Message: ");
+    	final EditText input = new EditText(this);
+    	shareAlert.setView(input);
+    	shareAlert.setPositiveButton("Share", new DialogInterface.OnClickListener() {
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				Toast.makeText(ItemActivity.this, "Shared", Toast.LENGTH_SHORT).show();
+			}
+		});
+    	shareAlert.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				// Do nothing		
+			}
+		});
+    	shareAlert.show();
     }
     public class ItemClick implements OnClickListener {
         @Override
