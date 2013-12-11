@@ -200,7 +200,7 @@ public class PaneActivity extends Activity {
 
     private LinearLayout setUpScrollingItem(View v, MediaItem temp) {
         LinearLayout scrollingItem = new LinearLayout(v.getContext());
-        scrollingItem.setLayoutParams(new LinearLayout.LayoutParams(188,250));
+        scrollingItem.setLayoutParams(new LinearLayout.LayoutParams(188,240));
         scrollingItem.setOrientation(LinearLayout.VERTICAL);
         ImageButton button = new ImageButton(scrollingItem.getContext());
         button.setLayoutParams(new ViewGroup.LayoutParams(150, 200));
