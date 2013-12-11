@@ -29,6 +29,16 @@ public class SettingsActivity extends Activity {
 			}
 		});
         
+        Button friendButton = (Button) findViewById(R.id.friends_button);
+        friendButton.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(SettingsActivity.this, FriendsActivity.class);
+				startActivity(intent);				
+			}
+		});
+        
         Button about = (Button) findViewById(R.id.about_button);
         about.setOnClickListener(new View.OnClickListener() {
 			

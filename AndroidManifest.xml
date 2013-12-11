@@ -30,11 +30,6 @@
             
         </activity>
 
-        <provider
-            android:name="SearchSuggestionSampleProvider"
-            android:authorities="com.android.cbin.SearchSuggestionSampleProvider" >
-        </provider>
-
         <activity
             android:name=".DiscoverActivity"
             android:label="Discover" >
@@ -69,7 +64,7 @@
         </activity>
         <activity
             android:name="media.backlog.medb.LoginScreen"
-            android:label="Login" >
+            android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

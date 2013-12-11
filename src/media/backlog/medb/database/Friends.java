@@ -1,5 +1,7 @@
 package media.backlog.medb.database;
 
+import java.util.ArrayList;
+
 import media.backlog.medb.data.MediaFriend;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -63,5 +65,48 @@ public final class Friends
     	friend.setPicture(cursor.getString(cursor.getColumnIndex(FriendsEntry.COLUMN_NAME_PICTURE)));
     	
     	return friend;
+    }
+    
+    public static ArrayList<MediaFriend> getAllFriends(DatabaseHelper dbHelper)
+    {
+    	SQLiteDatabase db = dbHelper.getReadableDatabase();
+
+    	// Define a projection that specifies which columns from the database
+    	// you will actually use after this query.
+    	String[] projection = {
+    	    FriendsEntry.COLUMN_NAME_FRIENDID,
+    	    FriendsEntry.COLUMN_NAME_FRIENDNAME,
+    	    FriendsEntry.COLUMN_NAME_PICTURE
+    	    };
+
+    	Cursor cursor = db.query(
+    	    FriendsEntry.TABLE_NAME,  // The table to query
+    	    projection,                               // The columns to return
+    	    null,    // The columns for the WHERE clause
+    	    null,                            // The values for the WHERE clause
+    	    null,                                     // don't group the rows
+    	    null,                                     // don't filter by row groups
+    	    null                                 // The sort order
+    	    );
+    	
+    	ArrayList<MediaFriend> friends = new ArrayList<MediaFriend>();
+    	
+    	if(cursor.moveToFirst())
+    	{
+    		while(true)
+    		{
+    			MediaFriend friend = new MediaFriend(cursor.getInt(cursor.getColumnIndex(FriendsEntry.COLUMN_NAME_FRIENDID)));
+    	    	friend.setFriendName(cursor.getString(cursor.getColumnIndex(FriendsEntry.COLUMN_NAME_FRIENDNAME)));
+    	    	friend.setPicture(cursor.getString(cursor.getColumnIndex(FriendsEntry.COLUMN_NAME_PICTURE)));
+    	    	friends.add(friend);
+    	    	
+    	    	if(cursor.moveToNext() == false)
+        		{
+        			break;
+        		}
+    		}
+    	}
+    	
+    	return friends;
     }
 }
