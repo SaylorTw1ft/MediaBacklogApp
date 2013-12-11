@@ -6,10 +6,7 @@ import java.util.ArrayList;
 
 import media.backlog.medb.data.MediaItem;
 import media.backlog.medb.database.DatabaseHelper;
-import media.backlog.medb.database.Items;
 import media.backlog.medb.database.TrendingAmongFriends;
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;

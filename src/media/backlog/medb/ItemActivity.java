@@ -2,11 +2,8 @@ package media.backlog.medb;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -39,7 +36,6 @@ import media.backlog.medb.data.MediaItem;
 public class ItemActivity extends Activity {
 	private static int staticCategory = 1;
     private MediaItem item;
-    private DatabaseHelper helper;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
