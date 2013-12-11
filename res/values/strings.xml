@@ -88,6 +88,7 @@
 
     <!-- Organize View -->
     <string name="organize_title">Organize</string>
+    <string name="my_lists"><u>My Lists</u></string>
     <string name="organize_movies">Movies</string>
     <string name="organize_games">Games</string>
     <string name="organize_books">Books</string>
