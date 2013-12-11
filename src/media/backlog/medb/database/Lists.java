@@ -137,6 +137,48 @@ public final class Lists
 
     	// Insert the new row, returning the primary key value of the new row
     	db.insert(ListEntry.TABLE_NAME, null, values);
+    	
+    	ListItems.addItem(dbHelper, list.getListID(), 5);
+    	ListItems.addItem(dbHelper, list.getListID(), 6);
+    	ListItems.addItem(dbHelper, list.getListID(), 7);
+    }
+    
+    public static MediaList addList(DatabaseHelper dbHelper, String listName)
+    {
+    	SQLiteDatabase db = dbHelper.getReadableDatabase();
+
+    	// Define a projection that specifies which columns from the database
+    	// you will actually use after this query.
+    	String[] projection = {
+    	    "MAX(" + ListEntry.COLUMN_NAME_LISTID + ")"
+    	    };
+
+    	// How you want the results sorted in the resulting Cursor
+    	//String sortOrder = FeedEntry.COLUMN_NAME_UPDATED + " DESC";
+
+    	Cursor cursor = db.query(
+    	    ListEntry.TABLE_NAME,  // The table to query
+    	    projection,                               // The columns to return
+    	    null,    // The columns for the WHERE clause
+    	    null,                            // The values for the WHERE clause
+    	    null,                                     // don't group the rows
+    	    null,                                     // don't filter by row groups
+    	    null                                 // The sort order
+    	    );
+    	
+    	cursor.moveToFirst();
+    	int itemID = cursor.getInt(cursor.getColumnIndex("MAX(" + ListEntry.COLUMN_NAME_LISTID + ")"));
+    	MediaList list = new MediaList(itemID + 1);
+    	list.setListName(listName);
+    	list.setNumItems(0);
+    	list.setPrivacy(false);
+    	list.setMovie(false);
+    	list.setGame(false);
+    	list.setMusic(false);
+    	list.setBook(false);
+    	
+    	Lists.addList(dbHelper, list);
+    	return list;
     }
     
     public static void deleteList(DatabaseHelper dbHelper, int listID)
@@ -145,5 +187,39 @@ public final class Lists
     	String selection = ListEntry.COLUMN_NAME_LISTID + " = ?";
     	String[] selectionArgs = { String.valueOf(listID) };
     	db.delete(ListEntry.TABLE_NAME, selection, selectionArgs);
+    }
+    
+    public static void updateListWithCategory(DatabaseHelper dbHelper, int listID, int category)
+    {
+    	SQLiteDatabase db = dbHelper.getReadableDatabase();
+    	
+    	// New value for one column
+		ContentValues values = new ContentValues();
+		if(category == 1)
+		{
+			values.put(ListEntry.COLUMN_NAME_MOVIE, 1);
+		}
+		if(category == 2)
+		{
+			values.put(ListEntry.COLUMN_NAME_GAME, 1);
+		}
+		if(category == 3)
+		{
+			values.put(ListEntry.COLUMN_NAME_MUSIC, 1);
+		}
+		if(category == 4)
+		{
+			values.put(ListEntry.COLUMN_NAME_BOOK, 1);
+		}
+
+		// Which row to update, based on the ID
+		String selection = ListEntry.COLUMN_NAME_LISTID + " = ?";
+		String[] selectionArgs = { String.valueOf(listID) };
+
+		db.update(
+		    ListEntry.TABLE_NAME,
+		    values,
+		    selection,
+		    selectionArgs);
     }
 }

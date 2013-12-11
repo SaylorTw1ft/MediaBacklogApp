@@ -109,6 +109,8 @@ public final class ListItems
 
     	// Insert the new row, returning the primary key value of the new row
     	db.insert(ListItemEntry.TABLE_NAME, null, values);
+    	
+    	Lists.updateListWithCategory(dbHelper, listID, Items.getItem(dbHelper, itemID).getCategory());
     }
     
     public static void deleteItem(DatabaseHelper dbHelper, int listID, int itemID)

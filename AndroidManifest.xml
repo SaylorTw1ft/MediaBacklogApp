@@ -45,6 +45,11 @@
                 android:value=".MainActivity" />
         </activity>
         <activity
+			android:name=".OrganizeAddListActivity"
+			android:label="OrganizeAddListActivity"
+			android:theme="@android:style/Theme.Dialog" >
+		</activity>
+        <activity
             android:name=".ListActivity"
             android:label="ListActivity" >
             <meta-data

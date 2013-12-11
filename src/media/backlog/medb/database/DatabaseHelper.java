@@ -92,7 +92,6 @@ public class DatabaseHelper extends SQLiteOpenHelper
     	db.execSQL(SampleLists.list3);
     	db.execSQL(SampleLists.list4);
     	db.execSQL(SampleLists.list5);
-    	db.execSQL(SampleLists.list6);
     	db.execSQL(SampleLists.list7);
     	db.execSQL(SampleLists.list8);
     	db.execSQL(SampleLists.list9);
@@ -123,9 +122,6 @@ public class DatabaseHelper extends SQLiteOpenHelper
     	db.execSQL(SampleListItems.listItem15);
     	db.execSQL(SampleListItems.listItem16);
     	db.execSQL(SampleListItems.listItem17);
-    	db.execSQL(SampleListItems.listItem18);
-    	db.execSQL(SampleListItems.listItem19);
-    	db.execSQL(SampleListItems.listItem20);
     	db.execSQL(SampleListItems.listItem21);
     	db.execSQL(SampleListItems.listItem22);
     	db.execSQL(SampleListItems.listItem23);

@@ -7,7 +7,6 @@ public class SampleLists
 	public static String list3 = "INSERT INTO Lists (listID,listName,movie,game,music,book) VALUES (3, 'Games Ive Played',0,1,0,0)";
 	public static String list4 = "INSERT INTO Lists (listID,listName,movie,game,music,book) VALUES (4, 'Books Ive Read',0,0,0,1)";
 	public static String list5 = "INSERT INTO Lists (listID,listName,movie,game,music,book) VALUES (5, 'Albums Ive listened to',0,0,1,0)";
-	public static String list6 = "INSERT INTO Lists (listID,listName,movie,game,music,book) VALUES (6, 'My favorite movies',1,0,0,0)";
 	public static String list7 = "INSERT INTO Lists (listID,listName,movie,game,music,book) VALUES (7, 'Batman',1,1,0,1)";
 	public static String list8 = "INSERT INTO Lists (listID,listName,movie,game,music,book) VALUES (8, 'Games I Want to Play',0,1,0,0)";
 	public static String list9 = "INSERT INTO Lists (listID,listName,movie,game,music,book) VALUES (9, 'Science Fiction',1,1,0,1)";

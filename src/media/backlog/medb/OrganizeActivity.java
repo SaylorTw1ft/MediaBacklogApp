@@ -164,19 +164,26 @@ public class OrganizeActivity extends Activity {
 //		Toast.makeText(getApplicationContext(), 
 //				"updating org list: all_list size is " + Integer.toString(all_lists.size()), 
 //				Toast.LENGTH_SHORT).show();
-        for(int i=0; i<all_lists.size(); i++){
+        for(int i=0; i<all_lists.size(); i++)
+        {
         	if(movies_checked && all_lists.get(i).getMovie()){
         		adapter.add(all_lists.get(i));
         		continue;
-        	}else{
+        	}
+        	else
+        	{
         		if(games_checked && all_lists.get(i).getGame()){
         			adapter.add(all_lists.get(i));
         			continue;
-        		}else{
+        		}
+        		else
+        		{
             		if(books_checked && all_lists.get(i).getBook()){
             			adapter.add(all_lists.get(i));
             			continue;
-            		}else{
+            		}
+            		else
+            		{
                 		if(music_checked && all_lists.get(i).getMusic()){
                 			adapter.add(all_lists.get(i));
                 			continue;
@@ -192,14 +199,18 @@ public class OrganizeActivity extends Activity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.main, menu);
+		getMenuInflater().inflate(R.menu.organize, menu);
 		return true;
 	}
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle presses on the action bar items
-        switch (item.getItemId()) {
+        switch (item.getItemId())
+        {
+	        case R.id.organize_action_add:
+	            addList();
+	            return true;
             case android.R.id.home:
                 android.support.v4.app.NavUtils.navigateUpFromSameTask(this);
                 return true;
@@ -207,6 +218,12 @@ public class OrganizeActivity extends Activity {
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+    
+    public void addList()
+    {
+        Intent intent=new Intent(getApplicationContext(), OrganizeAddListActivity.class);
+        startActivity(intent);
     }
 
     private class ListComparator implements Comparator<MediaList> {

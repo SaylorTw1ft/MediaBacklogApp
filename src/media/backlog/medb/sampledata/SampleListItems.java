@@ -32,11 +32,6 @@ public class SampleListItems {
 	public static String listItem16 = "INSERT INTO ListItems (listID, itemID) VALUES (5,40)";
 	public static String listItem17 = "INSERT INTO ListItems (listID, itemID) VALUES (5,41)";
 	
-	//My Favorite movies
-	public static String listItem18 = "INSERT INTO ListItems (listID, itemID) VALUES (6,5)";
-	public static String listItem19 = "INSERT INTO ListItems (listID, itemID) VALUES (6,6)";
-	public static String listItem20 = "INSERT INTO ListItems (listID, itemID) VALUES (6,7)";
-	
 	//Batman
 	public static String listItem21 = "INSERT INTO ListItems (listID, itemID) VALUES (7,2)";
 	public static String listItem22 = "INSERT INTO ListItems (listID, itemID) VALUES (7,53)";
