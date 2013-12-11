@@ -7,14 +7,6 @@
     android:layout_height="match_parent"
     tools:context=".SearchActivity">
 
-    <fragment
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:name="media.backlog.medb.HomeBar"
-        android:id="@+id/home_bar"
-        android:layout_alignParentBottom="true"
-        tools:layout="@layout/home_bar"></fragment>
-
     <EditText
         android:id="@+id/mediaTitle"
         android:layout_width="wrap_content"

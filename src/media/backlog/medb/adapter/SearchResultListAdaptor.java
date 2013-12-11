@@ -1,14 +1,24 @@
 package media.backlog.medb.adapter;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 
+import media.backlog.medb.AddActivity;
 import media.backlog.medb.R;
+import media.backlog.medb.SearchActivity;
 import media.backlog.medb.data.MediaItem;
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
+import android.graphics.drawable.Drawable;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -21,56 +31,101 @@ public class SearchResultListAdaptor extends ArrayAdapter<MediaItem> {
         super(context, textViewResourceId);
         this.context = context;
     }
-
-    public View getView(int position, View convertView, ViewGroup parent) {
-        View view = convertView;
-        if (view == null) {
-            LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            view = inflater.inflate(R.layout.search_list_display, null);
-        }
-
-        MediaItem item = getItem(position);
-        if (item!= null) {
-        	ImageView media_View = (ImageView) view.findViewById(R.id.mediaImage);
-        	if(media_View!=null){
-        		
-        	}
-        	
-        	ImageView icon_view = (ImageView) view.findViewById(R.id.movieType);
-            if (icon_view != null) {
-            	String path_of_icon = find_icon_index(item);
-            	int image_id = context.getResources().getIdentifier(path_of_icon, "drawable", context.getPackageName());
-            	icon_view.setImageResource(image_id);
-            }
-        	
-            TextView title_view = (TextView) view.findViewById(R.id.mediaTitle);
-            if (title_view != null) {
-            	title_view.setText(item.getItemName());
-            }
-            
-
-        	ImageView add_button_view = (ImageView) view.findViewById(R.id.addButton);
-            if (add_button_view != null) {
-            	int image_id = context.getResources().getIdentifier("ic_add_button", "drawable", context.getPackageName());
-            	add_button_view.setImageResource(image_id);
-            }
-            
-            
-        }
-
-        return view;
+    private class ViewHolder {
+    	Context context;
+    	ImageView imageViewRating;
+    	Button buttonAdd;
+    	ImageView imageViewThumbnail;
+    	ImageView imageViewCategory;
+    	TextView textViewPeople;
+    	TextView textViewItemName;
     }
 
-	private String find_icon_index(MediaItem item) {
-		int index = item.getCategory();
+    public View getView(int position, View convertView, ViewGroup parent) {
+    	ViewHolder holder = null;
+    	final MediaItem mediaItem = getItem(position);
+    	LayoutInflater mInflater = (LayoutInflater) context
+    			.getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
+    	
+    	if(convertView == null) {
+    		convertView = mInflater.inflate(R.layout.search_list_display, null);
+    		holder = new ViewHolder();
+    		holder.imageViewCategory = (ImageView) convertView.findViewById(R.id.category_type);
+    		holder.context = convertView.getContext();
+    		holder.imageViewRating = (ImageView) convertView.findViewById(R.id.rating_image);
+    		holder.imageViewThumbnail = (ImageView) convertView.findViewById(R.id.thumbnail_image);
+    		holder.textViewPeople = (TextView) convertView.findViewById(R.id.num_people);
+    		holder.textViewItemName = (TextView) convertView.findViewById(R.id.search_item_title);
+    		holder.buttonAdd = (Button) convertView.findViewById(R.id.search_add_button);
+    		convertView.setTag(holder);
+    	}
+    	else
+    		holder = (ViewHolder) convertView.getTag();
+    	holder.textViewItemName.setText(mediaItem.getItemName());
+    	holder.textViewPeople.setText("8 people list this...");
+    	final Context contexttwo = holder.context;
+    	holder.buttonAdd.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+		        Intent intent = new Intent(context, AddActivity.class);
+		        Bundle b = new Bundle();
+		        b.putInt("id", mediaItem.getItemID());
+		        intent.putExtras(b);
+		        context.startActivity(intent);
+			}
+
+		});
+    	
+        String path = mediaItem.getPicture();
+        try {
+
+            // get input stream
+
+            InputStream ims = holder.context.getAssets().open(path);
+
+            // load image as Drawable
+
+            Drawable d = Drawable.createFromStream(ims, null);
+
+            // set image to ImageView
+            holder.imageViewThumbnail.setImageDrawable(d);
+
+        }
+
+        catch(IOException ex) {
+
+
+        }
+        holder.imageViewCategory.setImageDrawable(holder.context.getResources()
+        		.getDrawable(getCategoryResource(mediaItem.getCategory())));
+        holder.imageViewRating.setImageDrawable(holder.context.getResources()
+        		.getDrawable(getRatingResource(mediaItem.getRating())));
+    	return convertView;
+       
+    }
+
+	private int getCategoryResource(int category) {
+			if(category == 1)
+				return R.drawable.movies_individual;
+			else if(category == 2)
+				return R.drawable.games_individual;
+			else if(category == 3)
+				return R.drawable.music_individual;
+			else
+				return R.drawable.books_individual;
+	}
+
+	private int getRatingResource(int rating) {
 		
-		switch (index){
-			case 1: return "icon_movies";
-			case 2: return "icon_games";
-			case 3: return "icon_music";
-			case 4: return "icon_books";
+		switch (rating){
+			case 1: return R.drawable.ic_rating_one;
+			case 2: return R.drawable.ic_rating_two;
+			case 3: return R.drawable.ic_rating_three;
+			case 4: return R.drawable.ic_rating_four;
+			case 5: return R.drawable.ic_rating_five;
 			default:break;
 		}
-		return "";
+		return R.drawable.ic_rating_two;
 	}
+	
 }

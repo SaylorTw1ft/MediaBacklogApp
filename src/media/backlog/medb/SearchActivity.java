@@ -50,13 +50,10 @@ public class SearchActivity extends Activity{
 		setContentView(R.layout.search_box);
 		
 		//cancel_BUT.setText(i.getAction().toString());
-		
-		
-		
 
 		search_BUT = (Button)findViewById(R.id.search_BUTTON);
 		cancel_BUT = (Button)findViewById(R.id.cancel_BUTTON);
-		et=(EditText) findViewById(R.id.searchBOX);
+		et = (EditText) findViewById(R.id.searchBOX);
 		//String searchString = et.getText().toString();
 		
 		search_BUT.setOnClickListener(new OnClickListener() {
@@ -106,7 +103,7 @@ public class SearchActivity extends Activity{
 		
 		
 		dbHelper = new DatabaseHelper(getApplicationContext());
-		all_Item=Items.getSearchResults(dbHelper, queryStr);
+		all_Item = Items.getSearchResults(dbHelper, queryStr);
 		
 
 		search_list = (ListView) findViewById(R.id.search_list);
