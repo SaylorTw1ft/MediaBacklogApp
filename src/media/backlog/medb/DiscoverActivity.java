@@ -12,6 +12,7 @@ import media.backlog.medb.database.NewReleases;
 import media.backlog.medb.database.PopularItems;
 import media.backlog.medb.database.TrendingAmongFriends;
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -163,6 +164,17 @@ public class DiscoverActivity extends Activity
         ImageButton button = new ImageButton(scrollingItem.getContext());
         button.setLayoutParams(new ViewGroup.LayoutParams(150,200));
         button.setScaleType(ScaleType.FIT_START);
+        final int myId = temp.getItemID();
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(DiscoverActivity.this, ItemActivity.class);
+                Bundle b = new Bundle();
+                b.putInt("id",myId);
+                intent.putExtras(b);
+                startActivity(intent);
+            }
+        });
         setThumbnailPic(temp, button);
         TextView t1 = new TextView(v.getContext());
         t1.setText(temp.getItemName());

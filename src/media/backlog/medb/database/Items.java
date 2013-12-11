@@ -106,6 +106,7 @@ public final class Items
     	
     	ArrayList<Integer> resultIDs = new ArrayList<Integer>();
     	ArrayList<MediaItem> searchResults = new ArrayList<MediaItem>();
+    	ArrayList<MediaItem> results = new ArrayList<MediaItem>();
     	
     	if(cursor.moveToFirst())
     	{
@@ -121,6 +122,8 @@ public final class Items
         		}
         	}
     		
+    		results.addAll(searchResults);
+    		
     		for(MediaItem item : searchResults)
     		{
     			ArrayList<MediaItem> similarItems = Items.getSimilarItems(dbHelper, item);
@@ -130,7 +133,7 @@ public final class Items
     				if(resultIDs.indexOf(sItem.getItemID()) < 0)
         			{
         				resultIDs.add(sItem.getItemID());
-        				searchResults.add(sItem);
+        				results.add(sItem);
         			}
     			}
     		}

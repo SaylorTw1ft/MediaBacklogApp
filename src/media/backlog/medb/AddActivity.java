@@ -20,14 +20,18 @@ import media.backlog.medb.database.ListItems;
 /**
  * Created by Arin on 12/9/13.
  */
-public class AddActivity extends Activity {
-
-    public void onCreate(Bundle savedInstanceState) {
+public class AddActivity extends Activity
+{
+	int itemID;
+	
+    public void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add);
         getActionBar().setDisplayHomeAsUpEnabled(true);
-        Bundle b = new Bundle();
+        Bundle b = getIntent().getExtras();
         int id = b.getInt("id");
+        itemID = id;
         DatabaseHelper helper = new DatabaseHelper(getApplicationContext());
         final MediaItem item = media.backlog.medb.database.Items.getItem(helper, id);
         // db connection
@@ -49,7 +53,7 @@ public class AddActivity extends Activity {
                 try {
 
                     MediaList list = (MediaList) parent.getItemAtPosition(position);
-                    ListItems.addItem(dbHelper,list.getListID(),item.getItemID());
+                    ListItems.addItem(dbHelper,list.getListID(),itemID);
                 }
                 catch (NullPointerException e)
                     {
