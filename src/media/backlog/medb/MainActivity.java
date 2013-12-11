@@ -75,7 +75,11 @@ public class MainActivity extends Activity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle presses on the action bar items
-        switch (item.getItemId()) {
+        switch (item.getItemId())
+        {
+	        case R.id.home_action_notifications:
+	            openNotifications();
+	            return true;
             case R.id.home_action_settings:
                 openSettings();
                 return true;
@@ -84,10 +88,16 @@ public class MainActivity extends Activity {
                 return super.onOptionsItemSelected(item);
         }
     }
-
-    public void openSettings() {
-    	Intent intent = new Intent(this, SettingsActivity.class);
+    
+    public void openNotifications()
+    {
+    	Intent intent = new Intent(this, NotificationsActivity.class);
         startActivity(intent);
     }
 
+    public void openSettings()
+    {
+    	Intent intent = new Intent(this, SettingsActivity.class);
+        startActivity(intent);
+    }
 }

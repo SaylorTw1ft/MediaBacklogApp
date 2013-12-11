@@ -259,9 +259,9 @@ public class PaneActivity extends Activity
 
         }
 
-        catch(IOException ex) {
-
-
+        catch(IOException ex)
+        {
+        	imageButton.setClickable(false);
         }
     }
 }
