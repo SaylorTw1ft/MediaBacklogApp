@@ -11,7 +11,8 @@
     <color name="discover_color">#00FFFF</color>
     <color name="organize_color">#FF00FF</color>
     <color name="game_color">#26AB5E</color>
-
+	<color name="white">#FFFFFF</color>
+	
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
 

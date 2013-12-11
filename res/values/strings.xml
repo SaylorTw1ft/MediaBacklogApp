@@ -2,6 +2,8 @@
 <resources>
 
     <string name="app_name">meDB</string>
+    <string name="login_button_text">LOG IN</string>
+    
     <!-- Action Bar constants -->
     <string name="home_action_settings">Settings</string>
     <string name="organize_action_add">Add List</string>
