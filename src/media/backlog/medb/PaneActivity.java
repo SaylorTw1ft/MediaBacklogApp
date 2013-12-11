@@ -33,7 +33,9 @@ import android.widget.ImageView.ScaleType;
 /**
  * Created by Arin on 11/28/13.
  */
-public class PaneActivity extends Activity {
+public class PaneActivity extends Activity
+{
+	private static int staticCategory = 1;
 	
 	public void setHomeBarColor(int color)
 	{
@@ -86,7 +88,17 @@ public class PaneActivity extends Activity {
         setContentView(R.layout.activity_pane);
         getActionBar().setDisplayHomeAsUpEnabled(true);
         Bundle b = getIntent().getExtras();
-        int category = b.getInt("category");
+        int category;
+        try
+        {
+        	category = b.getInt("category");
+        	staticCategory = category;
+        }
+        catch(Exception e)
+        {
+        	category = staticCategory;
+        }
+        
         setUpPage(category);
         
 		DatabaseHelper helper = new DatabaseHelper(getApplicationContext());
