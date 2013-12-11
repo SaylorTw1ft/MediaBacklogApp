@@ -211,11 +211,8 @@ public class ListActivity extends Activity {
         }
     }
 
-    public void addItem() {
-        Toast.makeText(getApplicationContext(),
-                " add button has been clicked",
-                Toast.LENGTH_SHORT).show();
-
+    public void addItem()
+    {
         Intent intent=new Intent(getApplicationContext(), ListAddItemActivity.class);
         Bundle b = new Bundle();
         b.putString("list_name", list_name);

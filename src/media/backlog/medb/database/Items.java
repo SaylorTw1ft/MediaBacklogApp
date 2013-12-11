@@ -79,6 +79,42 @@ public final class Items
     	return item;
     }
     
+    public static int getItemId(DatabaseHelper dbHelper, String itemName)
+    {
+    	SQLiteDatabase db = dbHelper.getReadableDatabase();
+
+    	// Define a projection that specifies which columns from the database
+    	// you will actually use after this query.
+    	String[] projection = {
+    	    ItemEntry.COLUMN_NAME_ITEMID,
+    	    ItemEntry.COLUMN_NAME_ITEMNAME,
+    	    };
+    	
+    	String[] selectionArgs = { itemName };
+
+    	// How you want the results sorted in the resulting Cursor
+    	//String sortOrder = FeedEntry.COLUMN_NAME_UPDATED + " DESC";
+
+    	Cursor cursor = db.query(
+    	    ItemEntry.TABLE_NAME,  // The table to query
+    	    projection,                               // The columns to return
+    	    ItemEntry.COLUMN_NAME_ITEMNAME + " = ?",    // The columns for the WHERE clause
+    	    selectionArgs,                            // The values for the WHERE clause
+    	    null,                                     // don't group the rows
+    	    null,                                     // don't filter by row groups
+    	    null                                 // The sort order
+    	    );
+    	
+    	if(cursor.moveToFirst())
+    	{
+    		return cursor.getInt(cursor.getColumnIndex(ItemEntry.COLUMN_NAME_ITEMID));
+    	}
+    	else
+    	{
+    		return -1;
+    	}
+    }
+    
     public static ArrayList<MediaItem> getSearchResults(DatabaseHelper dbHelper, String searchString)
     {
     	SQLiteDatabase db = dbHelper.getReadableDatabase();
