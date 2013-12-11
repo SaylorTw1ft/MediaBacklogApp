@@ -4,6 +4,7 @@
     android:contentDescription="@string/item_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/home_color"
     tools:context=".ItemActivity">
     
     <TextView
@@ -14,6 +15,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="8dp"
         android:text="Default"
+        android:textColor="@color/white"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <ImageView
@@ -30,7 +32,7 @@
         android:layout_width="fill_parent"
         android:layout_height="170dp"
         android:id = "@+id/scroll_bar_container"
-        android:background="@color/home_color"
+        android:background="@color/white"
         android:contentDescription="Recommendations container"
         android:layout_above="@+id/home_bar"
         android:layout_alignParentLeft="true"></FrameLayout>
@@ -45,8 +47,8 @@
 
 	<Button
 	    android:id="@+id/add_button"
-	    android:textColor="#FFFFFF"
-	    android:background="@layout/moive_button"
+	    android:textColor="@color/home_color"
+	    android:background="@layout/itempage_add_button"
 	    android:layout_width="125dp"
 	    android:layout_height="wrap_content"
 	    android:layout_alignTop="@+id/item_picture"
@@ -59,8 +61,8 @@
 	    android:layout_width="125dp"
 	    android:layout_height="wrap_content"
 	    android:layout_below="@+id/add_button"
-	    android:textColor="#FFFFFF"
-	    android:background="@layout/moive_button"
+	    android:textColor="@color/home_color"
+	    android:background="@layout/share_button"
 	    android:layout_marginTop="8dp"
 	    android:layout_toRightOf="@+id/recommend_text"
 	    android:text="Share" />
@@ -75,17 +77,19 @@
 	    android:layout_marginTop="8dp"
 	    android:paddingLeft="5dp"
 	    android:text="Medium Text"
+	    android:textColor="@color/white"
 	    android:textAppearance="?android:attr/textAppearanceMedium" />
 
 	<TextView
 	    android:id="@+id/recommend_text"
 	    android:layout_width="wrap_content"
 	    android:layout_height="wrap_content"
-	    android:layout_alignLeft="@+id/item_picture"
+	    android:layout_alignParentLeft="true"
 	    android:layout_above="@+id/scroll_bar_container"
 	    android:paddingLeft="5dp"
 	    android:paddingBottom="5dp"
 	    android:text="Recommendations"
+	    android:textColor="@color/white"
 	    android:textAppearance="?android:attr/textAppearanceMedium" />
 
 </RelativeLayout>

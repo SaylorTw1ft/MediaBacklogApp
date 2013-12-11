@@ -86,7 +86,7 @@ public class HorizontalScrollBar extends Fragment
             scrollingItem.setMinimumWidth(200);
             l.addView(scrollingItem);
         }
-
+        v.setBackgroundColor(getResources().getColor(R.color.home_color));
         return v;
     }
 
