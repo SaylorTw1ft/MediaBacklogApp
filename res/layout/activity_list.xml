@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/list_activity_relative"
     tools:context=".ListActivity">
 
 
@@ -74,6 +75,17 @@
             android:textOff="Music"
             android:textOn="Music" />
     </LinearLayout>
+    	
+	<LinearLayout
+	    android:id="@+id/remove_icons_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#E2DFE8"
+        android:layout_below="@id/toggle_list_buttons"
+        android:layout_above="@id/home_bar"
+        android:layout_alignParentLeft="true">
+	</LinearLayout>
     
     <ListView
         android:id="@+id/list_view_list_page"
@@ -82,7 +94,7 @@
         android:paddingTop="4dp"
         android:layout_below="@id/toggle_list_buttons"
         android:layout_above="@id/home_bar"
-        android:layout_alignParentLeft="true" >
+        android:layout_toRightOf="@id/remove_icons_list" >
     </ListView>
 
 </RelativeLayout>
