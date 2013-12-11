@@ -38,12 +38,17 @@ public class PaneActivity extends Activity {
 	public void setHomeBarColor(int color)
 	{
         Fragment homeFrag = getFragmentManager().findFragmentById(R.id.home_bar);
+        Fragment scrollFrag = getFragmentManager().findFragmentById(
+        		R.id.horizontal_scroll_bar_pane);
+        View scrollView = scrollFrag.getView();
+        
         View mainView = homeFrag.getView();
         View homeView = mainView.findViewById(R.id.homeButton);
         View organizeView = mainView.findViewById(R.id.organizeButton);
         View discoverView = mainView.findViewById(R.id.discoverButton);
         View searchView = mainView.findViewById(R.id.searchButton);
         
+        scrollView.setBackgroundColor(color);
         mainView.setBackgroundColor(color);
         homeView.setBackgroundColor(color);
         organizeView.setBackgroundColor(color);
