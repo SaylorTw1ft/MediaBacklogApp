@@ -111,5 +111,7 @@
     <string name="recent_activity">Recent Activity</string>
     <string name="trending_among_friends">Trending Among Friends</string>
     <string name="title_activity_friends">Friends</string>
+    <string name="delete_list">Delete List</string>
+    <string name="list_add">Add</string>
 
 </resources>

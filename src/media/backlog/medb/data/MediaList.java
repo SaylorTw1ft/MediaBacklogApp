@@ -8,6 +8,7 @@ public class MediaList
 {
 	private int listID;
 	private String listName;
+	private boolean privacy;
 	private boolean movie;
 	private boolean game;
 	private boolean music;
@@ -32,6 +33,16 @@ public class MediaList
 	public String getListName()
 	{
 		return listName;
+	}
+	
+	public void setPrivacy(boolean privacy)
+	{
+		this.privacy = privacy;
+	}
+	
+	public boolean getPrivacy()
+	{
+		return privacy;
 	}
 	
 	public void setMovie(boolean movie)

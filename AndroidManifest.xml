@@ -93,6 +93,11 @@
 			android:label="ListAddItemActivity"
 			android:theme="@android:style/Theme.Dialog" >
 		</activity>
+		<activity
+			android:name=".ListEditItemActivity"
+			android:label="ListEditItemActivity"
+			android:theme="@android:style/Theme.Dialog" >
+		</activity>
         <activity
             android:name="media.backlog.medb.AddActivity"
             android:label="Add to list..." >

@@ -20,6 +20,7 @@ public final class Lists
         public static final String TABLE_NAME = "Lists";
         public static final String COLUMN_NAME_LISTID = "listID";
         public static final String COLUMN_NAME_LISTNAME = "listName";
+        public static final String COLUMN_NAME_PRIVACY = "privacy";
         public static final String COLUMN_NAME_MOVIE = "movie";
         public static final String COLUMN_NAME_GAME = "game";
         public static final String COLUMN_NAME_MUSIC = "music";
@@ -29,6 +30,7 @@ public final class Lists
     	    "CREATE TABLE " + ListEntry.TABLE_NAME + " (" +
     	    ListEntry.COLUMN_NAME_LISTID + " INTEGER PRIMARY KEY," +
     	    ListEntry.COLUMN_NAME_LISTNAME + " TEXT" + "," +
+    	    ListEntry.COLUMN_NAME_PRIVACY + " INTEGER," +
     	    ListEntry.COLUMN_NAME_MOVIE + " INTEGER," +
     	    ListEntry.COLUMN_NAME_GAME + " INTEGER," +
     	    ListEntry.COLUMN_NAME_MUSIC + " INTEGER," +
@@ -85,6 +87,7 @@ public final class Lists
     	String[] projection = {
     	    ListEntry.COLUMN_NAME_LISTID,
     	    ListEntry.COLUMN_NAME_LISTNAME,
+    	    ListEntry.COLUMN_NAME_PRIVACY,
     	    ListEntry.COLUMN_NAME_MOVIE,
     	    ListEntry.COLUMN_NAME_GAME,
     	    ListEntry.COLUMN_NAME_MUSIC,
@@ -109,6 +112,7 @@ public final class Lists
     	cursor.moveToFirst();
     	MediaList list = new MediaList(listID);
     	list.setListName(cursor.getString(cursor.getColumnIndex(ListEntry.COLUMN_NAME_LISTNAME)));
+    	list.setPrivacy(1 == cursor.getInt(cursor.getColumnIndex(ListEntry.COLUMN_NAME_PRIVACY)));
     	list.setMovie(1 == cursor.getInt(cursor.getColumnIndex(ListEntry.COLUMN_NAME_MOVIE)));
     	list.setGame(1 == cursor.getInt(cursor.getColumnIndex(ListEntry.COLUMN_NAME_GAME)));
     	list.setMusic(1 == cursor.getInt(cursor.getColumnIndex(ListEntry.COLUMN_NAME_MUSIC)));
@@ -125,6 +129,7 @@ public final class Lists
     	ContentValues values = new ContentValues();
     	values.put(ListEntry.COLUMN_NAME_LISTID, list.getListID());
     	values.put(ListEntry.COLUMN_NAME_LISTNAME, list.getListName());
+    	values.put(ListEntry.COLUMN_NAME_PRIVACY, list.getPrivacy() ? 1 : 0);
     	values.put(ListEntry.COLUMN_NAME_MOVIE, list.getMovie() ? 1 : 0);
     	values.put(ListEntry.COLUMN_NAME_GAME, list.getGame() ? 1 : 0);
     	values.put(ListEntry.COLUMN_NAME_MUSIC, list.getMusic() ? 1 : 0);

@@ -11,7 +11,6 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 import media.backlog.medb.adapter.OrgListAdapter;
-import media.backlog.medb.data.MediaItem;
 import media.backlog.medb.data.MediaList;
 import media.backlog.medb.database.DatabaseHelper;
 import media.backlog.medb.database.Lists;
@@ -32,9 +31,6 @@ public class AddActivity extends Activity
         Bundle b = getIntent().getExtras();
         int id = b.getInt("id");
         itemID = id;
-        DatabaseHelper helper = new DatabaseHelper(getApplicationContext());
-        final MediaItem item = media.backlog.medb.database.Items.getItem(helper, id);
-        // db connection
         final DatabaseHelper dbHelper = new DatabaseHelper(getApplicationContext());
         final ArrayList<MediaList> lists = Lists.getAllLists(dbHelper);
 

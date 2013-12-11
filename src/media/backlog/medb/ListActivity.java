@@ -16,7 +16,6 @@ import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
-import android.widget.Toast;
 import android.widget.ToggleButton;
 
 /**
@@ -221,9 +220,13 @@ public class ListActivity extends Activity {
         startActivity(intent);
     }
 
-    public void editItem() {
-        Toast.makeText(getApplicationContext(),
-                " edit button has been clicked",
-                Toast.LENGTH_SHORT).show();
+    public void editItem()
+    {        
+        Intent intent=new Intent(getApplicationContext(), ListEditItemActivity.class);
+        Bundle b = new Bundle();
+        b.putString("list_name", list_name);
+        b.putInt("list_id", list_id);
+        intent.putExtras(b);
+        startActivity(intent);
     }
 }
