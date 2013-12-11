@@ -102,21 +102,6 @@ public class ItemActivity extends Activity {
                 }
         	}
         }
-		
-/*
-        FragmentManager fragmentManager = getFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        Bundle args = new Bundle();
-        args.putInt("id",id);
-        WhiteHorizontalScrollBar horizontalScrollBar = new WhiteHorizontalScrollBar();
-        horizontalScrollBar.setArguments(args);
-        fragmentTransaction.add(R.id.scroll_bar_container, horizontalScrollBar).commit();
-        */
-        
-        
-
-
-
     }
 
 	public void setUpButtons()

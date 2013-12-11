@@ -30,14 +30,13 @@
         android:clickable="true"
         android:layout_alignParentStart="false" />
 
-    <FrameLayout
-        android:layout_width="fill_parent"
+	<fragment
+	    android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/nav_block"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:id="@+id/main_scroll_bar_container"
-        android:background="@color/home_color"
-        android:focusable="true"></FrameLayout>
+	    android:id="@+id/horizontal_scroll_bar_main"
+	    android:name="media.backlog.medb.HorizontalScrollBar"
+	    android:layout_alignParentTop="true"
+	    tools:layout="@layout/horizontal_scroll_bar" />
+
 
 </RelativeLayout>
