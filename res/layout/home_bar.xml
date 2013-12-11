@@ -7,7 +7,7 @@
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:layout_alignParentBottom="true"
-    android:background="#6699cc"
+    android:background="@color/home_color"
     style="@android:style/ButtonBar"
     android:gravity="center">
 
