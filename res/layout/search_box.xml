@@ -30,6 +30,8 @@
             android:id="@+id/search_BUTTON"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:background="@layout/search_button"
+            android:textColor="@color/white"
             android:layout_weight="1"
             android:text="Search" />
 
@@ -37,6 +39,8 @@
             android:id="@+id/cancel_BUTTON"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:background="@layout/cancel_button"
+            android:textColor="@color/white"
             android:layout_weight="1"
             android:text="Cancel" />
         
