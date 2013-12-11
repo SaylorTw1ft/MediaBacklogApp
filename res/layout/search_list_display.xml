@@ -34,7 +34,7 @@
     
     <Button
         android:id="@+id/search_add_button"
-        android:layout_width="60dp"
+        android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:text="@string/list_action_add"
         android:background="@layout/cancel_button"
