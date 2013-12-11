@@ -35,6 +35,7 @@ import android.widget.ImageView.ScaleType;
  */
 public class PaneActivity extends Activity
 {
+	public static boolean addFromPane = false;
 	private static int staticCategory = 1;
 	
 	public void setHomeBarColor(int color)
@@ -207,7 +208,12 @@ public class PaneActivity extends Activity
 		
 	}
     
-    public void addList() {
+    public void addList()
+    {
+    	OrganizeActivity.addFromOrganize = false;
+    	PaneActivity.addFromPane = true;
+    	Intent intent=new Intent(getApplicationContext(), OrganizeAddListActivity.class);
+        startActivity(intent);
     }
 
     private LinearLayout setUpScrollingItem(View v, MediaItem temp) {

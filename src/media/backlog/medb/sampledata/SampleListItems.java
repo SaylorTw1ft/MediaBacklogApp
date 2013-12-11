@@ -59,10 +59,6 @@ public class SampleListItems {
 	public static String listItem36 = "INSERT INTO ListItems (listID, itemID) VALUES (11,37)";
 	public static String listItem37 = "INSERT INTO ListItems (listID, itemID) VALUES (11,42)";
 	
-	//Books I Liked
-	public static String listItem38 = "INSERT INTO ListItems (listID, itemID) VALUES (12,35)";
-	public static String listItem39 = "INSERT INTO ListItems (listID, itemID) VALUES (12,29)";
-	
 	//The Hunger Games
 	public static String listItem40 = "INSERT INTO ListItems (listID, itemID) VALUES (13,38)";
 	public static String listItem41 = "INSERT INTO ListItems (listID, itemID) VALUES (13,35)";

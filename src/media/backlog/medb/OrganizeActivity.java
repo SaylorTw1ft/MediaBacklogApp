@@ -30,8 +30,9 @@ import android.widget.ToggleButton;
  * 
  *  */
 
-public class OrganizeActivity extends Activity {
-
+public class OrganizeActivity extends Activity
+{
+	public static boolean addFromOrganize = false;
 	RelativeLayout r;
 	ToggleButton t_movies;
 	ToggleButton t_games;
@@ -222,6 +223,8 @@ public class OrganizeActivity extends Activity {
     
     public void addList()
     {
+    	OrganizeActivity.addFromOrganize = true;
+    	PaneActivity.addFromPane = false;
         Intent intent=new Intent(getApplicationContext(), OrganizeAddListActivity.class);
         startActivity(intent);
     }

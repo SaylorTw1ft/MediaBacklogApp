@@ -33,12 +33,17 @@ public class OrganizeAddListActivity extends Activity
 			public void onClick(View view)
 			{
 				add_new_list_to_db();
+				Intent intent;
 				
-				Intent intent = new Intent(getApplicationContext(), OrganizeActivity.class);
-//				Bundle b = new Bundle();
-//				b.putString("list_name", list_name);
-//				b.putInt("list_id", list_id);
-//				intent.putExtras(b);
+				if(OrganizeActivity.addFromOrganize)
+				{
+					intent = new Intent(getApplicationContext(), OrganizeActivity.class);
+				}
+				else
+				{
+					intent = new Intent(getApplicationContext(), PaneActivity.class);
+				}
+
 				startActivity(intent);
 			}
 
